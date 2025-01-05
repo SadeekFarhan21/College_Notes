@@ -9,14 +9,14 @@
 \maketitle
 \section{September 5, 2018}
  (Professor Artin wants us to call him Mike). \\
-First of all, it's good for us to read through the syllabus. On the back page, there is a diagnostic prblem that is pretty simple; we should have it done by Mondayl. It will count for our grade, but it  required. Apparently the problem sets are hard: we should not expect to finish them quickly.
+First of all, it's good for us to read through the syllabus. On the back page, there is a diagnostic problem that is pretty simple; we should have it done by Monday. It will count for our grade, but it is not required. Apparently, the problem sets are hard: we should not expect to finish them quickly.
 \begin{fact}
     The two main topics of this semester will be \textbf{group theory} and \textbf{ring theory}.
 \end{fact}
 When professor Artin was young, he wanted to learn the ``general axioms''. But it's better to use examples and use those to understand the axioms when we're learning mathematics.
 
 \begin{definition}
-    The \textcolor{blue}{\textbf{general linear group}}, denoted as $GL_n$, consists of the invertible $n \times n$ matrices with the opreation of matrix multiplication.
+    The \textcolor{blue}{\textbf{general linear group}}, denoted as $GL_n$, consists of the invertible $n \times n$ matrices with the operation of matrix multiplication.
 \end{definition}
 
 (The definition of a \textcolor{blue}{\textbf{group}} was given on the next day.) To make examples, easier to write down, we'll take $n = 2$. Matrix multiplication looks like the following:
@@ -71,7 +71,7 @@ inverse of a $2 \times 2$ matrix is
 \]
 
 \begin{definition}
-    An element is $A$ a group has \textcolor{blue}{\textbf{order}} $n$ if $A^n$ is an identity element.
+    An element $A$ in a group has \textcolor{blue}{\textbf{order}} $n$ if $A^n$ is an identity element.
 \end{definition}
 
 \begin{example}
@@ -80,7 +80,7 @@ inverse of a $2 \times 2$ matrix is
             1  & -1 \\
             -1 & 0
         \end{bmatrix}$
-    . Since $A^6 = I$, A is an element of $GL_2$ with oder 6.
+    . Since $A^6 = I$, A is an element of $GL_2$ with order 6.
 \end{example}
 Elements can have infinite order as well, but it turns out the space of $2 \times 2 $ matrix is nice:
 
@@ -91,7 +91,7 @@ Elements can have infinite order as well, but it turns out the space of $2 \time
 (We'll prove this much later on.) Professor Artin like to use dots instead of zeros in matrices because they looke cleaner, but I will not do this in the notes.
 
 \begin{example}
-    The following matrix just cycles the indicies of a vector, so it has $n$ if it is $n$-dimensional.
+    The following matrix just cycles the indices of a vector, so it has order $n$ if it is $n$-dimensional.
     \[
         A = \begin{bmatrix}
             0      & 1      & 0      & 0      & \cdots & 0      \\
@@ -104,7 +104,7 @@ Elements can have infinite order as well, but it turns out the space of $2 \time
     \]
 \end{example}
 
-There are three kinds of \vocab{elementary matrices}, which basically change
+There are three kinds of \textbf{elementary matrices}, which basically change
 the identity matrix by a tiny bit. (This is idea of \textbf{row reducing}.) We
 have the matrices
 \[
@@ -117,7 +117,7 @@ have the matrices
         a & 1
     \end{bmatrix}
 \]
-which add $a$ times the scond row and vice versa, the matrices
+which add $a$ times the second row and vice versa, the matrices
 \[
     \begin{bmatrix}
         c & 0 \\
@@ -128,7 +128,7 @@ which add $a$ times the scond row and vice versa, the matrices
         0 & c
     \end{bmatrix}
 \]
-which multiples one of the two matrices by $c$, and the matrix
+which multiplies one of the two rows by $c$, and the matrix
 \[
     \begin{bmatrix}
         0 & 1 \\
@@ -138,7 +138,7 @@ which multiples one of the two matrices by $c$, and the matrix
 which swaps two rows.
 
 \begin{theorem}
-    The elementary matrices genereate $GL_2$. In other words, every $A$ in $GL_2$ is a product of of the above elementary matrices.
+    The elementary matrices generate $GL_2$. In other words, every $A$ in $GL_2$ is a product of the above elementary matrices.
 \end{theorem}
 
 Let's say we start with an arbitrary matrix $A$ say
