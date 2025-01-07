@@ -1,14 +1,14 @@
 \ProvidesPackage{lindrew}[2022/11/17] % with much help from Jason Chen; thank you!
 
-\newif\iflinserif \linseriffalse % by default, uses cmbright sans serif font. 
-\newif\iflinclass \linclasstrue % by default, numbers all theorems/definitions from 1 to N w/o regard for section
-\newif\iflinindent \linindenttrue % by default, does do paragraph indent
-\newif\iflinheader \linheaderfalse % by default, no header
+%\newif\iflinserif \linseriffalse % by default, uses cmbright sans serif font. 
+%\newif\iflinclass \linclasstrue % by default, numbers all theorems/definitions from 1 to N w/o regard for section
+%\newif\iflinindent \linindenttrue % by default, does do paragraph indent
+%\newif\iflinheader \linheaderfalse % by default, no header
 
-\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
-\DeclareOption{formal}{\linclassfalse} % if you want a document where theorems in section 1 are "theorem 1.x", etc.
-\DeclareOption{noindent}{\linindentfalse}
-\DeclareOption{header}{\linheadertrue}
+%\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
+%\DeclareOption{formal}{\linclassfalse} % if you want a document where theorems in section 1 are "theorem 1.x", etc.
+%\DeclareOption{noindent}{\linindentfalse}
+%\DeclareOption{header}{\linheadertrue}
 
 \ProcessOptions*
 
@@ -22,15 +22,15 @@
 \fi
 
 \iflinheader
-    \usepackage[includehead, includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
+    \usepackage[includehead,includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
-    \rhead{\textbf{Farhan Sadeek}} % change name as necessary
+    \rhead{\textbf{Andrew Lin}} % change name as necessary
 \else
     %\usepackage[left=0.8in, top=2.6cm, bottom=1.4cm, right=0.8in]{geometry}
     \usepackage[left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
 \fi
-\usepackage{xparse}
+
 \usepackage{amsmath, amssymb, amsthm} % standard
 \usepackage{bbm} % blackboard bold math
 \usepackage[svgnames, dvipsnames, usenames]{xcolor}
@@ -39,7 +39,10 @@
 \hypersetup{urlcolor = RedViolet, linkcolor = RoyalBlue, citecolor = ForestGreen}
 \urlstyle{same}
 \usepackage{mhsetup, mathtools}
-
+\usepackage{lmodern} % Latin Modern font
+\usepackage{mathptmx} % Times New Roman font for text and math
+\usepackage[scaled=0.92]{helvet} % Helvetica font for sans-serif
+\usepackage{courier} % Courier font for monospace
 \usepackage[capitalize]{cleveref} % for cross-referencing theorems, etc.
 \usepackage{graphicx} % for putting pictures
 \usepackage[T1]{fontenc} % for accents, etc.
@@ -66,6 +69,7 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\LARGE\bfseries\sffamily}
 \titleformat{\subsection}{\Large\bfseries\sffamily}{\thesubsection}{0.4cm}{} 
+
 % Blackboard bold
 \renewcommand{\AA}{\mathbb A}
 \newcommand{\CC}{\mathbb C}
@@ -80,7 +84,7 @@
 \newcommand{\RR}{\mathbb R}
 \newcommand{\UU}{\mathbb U}
 \newcommand{\ZZ}{\mathbb Z}
-\newcommand{\sfrac}[2]{\frac{#1}{#2}}
+
 \newcommand{\mc}[1]{\mathcal{#1}}
 \newcommand{\mf}[1]{\mathfrak{#1}}
 \newcommand{\parsh}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
@@ -109,8 +113,6 @@
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\Alt}{Alt}
-\DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\codim}{codim}
 
 % physics
 \newcommand{\ket}[1]{\left|#1\right\rangle}

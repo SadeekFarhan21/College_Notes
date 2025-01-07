@@ -1,9 +1,10 @@
 \documentclass[11pt]{article}
 \usepackage{lindrew}
 \usepackage{xcolor}
-
-\title{Stat 4202: Mathematical Statistics II} 
-\author{Lecturer: \textbf{Professor Andrew Kerr}\\Notes by: Farhan Sadeek} 
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\title{Stat 4202: Mathematical Statistics II}
+\author{Lecturer: \textbf{Professor Andrew Kerr}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
 
 \begin{document}
@@ -30,9 +31,12 @@ The probability function
     \item For disjoint sets $A_1$, $A_2$, $\cdots$, $A_n$: \[ P\left(\bigcup_{i = 1}^{n}A_i \right) = \sum_{i = 1}^{n} P(A_i)\]
 \end{itemize}
 
-If an event $A$ is a subset of another event $B$, then the probability of $A$ is less than or equal to the probability of event $B$. That is to say, if $A \subseteq B$, then \( P(A) \leq P(B)\)
+If an event $A$ is a subset of another event $B$, then the probability of $A$
+is less than or equal to the probability of event $B$. That is to say, if $A
+    \subseteq B$, then \( P(A) \leq P(B)\)
 
-The complement of an event $A$, denoted by $A^c$, has a probability equal to one minus the probability of the event $A$. That is,
+The complement of an event $A$, denoted by $A^c$, has a probability equal to
+one minus the probability of the event $A$. That is,
 \[ P(A^c) = 1 - P(A) \]
 
 A partition of a sample space $\mathcal{S}$ is an exhaustive, non-overlapping
@@ -65,7 +69,8 @@ The \vocab{conditional probability} of $A$ given $B$ is given by \[P(A|B) = \fra
     A random variable is a function that takes outcomes from the sample space $\mathcal{S}$ to the real numbers $\mathbb{R}$. That is, a random variable is a function $X: \mathcal{S} \to \mathbb{R}$.
 \end{definition}
 
-We then use a probability mass function (pmf) in the discrete case or a probability density function (pdf) in the continuous case:
+We then use a probability mass function (pmf) in the discrete case or a
+probability density function (pdf) in the continuous case:
 \begin{align*}
      & \text{pmf:} &  & f_X(x) = P(X = x)                                   &  & \text{when } X \text{ is discrete}   \\
      & \text{pdf:} &  & \int_{a}^{b}f_X(x) \mathrm{d}x = P(a \leq X \leq b) &  & \text{when } X \text{ is continuous}
@@ -77,10 +82,11 @@ value less than or equal to a given value $x$: \[F_X(x) = P(X \leq x)\]
 When $X$ is a continuous random variable, the pdf is the derivative of the cdf: \[f_X(x) = F'_X(x)\]
 
 \subsection{Expected Value and Variance}
-For random variable $X$, the \vocab{expected value} is denoted by $E \,(X)$ and is given by:
+For random variable $X$, the \vocab{expected value} is denoted by $E \,(X)$ and
+is given by:
 \[
     E(X) = \begin{cases}
-        \sum_{x} x f_X(x)                           & \text{if } X \text{ is discrete}   \\
+        \sum_{x} x f_X(x)                            & \text{if } X \text{ is discrete}   \\
         \int_{-\infty}^{\infty} x f_X(x) \mathrm{d}x & \text{if } X \text{ is continuous}
     \end{cases}
 \]
@@ -88,7 +94,7 @@ For random variable $X$, the \vocab{expected value} is denoted by $E \,(X)$ and 
 The \vocab{variance} of a random variable $X$ is denoted by $\text{Var}(X)$ and is
 given by:
 \[
-    \text{Var}(X) = E\left[(X - E\{X\})^{2}\right]
+    \text{Var}(X) = E\left[(X - E(X))^{2}\right]
 \]
 
 \subsection{Covariance}
