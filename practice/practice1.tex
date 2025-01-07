@@ -1,0 +1,147 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+
+\title{Sample Project}
+\author{Farhan Sadeek}
+\date{Last Updated: \today}
+\begin{document}
+\maketitle
+This is a quick document I've put together to help explain how to use my style
+package (and for those newer to \LaTeX, a few key facts that are helpful to
+know)! If there's anything you think would be useful to add to this document,
+feel free to email me at \texttt{sadeek.1@osu.edu} and I'll include that. :)
+\textbf{There's an FAQ at the end with the questions I've been asked.}
+\section{Commands explanation}
+The \texttt{usepackage\{lindrew\}} line above basically means that all of the
+commands in the \texttt{lindrew.sty} file are automatically imported into this
+document. The first 50 or so lines of that file are some common packages that
+are broadly useful for the documents I create, as well as a few customizable
+settings (for example, if you instead typed something like
+\texttt{usepackage[serif][lindrew]} in line 2, line 16 of my style is not
+applied and you get the default font instead.) The middle part of the sty file
+is basically a long list of various shortcuts/adjustments that I've found
+useful for my own sake -- you can add your own or remove them as you see fit.
+Everything after that is for the colored theorem boxes (also customizable).
+\newline Many people start their LaTeX documents with a bunch of commands in
+the preamble (loading relevant packages, defining shortcuts) which they
+copy-paste into every new document they make. (This basically has the same
+effect as putting everything in a sty file.) In particular, if you're just
+making a bunch of documents for yourself (like I do for lecture notes), it's
+fine if you just keep adding more and more shortcuts even if you don't end up
+using them all the time; it shouldn't change the compile time too
+significantly.
+
+\subsection{Commands explanation}
+The main advantage of taking notes in LaTeX notes is that it's fairly easy to
+include formulas. If you want to include it seamlessly in your text, use
+something like \(\sqrt[3]{2} + \pi \approx 4.4\), while if you want to separate
+it out into its own line, use double dollar signs or (my preference for code
+readability) brackets as shown below. \\
+\[
+    \begin{bmatrix}
+        1 & 2 \\
+        3 & 4
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\
+        -1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 & -2 \\
+        3 & -4
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -1 \\
+        -1
+    \end{bmatrix}
+\]
+\\
+If you want a formula or string of equalities to span multiple lines, consider using the \texttt{align*} environment and putting ampersands where you want the different lines to line up:
+
+\begin{align*}
+    88^2 & = (88 + 12)(88 - 12) + 12^2 \\
+         & = 100 \cdot 76 + 12^2       \\
+         & = 7600 + 144                \\
+         & = 7744                      \\
+\end{align*}
+
+(Some people prefer to use \texttt{equation} instead of \texttt{align}, and there's some reasoning \href{https://tex.stackexchange.com/questions/196/eqnarray-vs-align}{here} if you're interested. Personally I don't care about these kinds of details, and by extension some of the stuff in the package might be a little hacky; if it bothers you, feel free to make your own version of my package!)
+
+You can take a look at the \texttt{sty} file for examples of how to create new
+shortcuts -- probably by far the most common types are
+\texttt{DeclareMathOperator} (so you can type something like
+\texttt{\textbackslash ord} and have it show up as \texttt{ord}),
+\texttt{newcommand} (to create a new shortcut), and \texttt{renewcommand} (if
+the command is already defined). When defining commands, you can either have
+them be faster re-definitions of symbols like \(\mathbb{E}\), or you can use
+them to simplify common formats you repeatedly need to type like \(\langle \psi
+| \phi \rangle\). In the latter case, you can specify a number of arguments
+(like the \texttt{bracket} command does) and then specify where they should
+show up in the format (that's what \#1, \#2 are for).
+
+\begin{remark*}
+    Do keep in mind that whlie shorthand like \texttt{\textbackslash ord} for $\mathbb{R}$ or using \texttt{\texttt{paren}} to get parentheses that automatically wrap around taller expressions like
+    \[
+        \paren{1 + \frac{1}{1 + \frac{1}{ 1 + \frac{1}{1 + \cdots}}}} = \frac{1 +
+            \sqrt{5}}{2}
+    \]
+    are both very "standard" shortcuts that many people use, some of my shorcuts
+    are \textbf{not} standardly named (like \texttt{pars}, which I found useful in
+    one physics class and don't think I've ever used since). I should definitely
+    mention that nothing I do is particularly "optimized" and you should feel free
+    to explore adjustments or alternatives because there are probably are many of
+    them that I just haven't needed.
+\end{remark*}
+\subsection{Using theorem boxes}
+(Note that if you don't what the sections to be numbered, you can use \texttt{section*} instead of \texttt{section}. The same is true for all of the boxes below.)
+\begin{example}
+    Here is an example box.
+\end{example}
+
+\begin{theorem}[Pythagorean Theorem]
+    Here is an example  box with a particular label.
+\end{theorem}
+
+\begin{definition}\label{usefulthing}
+    Here is a definition that I might want to label later on.
+\end{definition}
+
+Later in the document, you can reference \cref{usefulthing}, and clicking on
+the hyperlink will take you back to where it is in the document. The way those
+reference are displayed is pretty customizable as well -- feel free to look the
+\texttt{hyperref} and \texttt{cleveref} packages if you have storng opinions.
+
+Many people prefer to number their examples vs theorems seperately (so they
+don't count up with the same counter) or they prefer to number with respect to
+the section or subsection number (so perhaps the above would read Example 1.2.1
+instead of Example 1). Those can be controlled by adjusting the
+\texttt{numberwithin} or \texttt{sibling} parts of the style package (for
+example, not having \texttt{sibling=theorem}) would make them count seperately,
+and using \texttt{numberwithin=section} would make everything in Section 1 be
+Example 1.1, Theorem 1.2, and so on. You can also load the package as
+\texttt{\textbackslash usepackage[formal]\{lindrew\}}, which will automatically
+change the numbering.
+
+\section{Other FAQs}
+I'll add answers to any questions that people send by email!
+\subsection*{How do you get more comfortable what LaTeX commands, formatting, etc?}
+If you're unsure how to write a particular symbol, try drawing it on
+\href{https://detexify.kirelabs.org/}{Detexify}. For a cool typing game which
+gets you familiar with some common symbols, try
+\href{https://texnique.xyz/}{TeXnique}. And if you want to make a particular
+kind of diagram (e.g. tables, tikz, pictures etc.),
+\href{https://overleaf.com}{Overleaf} tends to have good documentation. In
+practice, \textbf{I don't think there's any real reason to "learn all the
+    commands"}\footnote{Notice that you have to use different quotes for left and right quotes.} ahead of time -- I only figured ever figured things out
+when they came up during classes or problem sets I was writing up. It's abita
+bit of a tough learning at first, but you'll comfortable pretty quickly if you
+keep asking the question ``how can I do this more easily?''.
+
+I'll point out in particular that Overleaf's explanation of
+\href{https://bibtex.org}{bibtex} and citation in general is very useful.
+Citiing papers, books, etc. is pretty easy with LaTeX, since you can use BibTeX
+citiations linked on the pages where they are hosted.
+\end{document}

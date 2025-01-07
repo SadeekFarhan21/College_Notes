@@ -1,0 +1,159 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+
+\title{\textbf{18.701: Algebra I}}
+\author{\textbf{Lecturer: Professor Mike Artin} \\ Notes by : Farhan Sadeek}
+\date{Fall 2018}
+\begin{document}
+\maketitle
+\section{September 5, 2018}
+ (Professor Artin wants us to call him Mike). \\
+First of all, it's good for us to read through the syllabus. On the back page, there is a diagnostic problem that is pretty simple; we should have it done by Monday. It will count for our grade, but it is not required. Apparently, the problem sets are hard: we should not expect to finish them quickly.
+\begin{fact}
+    The two main topics of this semester will be \textbf{group theory} and \textbf{ring theory}.
+\end{fact}
+When professor Artin was young, he wanted to learn the ``general axioms''. But it's better to use examples and use those to understand the axioms when we're learning mathematics.
+
+\begin{definition}
+    The \textcolor{blue}{\textbf{general linear group}}, denoted as $GL_n$, consists of the invertible $n \times n$ matrices with the operation of matrix multiplication.
+\end{definition}
+
+(The definition of a \textcolor{blue}{\textbf{group}} was given on the next day.) To make examples, easier to write down, we'll take $n = 2$. Matrix multiplication looks like the following:
+\[
+    \begin{bmatrix}
+        1 & 2 \\
+        3 & 4
+    \end{bmatrix}
+    \begin{bmatrix}
+        5 & 6 \\
+        7 & 8
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 \cdot 5 + 2 \cdot 7 & 1 \cdot 6 + 2 \cdot 8 \\
+        3 \cdot 5 + 4 \cdot 7 & 3 \cdot 6 + 4 \cdot 8
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        19 & 22 \\
+        43 & 50
+    \end{bmatrix}
+\]
+
+The definition of matrix multiplication seems kind of complicated, but it turns
+out we can come up with a natural explanation. One way to explain this
+definition is by looking at column vectors, with matrices ``acting from the
+left and side:'' if $V$ is a space of 2-dimensional column vectors, we can
+treat our matrix $A$ as a linear operator on $V$, where a vector $v \in V$ gets
+sent to $Av$.
+\begin{fact}
+    Given two matrices $A$ and $B$, it is generally not true that $AB = BA$. (For example, the matrices $\begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix}$
+    and $\begin{bmatrix}
+            0 & 1 \\
+            0 & 0\end{bmatrix}$ do not commute.) However, matrix multiplication is associative (that is $A(BC) = (AB)C$), and we know this because we're just computing three transformations in the same order: $C$, then $B$, then $A$.
+\end{fact}
+
+In this class, we'll generally deal with invertible matrices (because they make
+our group operations nicer.) By the way, if we don't know this already, the
+inverse of a $2 \times 2$ matrix is
+\[
+    \begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix} \text{ = } \frac{1}{ad - bc} \begin{bmatrix}
+        d  & -b \\
+        -c & a
+    \end{bmatrix}.
+\]
+
+\begin{definition}
+    An element $A$ in a group has \textcolor{blue}{\textbf{order}} $n$ if $A^n$ is an identity element.
+\end{definition}
+
+\begin{example}
+    Consider a matrix $A$ = $
+        \begin{bmatrix}
+            1  & -1 \\
+            -1 & 0
+        \end{bmatrix}$
+    . Since $A^6 = I$, A is an element of $GL_2$ with order 6.
+\end{example}
+Elements can have infinite order as well, but it turns out the space of $2 \times 2 $ matrix is nice:
+
+\begin{theorem}
+    If entries of a $2 \times 2$ matrix are rational and the order is finite, it must be 1, 2, 3, 4, or 6.
+\end{theorem}
+
+(We'll prove this much later on.) Professor Artin like to use dots instead of zeros in matrices because they looke cleaner, but I will not do this in the notes.
+
+\begin{example}
+    The following matrix just cycles the indices of a vector, so it has order $n$ if it is $n$-dimensional.
+    \[
+        A = \begin{bmatrix}
+            0      & 1      & 0      & 0      & \cdots & 0      \\
+            0      & 0      & 1      & 0      & \cdots & 0      \\
+            0      & 0      & 0      & 1      & \cdots & 0      \\
+            \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+            0      & 0      & 0      & 0      & \cdots & 1      \\
+            1      & 0      & 0      & 0      & \cdots & 0
+        \end{bmatrix}_{n \times n}
+    \]
+\end{example}
+
+There are three kinds of \textbf{elementary matrices}, which basically change
+the identity matrix by a tiny bit. (This is idea of \textbf{row reducing}.) We
+have the matrices
+\[
+    \begin{bmatrix}
+        1 & a \\
+        0 & 1
+    \end{bmatrix},
+    \begin{bmatrix}
+        1 & 0 \\
+        a & 1
+    \end{bmatrix}
+\]
+which add $a$ times the second row and vice versa, the matrices
+\[
+    \begin{bmatrix}
+        c & 0 \\
+        0 & 1
+    \end{bmatrix},
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & c
+    \end{bmatrix}
+\]
+which multiplies one of the two rows by $c$, and the matrix
+\[
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}
+\]
+which swaps two rows.
+
+\begin{theorem}
+    The elementary matrices generate $GL_2$. In other words, every $A$ in $GL_2$ is a product of the above elementary matrices.
+\end{theorem}
+
+Let's say we start with an arbitrary matrix $A$ say
+\[ M = 
+    \begin{bmatrix}
+    8 & 5 \\
+    4 & 6
+    \end{bmatrix}
+\]
+
+It's hard to randomly find matrices $E_1, E_2, \cdots $ that multiply $M$. Instead, we should work backwards, and try to write 
+
+\[
+E_k \cdots E_2 E_1 M = I
+\]
+
+Then we know that $A = E_1^{-1}E_2^{-1}\cdots E_k^{-1}$, since all elementary matrices have elementary matrix inverses. I'm not going to include how to do this here, but we basically work one column at a time and try to get the matrix to the identity.
+\end{document}
