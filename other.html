@@ -196,9 +196,12 @@
     </table>
 
     <br><br>
-    <p> This page was last updated on December 6, 2024. This is the <img src="/cgi/counter/lindrewother" alt="7700">th
-        page visit!</p>
-
+<p> This page was last updated on
+    <script>
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.write(new Date(document.lastModified).toLocaleDateString('en-US', options));
+    </script>.
+</p>
 
 
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>

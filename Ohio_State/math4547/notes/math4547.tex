@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Math 4547: Real Analysis I}
+\author{Lecturer: \textbf{Professor Alex Margolis}\\Notes by: Farhan Sadeek}
+\date{Spring 2025}
+\begin{document}
+\maketitle
+\section{January 6, 2025}
+Professor Margolis introduced the course and discussed the syllabus. The course
+will cover the following topics: Here are some common number systems
+\subsection{What is Analysis?}
+Analysis is the branch of mathematics that deals with the rigorous study of
+limits, functions, derivatives, integrals, and infinite series. It provides the
+foundation for calculus and extends its concepts to more abstract settings.
+
+\subsection{Analysis Study Tips}
+\begin{itemize}
+    \item Attend all lectures and take good notes.
+    \item Read the textbook and work through the examples.
+    \item Do the homework problems.
+    \item Study with others.
+    \item Ask questions.
+    \item Practice, practice, practice.
+\end{itemize}
+\begin{theorem}
+    Every convergent squence is bounded.
+\end{theorem}
+\subsection{The Real Numbers}
+\subsubsection{What are the reals?}
+
+\begin{itemize}
+    \item The \vocab{natural Numbers $\mathbb{N}$} = \{1, 2, 3, \ldots\}
+    \item The \vocab{integers $\mathbb{Z}$} = \{0, 1, -1, 2, -2, $\cdots$ \}
+    \item The \vocab{rational Numbers $\mathbb{Q}$} = \{$\frac{p}{q}$ | $p,q \in
+              \mathbb{Z}$ and $q \neq 0$\}
+    \item The \vocab{real Numbers $\mathbb{R}$}
+    \item The \vocab{complex Numbers $\mathbb{C}$}: = \{ $a + bi$ | $a,b \in
+              \mathbb{R}$\}, where $i^2 = -1$
+\end{itemize}
+
+\begin{theorem}
+    There is no rational number $x$, such that $x^2 = 2$.
+\end{theorem}
+
+\begin{proof}
+    We assume for contradiction that such an $x$ exists. Then $x = \frac{p}{q}$ for some $p, q \in \mathbb{Z}$ and $q \neq 0$. We can assume that $p$ and $q$ have no common factors. Then, $\frac{p^2}{q^2} = 2$, which implies \[p^2 = 2q^2\] Thus, $p^2$ is even. As the square of an odd number is odd, it follows $p$ must
+    even. Therefore, $p = 2k$ for an integer $k$. We have $2q^2 = p^2 = {(2k)}^2 =
+        4k^2$, and so $q^2 = 2k^2$. Thus, $q^2$ is even. Since $p$ and $q$ are both
+    even, this contradicts our assumption that $p$ and $q$ have no common factors.
+    Therefore, there is no rational number $x$ such that $x^2 = 2$.
+\end{proof}
+
+This theorem implies, if we visualize $\mathbb{Q}$ as points lying on a number
+line, there is a `hole' where $\sqrt{2}$ is. (There are many more `holes' e.g.
+$\pi$, $e$, $\sqrt{3}$, \ldots)
+
+The key property that $\mathbb{R}$ possesses, but $\mathbb{Q}$ doesn't is that
+$\mathbb{R}$ has ``no holes'' (formally, $\mathbb{R}$ is complete.)
+
+In this class, we will rigorously deduce all properties of $\mathbb{R}$ from
+the axioms of the real numbers.
+
+The axioms are in three groups.
+
+\begin{enumerate}
+    \item Field Axioms (addition and multiplication)
+    \item Order axioms (needed to describe properties concerning inequalities)
+    \item Completeness Axiom
+\end{enumerate}
+
+\subsection{Field axioms}
+\subsubsection{Addition axioms}
+\begin{enumerate}
+    \item For every pair $a, b \in \mathbb{R}$, we can associate a real number $a + b$
+          called their \vocab{sum}.
+    \item For every real number $a$, there is a real number $-a$ called its \vocab{negative}
+          or \vocab{additive inverse}.
+    \item There is a special real number $0$ called zero or the additive identity such
+          that for all $a, b, c$ real numbers:
+          \begin{enumerate}
+              \item $a + b = b + a$
+              \item $a + (b + c) = (a + b) + c$
+              \item $a + 0 = a$
+              \item $a + (-a) = 0$
+          \end{enumerate}
+\end{enumerate}
+
+\section{January 8, 2025}
+
+%\section{January 10, 2025}
+%\section{January 13, 2025}
+%\section{January 15, 2025}
+%\section{January 17, 2025}
+%\section{January 20, 2025}
+%\section{January 22, 2025}
+%\section{January 24, 2025}
+%\section{January 27, 2025}
+%\section{January 29, 2025}
+%\section{January 31, 2025}
+%\section{February 3, 2025}
+%\section{February 5, 2025}
+%\section{February 7, 2025}
+%\section{February 10, 2025}
+%\section{February 12, 2025}
+%\section{February 14, 2025}
+%\section{February 17, 2025}
+%\section{February 19, 2025}
+%\section{February 21, 2025}
+%\section{February 24, 2025}
+%\section{February 26, 2025}
+%\section{February 28, 2025}
+%\section{March 3, 2025}
+%\section{March 5, 2025}
+%\section{March 7, 2025}
+%\section{March 17, 2025}
+%\section{March 19, 2025}
+%\section{March 21, 2025}
+%\section{March 24, 2025}
+%\section{March 26, 2025}
+%\section{March 28, 2025}
+%\section{March 31, 2025}
+%\section{April 2, 2025}
+%\section{April 4, 2025}
+%\section{April 7, 2025}
+%\section{April 9, 2025}
+%\section{April 11, 2025}
+%\section{April 14, 2025}
+%\section{April 16, 2025}
+%\section{April 18, 2025}
+%\section{April 21, 2025}
+%\section{April 23, 2025}
+%\section{April 25, 2025}
+%\section{April 28, 2025}
+%\section{April 30, 2025}
+%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
