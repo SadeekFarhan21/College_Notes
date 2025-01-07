@@ -41,7 +41,7 @@
 
 <body data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1215.0">
     <br>
-    <h1>Andrew Lin</h1>
+    <h1>Farhan Sadeek</h1>
     <hr><br>
 
     <table width="90%">
@@ -62,10 +62,9 @@
                     <p style="text-align:center"> Here are course notes from classes I've taken in the past. If you find
                         any typos or other errors, please email me at <a
                             href="mailto:sadeek.1@osu.edu">sadeek.1@osu.edu</a>, and I'd be happy to
-                        fix them as soon as I can. <span style="color:darkgray;">Course notes marked in gray aren't
-                            quite at the level of polish I'd like yet -- expect updates in the future.</span> Notes here
+                        fix them as soon as I can. Notes here
                         that are published are done so with the permission of the course staff, but please note that all
-                        course content is owned by MIT / Stanford and their professors, while mistakes should be
+                        course content is owned by Ohio State and their professors, while mistakes should be
                         attributed to me (in transcription or interpretation -- they were not checked by instructors).
                     </p>
 
@@ -74,33 +73,25 @@
                         <tbody>
                             <tr>
                                 <td align="left" valign="top" width="30%">
-                                    <div style="text-align:center"> <img src="./images/celebi.png" width="220px"
-                                            height="220px"> </div>
-
                                     <h2> Relevant information </h2>
-                                    <p> I take notes using <a href="overleaf.com">Overleaf</a> and my own
+                                    <p> I take notes using <a href="overleaf.com">Visual Studio Code</a> and Andrew
+                                        Lin's
                                         LaTeX style package (download it <a href="lindrew.sty" download="">here</a>, see
-                                        sample project <a href="bpdfzfrrtmtb">here</a>). These documents are meant to be
-                                        a
-                                        close transcription of lecture, plus any additional thoughts that come to me. I
+                                        sample project <a href="practice/sample.tex">here</a>). These documents are
+                                        meant to be
+                                        a close transcription of lecture, plus any additional thoughts that come to me.
+                                        I
                                         hope this makes the material easy to follow, and it also helps me be a more
                                         active learner. <br><br> Some of these notes are less clean than others, because
-                                        I was still learning to live-TeX, had trouble following along with the pace of
-                                        the class while typing, or was just tired. I occasionally go back to previous
-                                        notes, reviewing the material myself and improving their quality. Thank you for
-                                        your patience on this front! <br><br> I'm aware that some people read my notes
-                                        to pass an ASE, as a replacement for going to classes, or in preparation for
-                                        future coursework. I'm flattered, but please don't blame me if I miss anything!
-                                        Specifically for Stanford grad students, the MATH 205/210/215 A/B notes may be
-                                        helpful for qual prep, but you should definitely still read textbooks and study
-                                        past exams as your primary study method. </p>
+                                        I am still learning to live-TeX, having trouble following along with the pace of
+                                        the class while typing.<br>
                                 </td>
 
                                 <td width="10%"> </td>
 
                                 <td align="left" valign="top" width="60%">
 
-                                    <h1> Notes from MIT </h1>
+                                    <h1> Notes from Ohio State </h1>
                                     <p> Classes in each subject are ordered in (reverse) chronological order. </p>
 
                                     <h2> Mathematics </h2>
@@ -110,7 +101,7 @@
                                         <li> <b>Math 4580</b>: Abstract Algebra, Spring 2025 (<a
                                                 href="/Ohio_State/math4580/notes/math4580.pdf">notes</a>)</li>
                                         <li> <b>Math 4573</b>: Number Theory, Spring 2025 (<a
-                                                href="/Ohio_State/math4547/notes/math4573.pdf">notes</a>)</li>
+                                                href="/Ohio_State/math4573/notes/math4573.pdf">notes</a>)</li>
                                         <li> <b>Stat 4202</b>: Mathematical Statistics II, Spring 2025 (<a
                                                 href="/Ohio_State/stat4202/notes/stat4202.pdf">notes</a>)</li>
                                     </ul>
@@ -118,7 +109,7 @@
                                     <h2> Physics </h2>
                                     <ul>
                                         <li><b>8.04</b>: Quantum Physics I, from OCW (<a
-                                                href="/Ohio_State/math4547/notes/physics2301.pdf">notes</a>)</li>
+                                                href="/Ohio_State/physics2300/notes/physics2300.pdf">notes</a>)</li>
                                     </ul>
 
                                 </td>
@@ -131,14 +122,19 @@
     </table>
 
     <br><br>
-    <p> This page was last updated on
-        <script>
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.write(new Date(document.lastModified).toLocaleDateString('en-US', options));
-        </script>.
+    <p> This page was last updated on <b>
+            <script>
+                let dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.write('<b>' + new Date(document.lastModified).toLocaleDateString('en-US', dateOptions) + '</b>');
+            </script>.
+        </b> This is the <b><span id="visitorCount"></span></b>th visit!
     </p>
-
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
-
+    
+    <script>
+        let pageKey = 'visitorCount_' + window.location.pathname;
+        let count = localStorage.getItem(pageKey) || 0;
+        count++;
+        localStorage.setItem(pageKey, count);
+        document.getElementById('visitorCount').innerText = count;
+    </script>
 </html>

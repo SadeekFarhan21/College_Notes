@@ -101,7 +101,7 @@
                                 <td align="left" valign="top" width="45%">
                                     <h2> My LaTeX style package </h2>
                                     <p> If you'd like your LaTeX document to look like the ones that I make, feel free
-                                        to try using Andrew Lin's <a href="./html/lindrew.sty.html" download="">style
+                                        to try using Farhan Sadeek's <a href="./html/lindrew.sty.html" download="">style
                                             package</a>!
                                         Including this file in your project and starting a document with
                                         "\usepackage{lindrew}" will import all of the shortcuts / formatting that I use.
@@ -128,12 +128,19 @@
     </table>
 
     <br><br>
-    <p> This page was last updated on
-        <script>
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.write(new Date(document.lastModified).toLocaleDateString('en-US', options));
-        </script>.
+    <p> This page was last updated on  <b><script>
+        let dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.write('<b>' + new Date(document.lastModified).toLocaleDateString('en-US', dateOptions) + '</b>');
+    </script>.</b> This is the <b><span id="visitorCount"></span></b>th visit!
     </p>
+    
+    <script>
+        let pageKey = 'visitorCount_' + window.location.pathname;
+        let count = localStorage.getItem(pageKey) || 0;
+        count++;
+        localStorage.setItem(pageKey, count);
+        document.getElementById('visitorCount').innerText = count;
+    </script>
 
 
 
