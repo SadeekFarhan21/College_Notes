@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+\usepackage{xcolor}
+
+\title{Stat 4202: Mathematical Statistics II} 
+\author{Lecturer: \textbf{Professor Andrew Kerr}\\Notes by: Farhan Sadeek} 
+\date{Spring 2025}
+
+\begin{document}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{January 6, 2025}
+STAT 4202 will rely a lot on STAT 4201. So we need to have a pretty good
+understanding of those concepts.
+
+\subsection{Review of Probability Theory}
+\begin{definition}
+    The \vocab{Sample Space}, denoted by $\mathcal{S}$, is the set of all outcomes from an experiment.
+\end{definition}
+
+\begin{definition}
+    An \vocab{Event}, usually denoted by a capital letter such as $A$ or $B$, is a subset of the Sample Space.
+\end{definition}
+
+The probability function
+\begin{itemize}
+    \item $P(A) \geq 0$
+    \item $P(\mathcal{S}) = 1$
+    \item For disjoint sets $A_1$, $A_2$, $\cdots$, $A_n$: \[ P\left(\bigcup_{i = 1}^{n}A_i \right) = \sum_{i = 1}^{n} P(A_i)\]
+\end{itemize}
+
+If an event $A$ is a subset of another event $B$, then the probability of $A$ is less than or equal to the probability of event $B$. That is to say, if $A \subseteq B$, then \( P(A) \leq P(B)\)
+
+The complement of an event $A$, denoted by $A^c$, has a probability equal to one minus the probability of the event $A$. That is,
+\[ P(A^c) = 1 - P(A) \]
+
+A partition of a sample space $\mathcal{S}$ is an exhaustive, non-overlapping
+collection of events $A_1$, $A_2$, $\cdots$, $A_n$ that is exhaustive and
+mutually exclusive: \[\bigcup_{i=1}^{n} A_i = \mathcal{S}\] and \[A_i \cap A_j = \emptyset \quad \forall i \neq j\]
+
+For any partition, we have \[\sum_{i=1}^{n} P(A_i) = 1\]
+
+Two events $A$ and $B$ are \vocab{independent} if the outcome of one doesn't
+affect the likelihood of the occurrence of the other. For two independent
+events, we have \[P(A \cap B) = P(A)P(B)\]
+
+The \vocab{conditional probability} of $A$ given $B$ is given by \[P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+
+\begin{lemma}
+    Note that if $A$ and $B$ are independent, then \begin{align*}
+        P(A|B) & = \frac{P(A \cap B)}{P(B)} \\
+               & = \frac{P(A)P(B)}{P(B)}    \\
+               & = P(A)
+    \end{align*}
+\end{lemma}
+
+\begin{corollary}
+    If $A$ and $B$ are independent, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$
+\end{corollary}
+
+\subsection{Random Variables}
+
+\begin{definition}
+    A random variable is a function that takes outcomes from the sample space $\mathcal{S}$ to the real numbers $\mathbb{R}$. That is, a random variable is a function $X: \mathcal{S} \to \mathbb{R}$.
+\end{definition}
+
+We then use a probability mass function (pmf) in the discrete case or a probability density function (pdf) in the continuous case:
+\begin{align*}
+     & \text{pmf:} &  & f_X(x) = P(X = x)                                   &  & \text{when } X \text{ is discrete}   \\
+     & \text{pdf:} &  & \int_{a}^{b}f_X(x) \mathrm{d}x = P(a \leq X \leq b) &  & \text{when } X \text{ is continuous}
+\end{align*}
+
+The cumulative distribution function (cdf) gives the probability of observing a
+value less than or equal to a given value $x$: \[F_X(x) = P(X \leq x)\]
+
+When $X$ is a continuous random variable, the pdf is the derivative of the cdf: \[f_X(x) = F'_X(x)\]
+
+\subsection{Expected Value and Variance}
+For random variable $X$, the \vocab{expected value} is denoted by $E \,(X)$ and is given by:
+\[
+    E(X) = \begin{cases}
+        \sum_{x} x f_X(x)                           & \text{if } X \text{ is discrete}   \\
+        \int_{-\infty}^{\infty} x f_X(x) \mathrm{d}x & \text{if } X \text{ is continuous}
+    \end{cases}
+\]
+\\
+The \vocab{variance} of a random variable $X$ is denoted by $\text{Var}(X)$ and is
+given by:
+\[
+    \text{Var}(X) = E\left[(X - E\{X\})^{2}\right]
+\]
+
+\subsection{Covariance}
+
+The \vocab{covariance} of two random variables $X$ and $Y$ is denoted by:
+\[
+    \text{Cov}(X, Y) = E\left[(X - E(X))(Y - E(Y))\right]
+\]
+\\
+If two random variables $X$ and $Y$ are independent, then
+\[
+    P(X\in A, Y \in B) = P(X\in A)P(Y\in B)
+\]
+\\
+So, we will be using these formulas to estimate the mean and the variance throughout the semester.
+
+\end{document}
