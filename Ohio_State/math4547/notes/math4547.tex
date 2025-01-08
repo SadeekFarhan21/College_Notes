@@ -92,10 +92,10 @@ The axioms are in three groups.
 \end{enumerate}
 
 \section{January 8, 2025}
-We will use the axioms to deduce all the properties of $\mathbb{R}$. From these
-axioms, we can derive many more properties of the real numbers. \\
+In this lecture, we will use the axioms to deduce various properties of the real numbers $\mathbb{R}$. From these axioms, we can derive many more properties of the real numbers.
+
 \begin{proposition}
-    If $x + a$ for all $a \in \mathbb{R}$, then $a = 0$.
+    If $x + a = x$ for all $a \in \mathbb{R}$, then $a = 0$.
 \end{proposition}
 
 \begin{proof}
@@ -103,12 +103,13 @@ axioms, we can derive many more properties of the real numbers. \\
     \begin{equation*}
         \begin{aligned}
             x & = x + 0 \quad \text{(A3)}                  \\
-              & = 0 + x \quad \text{(by assumption on } x)
+              & = x + a \quad \text{(by assumption on } a)
         \end{aligned}
     \end{equation*}
+    By the left cancellation property of addition, it follows that $a = 0$.
 \end{proof}
 
-\begin{proposition}{Left cancellation of addition}
+\begin{proposition}[Left cancellation of addition]
     If $a + x = a + y$, then $x = y$.
 \end{proposition}
 
@@ -142,9 +143,11 @@ axioms, we can derive many more properties of the real numbers. \\
     \end{align*}
     Therefore, $-(-a) = a$.
 \end{proof}
+
 \begin{proposition}
-    -(a + b) = (-a) + (-b)
+    $-(a + b) = (-a) + (-b)$
 \end{proposition}
+
 \begin{proof}
     We need to show that the additive inverse of $(a + b)$ is equal to the sum of the additive inverses of $a$ and $b$. Consider the following:
     \begin{align*}
@@ -160,11 +163,11 @@ axioms, we can derive many more properties of the real numbers. \\
 \end{proof}
 
 \begin{proposition}
-    -0 = 0
+    $-0 = 0$
 \end{proposition}
+
 \begin{proof}
-    We need to show that the additive inverse of $0$ is $0$. Consider the
-    following:
+    We need to show that the additive inverse of $0$ is $0$. Consider the following:
     \begin{align*}
         0 + 0    & = 0 \quad \text{(by the identity property of addition, A3)}  \\
         0 + (-0) & = 0 \quad \text{(by the definition of additive inverse, A4)}
@@ -187,98 +190,153 @@ axioms, we can derive many more properties of the real numbers. \\
 \end{definition}
 
 \begin{definition}
-    For every $a \in \mathbb{R}$, there is some $a^{-1} \in \mathbb{R}$ called its
-    \vocab{multiplicative inverse} or \vocab{reciprocal} such that for all $a \neq 0$, $a \times a^{-1} = 1$.
+    For every $a \in \mathbb{R}$, there is some $a^{-1} \in \mathbb{R}$ called its \vocab{multiplicative inverse} or \vocab{reciprocal} such that for all $a \neq 0$, $a \times a^{-1} = 1$.
 \end{definition}
 
 \begin{definition}
-    There is a number 1 called \vocab{one} or the \vocab{multiplicative identity}
-    such that for all $a \in \mathbb{R}$, $a \times 1 = a$.
+    There is a number 1 called \vocab{one} or the \vocab{multiplicative identity} such that for all $a \in \mathbb{R}$, $a \times 1 = a$.
 \end{definition}
 
 \begin{definition}
     For all $a, b, c \in \mathbb{R}$, we have the following properties of multiplication:
     \begin{itemize}
         \item For all $a, b \in \mathbb{R}$, $a \times b = b \times a$.
-        \item For all $a, b, c \in \mathbb{R}$, $a \times (b \times c) = (a \times b) \times
-                  c$.
+        \item For all $a, b, c \in \mathbb{R}$, $a \times (b \times c) = (a \times b) \times c$.
         \item For all $a \in \mathbb{R}$, $a \times 0 = 0$.
         \item For all $a, b \in \mathbb{R}$, $a \times (b + c) = a \times b + a \times c$.
     \end{itemize}
 \end{definition}
 
 \begin{proposition}
-    If $a \times a \times b = a$, and $a \in \RR$ then $b=1$.
+    If $a \times b = a$, and $a \in \mathbb{R}$ then $b = 1$.
 \end{proposition}
+
+\begin{proof}
+    We start with the given equation $a \times b = a$. By the multiplicative identity property, we have:
+    \begin{align*}
+        a \times b & = a \times 1 \\
+        b & = 1 \quad \text{(by left cancellation of multiplication)}
+    \end{align*}
+    Therefore, $b = 1$.
+\end{proof}
+
 \begin{proposition}
     If $a \neq 0$ and $a \times b = a \times c$, then $b = c$.
 \end{proposition}
 
+\begin{proof}
+    We start with the given equation $a \times b = a \times c$. By the multiplicative inverse property, we have:
+    \begin{align*}
+        a^{-1} \times (a \times b) & = a^{-1} \times (a \times c) \\
+        (a^{-1} \times a) \times b & = (a^{-1} \times a) \times c \\
+        1 \times b & = 1 \times c \\
+        b & = c
+    \end{align*}
+    Therefore, $b = c$.
+\end{proof}
+
 \begin{proposition}
-    If $a \neq 0$ and $a ^{-1} \neq 0$ and $(a^{-1})^{-1} = a$.
+    If $a \neq 0$ and $a^{-1} \neq 0$, then $(a^{-1})^{-1} = a$.
 \end{proposition}
+
+\begin{proof}
+    We need to show that the multiplicative inverse of $a^{-1}$ is $a$. Consider the following:
+    \begin{align*}
+        a^{-1} \times a & = 1 \quad \text{(by definition of multiplicative inverse)} \\
+        (a^{-1})^{-1} \times a^{-1} & = 1 \quad \text{(by definition of multiplicative inverse)} \\
+        (a^{-1})^{-1} & = a
+    \end{align*}
+    Therefore, $(a^{-1})^{-1} = a$.
+\end{proof}
 
 \begin{proposition}
     If $a \neq 0$, $b \neq 0$, and $a \times b \neq 0$, then $(a \times b)^{-1} = a^{-1} \times b^{-1}$.
 \end{proposition}
 
-\begin{proposition}
-    If $a, b, c \in \RR$, then $(a + b) \times c = (a \times b) + (a \times c)$
-\end{proposition}
-
 \begin{proof}
+    We need to show that the multiplicative inverse of $a \times b$ is $a^{-1} \times b^{-1}$. Consider the following:
     \begin{align*}
-        (a + b)\times c & = c \times (a + b)        \\
-                        & = c \times a + c \times b \\
-                        & = a \times c + b \times c \\
+        (a \times b) \times (a^{-1} \times b^{-1}) & = a \times (b \times (a^{-1} \times b^{-1})) \\
+                                                   & = a \times ((b \times a^{-1}) \times b^{-1}) \\
+                                                   & = a \times (1 \times b^{-1}) \\
+                                                   & = a \times b^{-1} \\
+                                                   & = 1
     \end{align*}
+    Therefore, $(a \times b)^{-1} = a^{-1} \times b^{-1}$.
 \end{proof}
 
 \begin{proposition}
-    For all, $a \in \RR, a \times 0 = 0$
+    If $a, b, c \in \mathbb{R}$, then $(a + b) \times c = (a \times c) + (b \times c)$.
 \end{proposition}
 
 \begin{proof}
+    We need to show that the product of $(a + b)$ and $c$ is equal to the sum of the products of $a$ and $c$, and $b$ and $c$. Consider the following:
     \begin{align*}
-        a \times 0 & = a \times 0 + 0          \\
-                   & = a \times (0 + 0)        \\
+        (a + b) \times c & = c \times (a + b) \\
+                         & = c \times a + c \times b \\
+                         & = a \times c + b \times c
+    \end{align*}
+    Therefore, $(a + b) \times c = (a \times c) + (b \times c)$.
+\end{proof}
+
+\begin{proposition}
+    For all $a \in \mathbb{R}$, $a \times 0 = 0$.
+\end{proposition}
+
+\begin{proof}
+    We need to show that the product of any real number $a$ and $0$ is $0$. Consider the following:
+    \begin{align*}
+        a \times 0 & = a \times (0 + 0) \\
                    & = a \times 0 + a \times 0 \\
-                   & = 0 + 0                   \\
+                   & = 0 + 0 \\
                    & = 0
     \end{align*}
+    Therefore, $a \times 0 = 0$.
 \end{proof}
 
 \begin{proposition}
     If $a \times b = 0$, then either $a = 0$ or $b = 0$ or both.
 \end{proposition}
-\begin{proposition}
-    $a \times (-b) = (a \times b)$. In particular, $a \times (-1) = - -a$
-\end{proposition}
+
 \begin{proof}
+    We need to show that if the product of $a$ and $b$ is $0$, then either $a$ or $b$ or both must be $0$. Consider the following:
     \begin{align*}
-        a \times (-b) + a \times b & = a \times (b + (-b))          \\
-                                   & = a \times 0                   \\
-                                   & = 0                            \\
-                                   & = a \times b + (-(a \times b))
+        a \times b = 0
     \end{align*}
-    Hence, additive inverse of $a \times b$ = $-(a \times b)$.
+    If $a \neq 0$, then $b = 0$ by the multiplicative inverse property. If $b \neq 0$, then $a = 0$ by the multiplicative inverse property. Therefore, if $a \times b = 0$, then either $a = 0$ or $b = 0$ or both.
 \end{proof}
 
 \begin{proposition}
-    $(-1) = -1$ and $(-1) \times (-1) = 1$
+    $a \times (-b) = (-a) \times b$. In particular, $a \times (-1) = -a$.
 \end{proposition}
 
 \begin{proof}
+    We need to show that the product of $a$ and $-b$ is equal to the product of $-a$ and $b$. Consider the following:
     \begin{align*}
-        (-1) \times (-1) & = -(-1) \times 1          \\
-                         & = -(-1) \times (1 + 0)    \\
+        a \times (-b) + a \times b & = a \times (b + (-b)) \\
+                                  & = a \times 0 \\
+                                  & = 0 \\
+                                  & = a \times b + (-(a \times b))
+    \end{align*}
+    Hence, the additive inverse of $a \times b$ is $-(a \times b)$. Therefore, $a \times (-b) = (-a) \times b$.
+\end{proof}
+
+\begin{proposition}
+    $(-1) \times (-1) = 1$
+\end{proposition}
+
+\begin{proof}
+    We need to show that the product of $-1$ and $-1$ is $1$. Consider the following:
+    \begin{align*}
+        (-1) \times (-1) & = -(-1) \times 1 \\
+                         & = -(-1) \times (1 + 0) \\
                          & = -(-1) \times (1 + (-1)) \\
-                         & = -(-1) \times 0          \\
-                         & = 0                       \\
+                         & = -(-1) \times 0 \\
+                         & = 0 \\
                          & = (-1) + (-1)
     \end{align*}
+    Therefore, $(-1) \times (-1) = 1$.
 \end{proof}
-%\section{January 10, 2025}
 %\section{January 13, 2025}
 %\section{January 15, 2025}
 %\section{January 17, 2025}
