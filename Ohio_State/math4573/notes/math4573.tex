@@ -1,0 +1,131 @@
+%\documentclass[11pt, draft]{article}
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\title{Math 4573: Number Theory}
+\author{Lecturer: \textbf{James Cogdell}\\Notes by: Farhan Sadeek}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{January 8, 2025}
+
+Dr. Cogdell explained the logistics of the class and also took attendance.
+\subsection{Conjectures in Number Theory}
+\begin{itemize}
+    \item Every number is divisible by 3 if the sum of its digits are deivisimble by 3.
+    \item \textbf{Fermat's last theorem}: Every number is a solution to $x^2 + y^2 = z^2$.
+    \item There are infinitely many primes.
+    \item $\sqrt{2}$ is irrational.
+    \item $\pi$ is irrational.
+    \item Every number can be written as the sum of 4 squares (Lagrange). e.g. $1000 = 10
+              ^2 + 30^2 +0^2 + 0^2$ and $999 = 30^2 + 9^2 + 3^2 + 3^2$.
+    \item $n^2 - n + 41$ is a prime. [This is proven to be false if $n = 41$]. There is a counterexample to this.
+    \item Euler conjectured that no $n^{th}$ power can be written as the sum of two
+          $n^{th}$ powers for $n > 2$. [This is proben to be false] e.g. $144^5 = 27^5 +
+              84^5 + 10 ^5 + 133^5$
+    \item \textbf{Goldbach's Conjecture} : Every even integer greater than 2 can be written as the sum of two primes. e.g. $4 = 2 + 2$, $6 = 3 + 3$, $8 = 3 + 5$, $10 = 5 + 5$, $12 = 5 + 7$, $14 = 7 + 7$, $16 = 3 + 13$, $18 = 7 + 11$. [Yet to be proven if it's true or false, but this has been verified till 100,000]
+\end{itemize}
+The theory of number is related to \textbf{Abstract Algebra}. But also, in other domains like \textbf{Combinatorics, Analysis, Topology}. We will accept a few facts about \textbf{Number Theory}.
+\\
+\begin{fact}
+    However, if \SS is a set of positive integers, not empty then \SS contains a member such that $s \leq a$. This is stated as follows:
+    If \SS is a set of positive integers that contains $1$ and contains $n + 1$ then \SS contains all positive integers.
+\end{fact}
+
+\subsection{Divisibility}
+This has been known since the time of Euclid. \\
+\begin{definition}
+    An integer $b$ is divisible by an integer $a$, not zero, if there is an integer $x$ so that $b = ax$. So we will write as $a \mid b$. In case, $n$ isn't divisible by $b$, we write as $a \nmid b$.
+\end{definition}
+
+There are two derivative notion.\begin{itemize}
+    \item if $0 < a < b$, then $a$ is called a \textbf{proper divisor} \item if $a^k \mid\mid b$ means $a^k \mid b$ and $a^{k + 1} \nmid b$.
+\end{itemize}
+\begin{theorem}
+    \begin{itemize}
+        \item If $a \mid b$ then $a \mid bc$.
+        \item If $a \mid b$ then $a \mid b + c$.
+        \item If $a \mid b$ and $a \mid c$ then $a \mid b + c$.
+        \item If $a \mid b$ and $b \mid a$ then $a = b$.
+        \item If $a \mid b$ and $a > 0$ and $b > 0$ then $a \leq b$.
+        \item If $m \neq 0$ and $a \mid b$, then $am \mid bm$.
+        \item If $a \mid b_1, a \mid b_2, \ldots, a \mid b_n \rightarrow \sum_{i= 1}^{n} b_i
+                  X_i$
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[The division algorithm]
+    Given integers $a$ $b$, with $a > 0$, then there exists unique integers $q$ and $r$ such that $0 \leq r < a$ and $b = aq + r$.
+\end{theorem}
+\begin{proof}
+    Consider the arithmetic progression $\ldots, b - 3a, b - 2a, b - a, b, b + a, b + 2a, b + 3a, \ldots $ \\
+    In the sequence, select the sequence if the smallest non-negative member. So this definition of $r$ is satifies the inequalities of the theorem. But also, the being in the sequence of the form \[ b - qa\] This is defined in terms of $qr$. To prove the uniqueness of $q$ and $r$,
+    suppose there is another $r$ pair $q_1$, and $r_1$ satiesfies the same
+    conditions.\\ We first prove that $r = r_1$. For if not, we may assume $r <
+        r_1$, so $0 < r_1 - r < a$. But we see that \(r - 1 = a(q - q_1) \) meaning \(a
+    \mid (r_1 - r)\) so it's a contradiction to to the theorem $1$, part $5$. So $q
+        = q_1$ and $r = r_1$.
+\end{proof}
+\begin{fact}
+    If $a + b$ then $r$ satisfies the stronger inequality $0 \leq r < a$.
+\end{fact}
+
+\begin{fact}
+    If we stated the theorem, with the assumption, $a > 0$. However, this hypothesis is not necessary. We may formulate the theorem without $a$, given integers $a$ and $b$ such that $a \neq 0$ there then exists $q$ and $r$ such that $b = qa + r$ wich $0 \leq |a|$.
+\end{fact}
+
+\
+%\section{January 10, 2025}
+%\section{January 13, 2025}
+%\section{January 15, 2025}
+%\section{January 17, 2025}
+%\section{January 20, 2025}
+%\section{January 22, 2025}
+%\section{January 24, 2025}
+%\section{January 27, 2025}
+%\section{January 29, 2025}
+%\section{January 31, 2025}
+%\section{February 3, 2025}
+%\section{February 5, 2025}
+%\section{February 7, 2025}
+%\section{February 10, 2025}
+%\section{February 12, 2025}
+%\section{February 14, 2025}
+%\section{February 17, 2025}
+%\section{February 19, 2025}
+%\section{February 21, 2025}
+%\section{February 24, 2025}
+%\section{February 26, 2025}
+%\section{February 28, 2025}
+%\section{March 3, 2025}
+%\section{March 5, 2025}
+%\section{March 7, 2025}
+%\section{March 17, 2025}
+%\section{March 19, 2025}
+%\section{March 21, 2025}
+%\section{March 24, 2025}
+%\section{March 26, 2025}
+%\section{March 28, 2025}
+%\section{March 31, 2025}
+%\section{April 2, 2025}
+%\section{April 4, 2025}
+%\section{April 7, 2025}
+%\section{April 9, 2025}
+%\section{April 11, 2025}
+%\section{April 14, 2025}
+%\section{April 16, 2025}
+%\section{April 18, 2025}
+%\section{April 21, 2025}
+%\section{April 23, 2025}
+%\section{April 25, 2025}
+%\section{April 28, 2025}
+
+\end{document}
