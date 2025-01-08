@@ -1,10 +1,11 @@
+% !TEX TS-program = xelatex
 \documentclass[11pt]{article}
 \usepackage{lindrew}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-
+\usepackage{fontspec}
 \title{Math 4547: Real Analysis I}
 \author{Lecturer: \textbf{Professor Alex Margolis}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
@@ -73,15 +74,15 @@ The axioms are in three groups.
     \item Completeness Axiom
 \end{enumerate}
 
-\subsection{Field axioms}
-\subsubsection{Addition axioms}
+\subsection{Addition axioms}
 \begin{enumerate}
     \item For every pair $a, b \in \mathbb{R}$, we can associate a real number $a + b$
           called their \vocab{sum}.
-    \item For every real number $a$, there is a real number $-a$ called its \vocab{negative}
-          or \vocab{additive inverse}.
+    \item For every real number $a$, there is a real number $-a$ called its
+          \vocab{negative} or \vocab{additive inverse}.
     \item There is a special real number $0$ called zero or the additive identity such
-          that for all $a, b, c$ real numbers:
+          that for all $a, b, c, x, y, z \cdots $ are real numbers unless otherwise
+          stated:
           \begin{enumerate}
               \item $a + b = b + a$
               \item $a + (b + c) = (a + b) + c$
@@ -91,7 +92,192 @@ The axioms are in three groups.
 \end{enumerate}
 
 \section{January 8, 2025}
+We will use the axioms to deduce all the properties of $\mathbb{R}$. From these
+axioms, we can derive many more properties of the real numbers. \\
+\begin{proposition}
+    If $x + a$ for all $a \in \mathbb{R}$, then $a = 0$.
+\end{proposition}
 
+\begin{proof}
+    We know that
+    \begin{equation*}
+        \begin{aligned}
+            x & = x + 0 \quad \text{(A3)}                  \\
+              & = 0 + x \quad \text{(by assumption on } x)
+        \end{aligned}
+    \end{equation*}
+\end{proof}
+
+\begin{proposition}{Left cancellation of addition}
+    If $a + x = a + y$, then $x = y$.
+\end{proposition}
+
+\begin{proof}
+    We start with the given equation $a + x = a + y$. By the additive identity property (A3), we have:
+    \begin{align*}
+        y & = y + 0          & \text{(A3)}    \\
+          & = y + (a + (-a)) & \text{(A4)}    \\
+          & = (y + a) + (-a) & \text{(A2)}    \\
+          & = (a + y) + (-a) & \text{(A1)}    \\
+          & = (a + x) + (-a) & \text{(given)} \\
+          & = x + (a + (-a)) & \text{(A1)}    \\
+          & = x + 0          & \text{(A4)}    \\
+          & = x              & \text{(A3)}
+    \end{align*}
+    Therefore, $x = y$.
+\end{proof}
+
+\begin{proposition}
+    $-(-a) = a$
+\end{proposition}
+
+\begin{proof}
+    We need to show that $-(-a) = a$. Consider the following:
+    \begin{align*}
+        (-a) + (-(-a)) & = 0 \quad \text{(by definition of additive inverse)} \\
+        (-a) + a       & = 0 \quad \text{(since } -(-a) = a \text{)}          \\
+        a + (-a)       & = 0 \quad \text{(by commutativity of addition)}      \\
+        (-a) + (-(-a)) & = a + (-a) \quad \text{(by substitution)}            \\
+        (-(-a))        & = a \quad \text{(by left cancellation of addition)}
+    \end{align*}
+    Therefore, $-(-a) = a$.
+\end{proof}
+\begin{proposition}
+    -(a + b) = (-a) + (-b)
+\end{proposition}
+\begin{proof}
+    We need to show that the additive inverse of $(a + b)$ is equal to the sum of the additive inverses of $a$ and $b$. Consider the following:
+    \begin{align*}
+        (a + b) + (-(a + b))    & = 0 \quad \text{(by definition of additive inverse)}                  \\
+        (a + b) + ((-a) + (-b)) & = a + (b + ((-a) + (-b))) \quad \text{(by associativity of addition)} \\
+                                & = a + ((b + (-a)) + (-b)) \quad \text{(by associativity of addition)} \\
+                                & = a + ((-a) + (b + (-b))) \quad \text{(by commutativity of addition)} \\
+                                & = a + ((-a) + 0) \quad \text{(by definition of additive inverse)}     \\
+                                & = a + (-a) \quad \text{(by identity property of addition)}            \\
+                                & = 0 \quad \text{(by definition of additive inverse)}
+    \end{align*}
+    Therefore, $-(a + b) = (-a) + (-b)$.
+\end{proof}
+
+\begin{proposition}
+    -0 = 0
+\end{proposition}
+\begin{proof}
+    We need to show that the additive inverse of $0$ is $0$. Consider the
+    following:
+    \begin{align*}
+        0 + 0    & = 0 \quad \text{(by the identity property of addition, A3)}  \\
+        0 + (-0) & = 0 \quad \text{(by the definition of additive inverse, A4)}
+    \end{align*}
+    Therefore, we have:
+    \begin{align*}
+        0 + 0 & = 0 + (-0)
+    \end{align*}
+    By the left cancellation property of addition, it follows that:
+    \begin{align*}
+        0 & = -0
+    \end{align*}
+    Therefore, $-0 = 0$.
+\end{proof}
+
+\subsection{Multiplication Axioms}
+
+\begin{definition}
+    For all $a, b \in \mathbb{R}$, we can associate a real number $a \times b$ called their \vocab{product}.
+\end{definition}
+
+\begin{definition}
+    For every $a \in \mathbb{R}$, there is some $a^{-1} \in \mathbb{R}$ called its
+    \vocab{multiplicative inverse} or \vocab{reciprocal} such that for all $a \neq 0$, $a \times a^{-1} = 1$.
+\end{definition}
+
+\begin{definition}
+    There is a number 1 called \vocab{one} or the \vocab{multiplicative identity}
+    such that for all $a \in \mathbb{R}$, $a \times 1 = a$.
+\end{definition}
+
+\begin{definition}
+    For all $a, b, c \in \mathbb{R}$, we have the following properties of multiplication:
+    \begin{itemize}
+        \item For all $a, b \in \mathbb{R}$, $a \times b = b \times a$.
+        \item For all $a, b, c \in \mathbb{R}$, $a \times (b \times c) = (a \times b) \times
+                  c$.
+        \item For all $a \in \mathbb{R}$, $a \times 0 = 0$.
+        \item For all $a, b \in \mathbb{R}$, $a \times (b + c) = a \times b + a \times c$.
+    \end{itemize}
+\end{definition}
+
+\begin{proposition}
+    If $a \times a \times b = a$, and $a \in \RR$ then $b=1$.
+\end{proposition}
+\begin{proposition}
+    If $a \neq 0$ and $a \times b = a \times c$, then $b = c$.
+\end{proposition}
+
+\begin{proposition}
+    If $a \neq 0$ and $a ^{-1} \neq 0$ and $(a^{-1})^{-1} = a$.
+\end{proposition}
+
+\begin{proposition}
+    If $a \neq 0$, $b \neq 0$, and $a \times b \neq 0$, then $(a \times b)^{-1} = a^{-1} \times b^{-1}$.
+\end{proposition}
+
+\begin{proposition}
+    If $a, b, c \in \RR$, then $(a + b) \times c = (a \times b) + (a \times c)$
+\end{proposition}
+
+\begin{proof}
+    \begin{align*}
+        (a + b)\times c & = c \times (a + b)        \\
+                        & = c \times a + c \times b \\
+                        & = a \times c + b \times c \\
+    \end{align*}
+\end{proof}
+
+\begin{proposition}
+    For all, $a \in \RR, a \times 0 = 0$
+\end{proposition}
+
+\begin{proof}
+    \begin{align*}
+        a \times 0 & = a \times 0 + 0          \\
+                   & = a \times (0 + 0)        \\
+                   & = a \times 0 + a \times 0 \\
+                   & = 0 + 0                   \\
+                   & = 0
+    \end{align*}
+\end{proof}
+
+\begin{proposition}
+    If $a \times b = 0$, then either $a = 0$ or $b = 0$ or both.
+\end{proposition}
+\begin{proposition}
+    $a \times (-b) = (a \times b)$. In particular, $a \times (-1) = - -a$
+\end{proposition}
+\begin{proof}
+    \begin{align*}
+        a \times (-b) + a \times b & = a \times (b + (-b))          \\
+                                   & = a \times 0                   \\
+                                   & = 0                            \\
+                                   & = a \times b + (-(a \times b))
+    \end{align*}
+    Hence, additive inverse of $a \times b$ = $-(a \times b)$.
+\end{proof}
+
+\begin{proposition}
+    $(-1) = -1$ and $(-1) \times (-1) = 1$
+\end{proposition}
+
+\begin{proof}
+    \begin{align*}
+        (-1) \times (-1) & = -(-1) \times 1          \\
+                         & = -(-1) \times (1 + 0)    \\
+                         & = -(-1) \times (1 + (-1)) \\
+                         & = -(-1) \times 0          \\
+                         & = 0                       \\
+                         & = (-1) + (-1)
+    \end{align*}
+\end{proof}
 %\section{January 10, 2025}
 %\section{January 13, 2025}
 %\section{January 15, 2025}
