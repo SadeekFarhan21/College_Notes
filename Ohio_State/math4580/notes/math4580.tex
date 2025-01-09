@@ -1,7 +1,6 @@
 % !TEX TS-program = xelatex
 \documentclass[11pt]{article}
 \usepackage{xcolor}
-\definecolor{RedViolet}{rgb}{0.78, 0.08, 0.52}
 \usepackage{lindrew}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -48,156 +47,92 @@ Certain course expectations:
     \item For the exams, we are not supposed to talk to other friends.
 \end{itemize}
 
-\subsection{Review of Set Theory}
-In this course, we will study \vocab{functions} and \vocab{equivalence
-    relations}.\\
-
+\subsection{Functions}
 \begin{definition}
-    A \vocab{function} from a set \( A \) to a set \( B \) is a relation that assigns to each element \( x \) in \( A \) exactly one element \( y \) in \( B \). We write \( f: A \to B \) to denote a function \( f \) from \( A \) to \( B \). Here, \( A \) is the \vocab{domain} and \( B \) is the \vocab{codomain}.\\
-    \vocab{Domain}: The set of all possible input values for the function.\\
-    \vocab{Codomain}: The set of all possible output values for the function.
+    Let $A$ and $B$ be sets. A function $f: A \to B$ assigns exactly one output $f(a) \in B$ to every input $a \in A$.
 \end{definition}
+\begin{itemize}
+    \item The set $A$ is called the \textbf{domain} of $f$.
+    \item The set $B$ is called the \textbf{codomain} of $f$.
+\end{itemize}
 
-\begin{example}
-    Consider the function \( f: \mathbb{Z} \to \mathbb{Z} \) defined by \( f(x) = x^2 \). Here, the domain is the set of all integers \( \mathbb{Z} \), and the codomain is also the set of all integers \( \mathbb{Z} \). For example, \( f(2) = 4 \) and \( f(-3) = 9 \).
-\end{example}
-
-\begin{example}
-    Another example is the function \( g: \mathbb{R} \to \mathbb{R} \) defined by \( g(x) = \sqrt{x} \). Here, the domain is the set of all non-negative real numbers \( \mathbb{R}_{\geq 0} \), and the codomain is the set of all real numbers \( \mathbb{R} \). For example, \( g(4) = 2 \) and \( g(9) = 3 \).
-\end{example}
-
-\begin{fact}
-    A function must have a unique output for each input in its domain. This means that for every \( x \in A \), there is exactly one \( y \in B \) such that \( f(x) = y \).
+\begin{fact}The domain $A$, codomain $B$, and the assignment of outputs $f(a)$ to every input $a \in A$ are all part of the data defining a function. Just writing a formula like $f(x) = e^x$ does not determine a function, as the domain and codomain are not specified. 
 \end{fact}
+For example:
+\begin{itemize}
+    \item $f: \mathbb{R} \to \mathbb{R}, f(x) = e^x$.
+    \item $f: \mathbb{Q} \to \mathbb{Q}, f(x) = e^x$.
+\end{itemize}
+Although these functions use the same formula, their meanings are completely different because their domains and codomains differ.
 
+\subsection{Graphs}
+A function $f: A \to B$ is often identified with its \textbf{graph} in $A
+    \times B$:
+\[ \text{graph}(f) = \{(a, b) \in A \times B : b = f(a)\}. \]
+
+\begin{lemma}
+    Let $f: A \to B$ be a function. Its graph, $\text{graph}(f)$, passes the \textbf{vertical line test}: For every $a \in A$, $V_a := \{(a, b) \in A \times B : b \in B\}$ intersects $\text{graph}(f)$ in exactly one element.
+\end{lemma}
 \begin{center}
     \begin{tikzpicture}
-        \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$f(x)$},
-                domain=-5:5,
-                samples=100,
-                width=10cm,
-                height=10cm,
-                grid=both,
-                minor grid style={gray!25},
-                major grid style={gray!50},
-            ]
-            \addplot[color=blue, thick] {x^2};
-            \addlegendentry{$f(x) = x^2$}
-        \end{axis}
-    \end{tikzpicture}
-\end{center}
-
-\begin{fact}
-    A function \( f \) can be represented as a special kind of subset of the Cartesian product \( A \times B \). Specifically, the \vocab{graph} of \( f \) is the set of ordered pairs \( \{(a, b) \mid a \in A, b = f(a)\} \).
-\end{fact}
-
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$f(x)$},
-                domain=-5:5,
-                samples=100,
-                width=10cm,
-                height=10cm,
-                grid=both,
-                minor grid style={gray!25},
-                major grid style={gray!50},
-            ]
-            \addplot[color=red, thick] {sqrt(x)};
-            \addlegendentry{$g(x) = \sqrt{x}$}
-        \end{axis}
+        \draw[thick,->] (-2,0) -- (2,0) node[right] {$x$};
+        \draw[thick,->] (0,-2) -- (0,2) node[above] {$y$};
+        \draw[domain=-1.5:1.5,smooth,variable=\x,blue,thick] plot ({\x},{\x^2});
+        \draw[dashed] (-1,0) -- (-1,1) node[midway,left] {Vertical line test};
+        \draw[fill=red] (-1,1) circle (2pt);
     \end{tikzpicture}
 \end{center}
 
 \begin{proposition}
-    A set \( G \subseteq A \times B \) is the graph of a function \( f: A \to B \) if and only if \( G \) intersects every vertical line \( x = a \) at exactly one point.
+    Let $G \subseteq A \times B$ be any subset passing the vertical line test, i.e., for all $a \in A$, $V_a \cap G$ consists of exactly one element. Then $G = \text{graph}(f)$ for a unique function $f: A \to B$.
 \end{proposition}
-
-\begin{example}
-    Consider the function \( h: \mathbb{R} \to \mathbb{R} \) defined by \( h(x) = e^x \). The graph of this function is the set of ordered pairs \( \{(x, e^x) \mid x \in \mathbb{R}\} \).
-\end{example}
-
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$h(x)$},
-                domain=-2:2,
-                samples=100,
-                width=10cm,
-                height=10cm,
-                grid=both,
-                minor grid style={gray!25},
-                major grid style={gray!50},
-            ]
-            \addplot[color=green, thick] {exp(x)};
-            \addlegendentry{$h(x) = e^x$}
-        \end{axis}
-    \end{tikzpicture}
-\end{center}
-
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$y$},
-                domain=-10:10,
-                samples=100,
-                width=10cm,
-                height=10cm,
-                grid=both,
-                minor grid style={gray!25},
-                major grid style={gray!50},
-            ]
-            \addplot[color=purple, thick] {x};
-            \addlegendentry{$a \equiv b \pmod{n}$}
-        \end{axis}
-    \end{tikzpicture}
-\end{center}
+\begin{proof}
+    If $G = \{(a, b) \mid b \in B\}$ satisfies the vertical line test, define $f: A \to B$ by $f(a) = b$. Then $G = \text{graph}(f)$.
+\end{proof}
 
 \begin{definition}
-    The \vocab{vertical line test} is a visual way to determine if a curve in the coordinate plane represents a function. A curve represents a function if and only if no vertical line intersects the curve more than once. This is because a function can only have one output for each input.
+    A subset $R \subseteq A \times B$ is called a \textbf{relation}. The vertical line test distinguishes graphs of functions from more general relations.
 \end{definition}
+\section*{Examples}
+\begin{itemize}
+    \item Let $S = \{(x, y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$ (the unit circle). This
+          is a relation but not the graph of a function because it fails the vertical
+          line test: The vertical line $x = 0$ intersects the circle at two points.
+    \item Visual depiction of a unit circle:
+          \begin{center}
+              \begin{tikzpicture}
+                  \draw[thick,->] (-2,0) -- (2,0) node[right] {$x$};
+                  \draw[thick,->] (0,-2) -- (0,2) node[above] {$y$};
+                  \draw[thick] (0,0) circle (1.5);
+                  \node[below right] at (2,2.5) {$x^2 + y^2 = 1$};
+                  \draw[dashed] (0.5,-1.5) -- (0.5,1.5);
+              \end{tikzpicture}
+          \end{center}
+    \item Let $A = \{1, 2, 3\}$, $B = \{4, 5\}$. The number of functions from $A$ to $B$
+          is $2^3 = 8$, corresponding to the $8$ associated graphs in $A \times B$.
+    \item The number of relations from $A$ to $B$ is $2^{|A| \cdot |B|} = 2^{3 \cdot 2} =
+              64$, containing the $8$ graphs of functions from $A$ to $B$.
+\end{itemize}
 
-\begin{example}
-    Consider the relation defined by the equation \( x^2 + y^2 = 1 \), which represents a circle with radius 1 centered at the origin. This relation does not pass the vertical line test because there are vertical lines that intersect the circle at two points. For example, the vertical line \( x = 0 \) intersects the circle at the points \( (0, 1) \) and \( (0, -1) \). Therefore, the circle is not the graph of a function.
-\end{example}
-\vspace{10pt}
+\begin{fact}
+    The notion of relation is much more permissive than the notion of functions.
+\end{fact}
+
+\section*{Visualizing Functions as Directed Edges}
+A function $f: A \to B$ can be visualized as a collection of directed edges $(a, f(a)) \in A \times B$. Each element of $A$ has exactly one outgoing edge in the graph.
+
 \begin{center}
     \begin{tikzpicture}
-        \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$y$},
-                domain=-1.5:1.5,
-                samples=100,
-                width=10cm,
-                height=10cm,
-                grid=both,
-                minor grid style={gray!25},
-                major grid style={gray!50},
-                legend pos=north east,
-                legend cell align={left},
-                enlargelimits=true,
-                axis equal image
-            ]
-            \addplot[color=blue, thick] {sqrt(1 - x^2)};
-            \addplot[color=blue, thick] {-sqrt(1 - x^2)};
-            \addlegendentry{$x^2 + y^2 = 1$}
-            \addplot[dashed, color=red, thick] coordinates {(0, -1.5) (0, 1.5)};
-            \addlegendentry{Vertical Line $x = 0$}
-        \end{axis}
+        \node[circle,draw] (A1) at (0,1) {$1$};
+        \node[circle,draw] (A2) at (0,0) {$2$};
+        \node[circle,draw] (A3) at (0,-1) {$3$};
+        \node[circle,draw] (B1) at (2,0.5) {$4$};
+        \node[circle,draw] (B2) at (2,-0.5) {$5$};
+        \draw[->] (A1) -- (B1);
+        \draw[->] (A2) -- (B2);
+        \draw[->] (A3) -- (B1);
     \end{tikzpicture}
 \end{center}
-In this case the circle is not the graph of a function because it fails the vertical line test.\\
-
 
 %\section{January 15, 2025}
 %\section{January 17, 2025}

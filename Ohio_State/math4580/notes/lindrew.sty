@@ -13,7 +13,7 @@
 \ProcessOptions*
 
 \iflinserif\else
-    \usepackage{cmbright}
+    \usepackage{cmbright} % sans serif font
 \fi
 
 \iflinindent
@@ -22,7 +22,7 @@
 \fi
 
 \iflinheader
-    \usepackage[includehead, includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
+    \usepackage[includehead,includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \rhead{\textbf{Andrew Lin}} % change name as necessary
@@ -31,10 +31,11 @@
     \usepackage[left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
 \fi
 
+\usepackage[OT1]{fontenc}
 \usepackage{amsmath, amssymb, amsthm} % standard
 \usepackage{bbm} % blackboard bold math
-\usepackage{hyperref} % inserting links - copied from Jason
-\PassOptionsToPackage{svgnames, dvipsnames, usenames}{xcolor}
+\usepackage[svgnames, dvipsnames, usenames]{xcolor}
+\usepackage[colorlinks]{hyperref} % inserting links - copied from Jason
 \PassOptionsToPackage{colorlinks}{hyperref}
 \hypersetup{urlcolor = RedViolet, linkcolor = RoyalBlue, citecolor = ForestGreen}
 \urlstyle{same}
@@ -51,12 +52,12 @@
 \usepackage{multicol}
 \usepackage{array,multirow}
 \usepackage[normalem]{ulem}
-
+\usepackage{fontspec}
 \newcommand{\vocab}[1]{\textbf{\color{blue!90}\boldmath #1}}
 \newcommand{\paren}[1]{\left(#1\right)}
 \newcommand{\pnorm}[1]{\left|\left|#1\right|\right|}
 \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
-\newcommand{\tbf}[1]{\textbf{\color{black}#1}}
+
 % Fixes itemize
 \usepackage{enumitem}
 \setlist{itemsep = 0.2em, topsep = 0.4em}
@@ -110,8 +111,6 @@
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\Alt}{Alt}
-\DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\codim}{codim}
 
 % physics
 \newcommand{\ket}[1]{\left|#1\right\rangle}
@@ -195,6 +194,7 @@
 
 \declaretheorem[style = plain, name = Question, sibling = theorem]{question}
 \declaretheorem[style = plain, name = Question, numbered = no]{question*}
+
 
 \declaretheorem[style = plain, name = Claim, sibling = theorem]{claim}
 \declaretheorem[style = plain, name = Claim, numbered = no]{claim*}
