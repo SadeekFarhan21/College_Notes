@@ -19,15 +19,6 @@ Analysis is the branch of mathematics that deals with the rigorous study of
 limits, functions, derivatives, integrals, and infinite series. It provides the
 foundation for calculus and extends its concepts to more abstract settings.
 
-\subsection{Analysis Study Tips}
-\begin{itemize}
-    \item Attend all lectures and take good notes.
-    \item Read the textbook and work through the examples.
-    \item Do the homework problems.
-    \item Study with others.
-    \item Ask questions.
-    \item Practice, practice, practice.
-\end{itemize}
 \begin{theorem}
     Every convergent squence is bounded.
 \end{theorem}
@@ -92,7 +83,9 @@ The axioms are in three groups.
 \end{enumerate}
 
 \section{January 8, 2025}
-In this lecture, we will use the axioms to deduce various properties of the real numbers $\mathbb{R}$. From these axioms, we can derive many more properties of the real numbers.
+In this lecture, we will use the axioms to deduce various properties of the
+real numbers $\mathbb{R}$. From these axioms, we can derive many more
+properties of the real numbers.
 
 \begin{proposition}
     If $x + a = x$ for all $a \in \mathbb{R}$, then $a = 0$.
@@ -102,8 +95,8 @@ In this lecture, we will use the axioms to deduce various properties of the real
     We know that
     \begin{equation*}
         \begin{aligned}
-            x & = x + 0 \quad \text{(A3)}                  \\
-              & = x + a \quad \text{(by assumption on } a)
+            x & = x + 0 \quad \text{(A3)}                   \\
+              & = x + a \quad \text{(by assumption on $a$)}
         \end{aligned}
     \end{equation*}
     By the left cancellation property of addition, it follows that $a = 0$.
@@ -201,7 +194,8 @@ In this lecture, we will use the axioms to deduce various properties of the real
     For all $a, b, c \in \mathbb{R}$, we have the following properties of multiplication:
     \begin{itemize}
         \item For all $a, b \in \mathbb{R}$, $a \times b = b \times a$.
-        \item For all $a, b, c \in \mathbb{R}$, $a \times (b \times c) = (a \times b) \times c$.
+        \item For all $a, b, c \in \mathbb{R}$, $a \times (b \times c) = (a \times b) \times
+                  c$.
         \item For all $a \in \mathbb{R}$, $a \times 0 = 0$.
         \item For all $a, b \in \mathbb{R}$, $a \times (b + c) = a \times b + a \times c$.
     \end{itemize}
@@ -214,8 +208,8 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We start with the given equation $a \times b = a$. By the multiplicative identity property, we have:
     \begin{align*}
-        a \times b & = a \times 1 \\
-        b & = 1 \quad \text{(by left cancellation of multiplication)}
+        a \times b & = a \times 1                                              \\
+        b          & = 1 \quad \text{(by left cancellation of multiplication)}
     \end{align*}
     Therefore, $b = 1$.
 \end{proof}
@@ -229,8 +223,8 @@ In this lecture, we will use the axioms to deduce various properties of the real
     \begin{align*}
         a^{-1} \times (a \times b) & = a^{-1} \times (a \times c) \\
         (a^{-1} \times a) \times b & = (a^{-1} \times a) \times c \\
-        1 \times b & = 1 \times c \\
-        b & = c
+        1 \times b                 & = 1 \times c                 \\
+        b                          & = c
     \end{align*}
     Therefore, $b = c$.
 \end{proof}
@@ -242,9 +236,9 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We need to show that the multiplicative inverse of $a^{-1}$ is $a$. Consider the following:
     \begin{align*}
-        a^{-1} \times a & = 1 \quad \text{(by definition of multiplicative inverse)} \\
+        a^{-1} \times a             & = 1 \quad \text{(by definition of multiplicative inverse)} \\
         (a^{-1})^{-1} \times a^{-1} & = 1 \quad \text{(by definition of multiplicative inverse)} \\
-        (a^{-1})^{-1} & = a
+        (a^{-1})^{-1}               & = a
     \end{align*}
     Therefore, $(a^{-1})^{-1} = a$.
 \end{proof}
@@ -258,8 +252,8 @@ In this lecture, we will use the axioms to deduce various properties of the real
     \begin{align*}
         (a \times b) \times (a^{-1} \times b^{-1}) & = a \times (b \times (a^{-1} \times b^{-1})) \\
                                                    & = a \times ((b \times a^{-1}) \times b^{-1}) \\
-                                                   & = a \times (1 \times b^{-1}) \\
-                                                   & = a \times b^{-1} \\
+                                                   & = a \times (1 \times b^{-1})                 \\
+                                                   & = a \times b^{-1}                            \\
                                                    & = 1
     \end{align*}
     Therefore, $(a \times b)^{-1} = a^{-1} \times b^{-1}$.
@@ -272,7 +266,7 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We need to show that the product of $(a + b)$ and $c$ is equal to the sum of the products of $a$ and $c$, and $b$ and $c$. Consider the following:
     \begin{align*}
-        (a + b) \times c & = c \times (a + b) \\
+        (a + b) \times c & = c \times (a + b)        \\
                          & = c \times a + c \times b \\
                          & = a \times c + b \times c
     \end{align*}
@@ -286,9 +280,9 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We need to show that the product of any real number $a$ and $0$ is $0$. Consider the following:
     \begin{align*}
-        a \times 0 & = a \times (0 + 0) \\
+        a \times 0 & = a \times (0 + 0)        \\
                    & = a \times 0 + a \times 0 \\
-                   & = 0 + 0 \\
+                   & = 0 + 0                   \\
                    & = 0
     \end{align*}
     Therefore, $a \times 0 = 0$.
@@ -313,10 +307,10 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We need to show that the product of $a$ and $-b$ is equal to the product of $-a$ and $b$. Consider the following:
     \begin{align*}
-        a \times (-b) + a \times b & = a \times (b + (-b)) \\
-                                  & = a \times 0 \\
-                                  & = 0 \\
-                                  & = a \times b + (-(a \times b))
+        a \times (-b) + a \times b & = a \times (b + (-b))          \\
+                                   & = a \times 0                   \\
+                                   & = 0                            \\
+                                   & = a \times b + (-(a \times b))
     \end{align*}
     Hence, the additive inverse of $a \times b$ is $-(a \times b)$. Therefore, $a \times (-b) = (-a) \times b$.
 \end{proof}
@@ -328,16 +322,161 @@ In this lecture, we will use the axioms to deduce various properties of the real
 \begin{proof}
     We need to show that the product of $-1$ and $-1$ is $1$. Consider the following:
     \begin{align*}
-        (-1) \times (-1) & = -(-1) \times 1 \\
-                         & = -(-1) \times (1 + 0) \\
+        (-1) \times (-1) & = -(-1) \times 1          \\
+                         & = -(-1) \times (1 + 0)    \\
                          & = -(-1) \times (1 + (-1)) \\
-                         & = -(-1) \times 0 \\
-                         & = 0 \\
+                         & = -(-1) \times 0          \\
+                         & = 0                       \\
                          & = (-1) + (-1)
     \end{align*}
     Therefore, $(-1) \times (-1) = 1$.
 \end{proof}
-%\section{January 13, 2025}
+
+\section{January 10, 2025}
+
+For all \(a, b \in \mathbb{R}\), we write:
+\begin{itemize}
+    \item \(ab\) or \(a \cdot b\) for \(a \times b\).
+    \item \(a - b\) for \(a + (-b)\).
+    \item \(\frac{1}{a}\) for \(a^{-1}\) if \(a \neq 0\).
+    \item \(\frac{a}{b}\) for \(a b^{-1}\) if \(b \neq 0\).
+\end{itemize}
+For \(a \neq 0\), we write:
+\begin{itemize}
+    \item \(a^0\) for 1.
+    \item \(a^{k + 1}\) for \(a^k \cdot a\) for \(k = 0, 1, 2, \ldots\)
+    \item \(a^{-1} for (a^l)^{-1}\) for \(l = 1, 2, 3\)
+\end{itemize}
+
+\begin{definition}
+    Any set equipped with operations \(+\) and \(\times\) staisfying A1 - A4, M1 - M4, Z, D is a \vocab{field}.
+\end{definition}
+\begin{fact}
+    Some facts about the fields:
+
+    \begin{itemize}
+        \item \(\RR, \QQ, \CC\) are all fields.
+        \item \(\ZZ\) is not a field (M4 isn't satisified).
+        \item \(\NN\) is not a field (\(A4, M4\)) are not satsified.
+        \item \(\frac{\ZZ}{p\ZZ}\) (integers mod p for prime \(p\)) is a field.
+    \end{itemize}
+\end{fact}
+
+\subsection{The order axioms}
+The order axioms are: There is as subset of \(P \subset \RR\) called the set of
+\textbf{positive numbers}.
+\begin{itemize}
+    \item If \(a, b \in \PP\), then \(a + b \in \PP\). \hfill (P1)
+    \item If \(a, b \in \PP\), then \(a \times b \in \PP\). \hfill (P2)
+    \item For each \(a \in \RR\), exactly one of the following is true: \(a \in \PP\),
+          \(a = 0\), or \(-a \in \PP\). \(\leftarrow\) \text{Law of Trichotomy}\hfill
+          (P3)
+\end{itemize}
+\textbf{P3} is the most powerful aximom about the positive numbers.
+\begin{proposition}
+    Prove that \(1 \in \PP\)
+\end{proposition}
+\begin{proof}
+    According to \textbf{P3}, either
+    \begin{itemize}
+        \item \(1 \in \PP\)
+        \item \(1 = 0\)
+        \item \(-1 \in \PP\)
+    \end{itemize}
+    We will prove (b) and (c) are false by contradiction and then show that \(1 \in \PP\).
+    If \textbf{(b)} holds, \(1 = 0\), which contradicts \textbf{Z}.
+    Assume for contradiction \textbf{(c)} holds. We know from last lecture that \(1 = -(-1)\). Since \(-1 \in \PP\), by (P2), \((-1) \times (-1) \in \PP\). But \((-1) \times (-1) = 1\), so \(1 \in \PP\).
+    \(\therefore, 1 \in \PP\) and \(-1 \in \PP\) contradicts \textbf{P3}.
+    Since, \textbf{(b)} and \textbf{(c)} cannot hold, therefore, \textbf{(a)} must hold.
+\end{proof}
+
+\begin{fact}
+    For all \(a , b \in \RR\), we write
+    \begin{itemize}
+        \item \(a < b\) if \(b - a \in \PP\)
+        \item \(a > b\) if \(a - b \in \PP\)
+        \item \(a \leq b\) if \(b - a \in \PP \cup \{0\}\)
+        \item \(a \geq b\) if \(a - b \in \PP \cup \{0\}\)
+    \end{itemize}
+\end{fact}
+
+\begin{proposition}
+    \(a > b\) if and only if \(-a < -b\). In particular, \(x > 0 \Longleftrightarrow -x < 0\)
+\end{proposition}
+\begin{proof}
+    \begin{align*}
+        a > b & \Longleftrightarrow  a - b \in \PP        \\
+              & \Longleftrightarrow  -(-(a)) - b \in -\PP \\
+              & \Longleftrightarrow  -b -(-a) \in -\PP    \\
+              & \Longleftrightarrow  -a < -b
+    \end{align*}
+\end{proof}
+\begin{proposition}
+    For all \(x, y, z \in \RR\) the following holds:
+    \begin{itemize}
+        \item \(x \leq x\)
+        \item If \(x \leq y\) and \(y \leq z\), then \(x \leq z\).
+        \item If \(x \leq y\) and \(y \leq z\), then \(x \leq z\).
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}
+    If \(x, t, z \in \RR\) and \(x < y\), then \(x + z < y + z\).
+\end{proposition}
+\begin{proof}
+    Since \(x < y\), we have \(x - y \in \PP\).
+    By the properties of addition (A1-A4), we know that:
+    \[
+        (y + z) - (x + z) = y - x
+    \]
+    Since \(y - x \in \PP\), it follows that:
+    \[
+        (y + z) - (x + z) \in \PP
+    \]
+    Hence, \(x + z < y + z\).
+\end{proof}
+
+\begin{proposition}
+    If \(x, y, z \in \RR\) and \(x < y\) and \(z > 0\), then \(xz < yz\).
+\end{proposition}
+
+\begin{proof}
+    \(zy = zx = z(y - x) \). Now, \(z \in \PP\) and \(y - x \in \PP\), therefore \(zy - zx \in \PP\). Therefore, \(xz < yz\).
+\end{proof}
+\begin{corollary}
+    If \(x, y, z \in \RR\) and \(x < y\) and \(z < 0\), then \(xz > yz\).
+\end{corollary}
+\begin{proof}
+
+\end{proof}
+\begin{corollary}
+    For all, \(a \in \RR\), \(a^2 \geq 0\).
+\end{corollary}
+\begin{proof}
+    By P3, either \(a > 0, a = 0\) or \(g < 0\).
+    \begin{itemize}
+        \item If \(a > 0\), then \(a^2 = a \times a > 0\). \hfill(P2)
+        \item If \(a = 0\), then \(a^2 = 0 \geq 0\).
+        \item If \(a < 0\), then \(-a > 0\) and \((-a)^2 = a^2 > 0\).
+    \end{itemize}
+\end{proof}
+
+\begin{proposition}
+    If \(x \in \PP\), then \(x^{-1} \in \PP \).
+\end{proposition}
+\begin{proof}
+    Since, \(x \in \PP, x \neq 0\). Therefore, \(x^{-1}\) exists. By P3, \(x^{-1} > 0, x^{-1} = 0  \), or \(x^{-1} < 0\).
+If \(x^{-1} = 0\), then \(1 = x \times x^{-1} = x \times 0 = 0\)
+    [Contradiction] Assume \(x^{-1} < 0\). Then \(-x^{-1} \in \PP\) by P3. Then \(x
+    \times (-x^{-1}) \in \PP\) by P2. But \(x \times (-x^{-1}) = -1\), which
+    contradicts P3 since \(-1 \notin \PP\). Therefore, \(x^{-1} \in \PP\).
+\end{proof}
+\begin{corollary}
+    If \(x, y \in \PP\), and \(x < y\), then \(\frac{1}{y} < \frac{1}{x}\).
+\end{corollary}
 %\section{January 15, 2025}
 %\section{January 17, 2025}
 %\section{January 20, 2025}
