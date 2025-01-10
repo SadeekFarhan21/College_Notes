@@ -7,6 +7,14 @@
 \usepackage{fontspec}
 \pgfplotsset{compat=1.18}
 \title{Math 4580: Abstract Algebra I}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=red,
+    urlcolor=red,
+    citecolor=red
+}
 \author{Lecturer: \textbf{Professor Michael Lipnowski}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
 
@@ -17,7 +25,7 @@
 
 \section{January 6, 2025}
 We didn't have any, but Dr.\ Lipnowski did post a module on
-\href{https://carmen.osu.edu}{\texttt{carmen}} about the syllabus and the
+\href{https://carmen.osu.edu}{{\texttt{carmen}}} about the syllabus and the
 course. This semester we will be covering the first few chapters of the book
 \textit{Abstract Algebra: Theory and Applications} by Thomas Judson. \\
 
@@ -56,7 +64,7 @@ Certain course expectations:
     \item The set $B$ is called the \textbf{codomain} of $f$.
 \end{itemize}
 
-\begin{fact}The domain $A$, codomain $B$, and the assignment of outputs $f(a)$ to every input $a \in A$ are all part of the data defining a function. Just writing a formula like $f(x) = e^x$ does not determine a function, as the domain and codomain are not specified. 
+\begin{fact}The domain $A$, codomain $B$, and the assignment of outputs $f(a)$ to every input $a \in A$ are all part of the data defining a function. Just writing a formula like $f(x) = e^x$ does not determine a function, as the domain and codomain are not specified.
 \end{fact}
 For example:
 \begin{itemize}
@@ -93,7 +101,7 @@ A function $f: A \to B$ is often identified with its \textbf{graph} in $A
 \begin{definition}
     A subset $R \subseteq A \times B$ is called a \textbf{relation}. The vertical line test distinguishes graphs of functions from more general relations.
 \end{definition}
-\section*{Examples}
+\subsection{Examples}
 \begin{itemize}
     \item Let $S = \{(x, y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$ (the unit circle). This
           is a relation but not the graph of a function because it fails the vertical
@@ -110,7 +118,7 @@ A function $f: A \to B$ is often identified with its \textbf{graph} in $A
           \end{center}
     \item Let $A = \{1, 2, 3\}$, $B = \{4, 5\}$. The number of functions from $A$ to $B$
           is $2^3 = 8$, corresponding to the $8$ associated graphs in $A \times B$.
-    \item The number of relations from $A$ to $B$ is $2^{|A| \cdot |B|} = 2^{3 \cdot 2} =
+    \item The number of relations from $A$ to $B$ is $2^{ |a| \cdot  |b|} = 2^{3 \cdot 2} =
               64$, containing the $8$ graphs of functions from $A$ to $B$.
 \end{itemize}
 
@@ -118,8 +126,10 @@ A function $f: A \to B$ is often identified with its \textbf{graph} in $A
     The notion of relation is much more permissive than the notion of functions.
 \end{fact}
 
-\section*{Visualizing Functions as Directed Edges}
-A function $f: A \to B$ can be visualized as a collection of directed edges $(a, f(a)) \in A \times B$. Each element of $A$ has exactly one outgoing edge in the graph.
+\subsection{Visualizing Functions as Directed Edges}
+A function $f: A \to B$ can be visualized as a collection of directed edges
+$(a, f(a)) \in A \times B$. Each element of $A$ has exactly one outgoing edge
+in the graph.
 
 \begin{center}
     \begin{tikzpicture}
@@ -133,7 +143,201 @@ A function $f: A \to B$ can be visualized as a collection of directed edges $(a,
         \draw[->] (A3) -- (B1);
     \end{tikzpicture}
 \end{center}
+\section{January 10, 2025}
+\subsection{More about function}
 
+\(f : A \rightarrow B\) is a function.
+\begin{itemize}
+    \item injective (one-to-one)
+    \item surjective (onto)
+    \item bijective (one-to-one and onto)
+\end{itemize}
+
+\begin{definition}
+    Let \(f: A \rightarrow B\) be a function. \(f\) is injective if for all \(x, y \in A\), if \(f(x) = f(y)\) then \(x = y\).
+\end{definition}
+\begin{example}
+    Consider the function $f: \{1, 2, 3\} \to \{a, b, c\}$ defined by the following assignments:
+    \[
+        f(1) = a, \quad f(2) = b, \quad f(3) = c
+    \]
+    This function is bijective because it is both injective and surjective.
+\end{example}
+
+\begin{example}
+    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = 2x + 3$. We claim that $f$ is injective.
+
+    To prove this, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{R}$. Then:
+    \[
+        2a + 3 = 2b + 3
+    \]
+    Subtracting 3 from both sides, we get:
+    \[
+        2a = 2b
+    \]
+    Dividing both sides by 2, we obtain:
+    \[
+        a = b
+    \]
+    Therefore, $f$ is injective.
+\end{example}
+
+\begin{example}
+    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x^2$. We claim that $f$ is not injective.
+
+    To see this, observe that $f(2) = 4$ and $f(-2) = 4$. Since $f(2) = f(-2)$ but
+    $2 \neq -2$, the function $f$ is not injective.
+\end{example}
+
+\begin{example}
+    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
+    \]
+    This function is not injective because $f(1) = f(3) = 4$ but $1 \neq 3$.
+\end{example}
+Here we have two elements in set $B$ but there are three elements in input in set $A$. That's why there has to be a collision. Since $ |a| >  |b|$, there must be a collision. If $f(1), f(2), f(3) \in B$, and $ |b| = 2$ Tow of those must be the same. That means that f is not one-to-one.
+
+\begin{definition}
+    A function $f: A \to B$ is called \textbf{surjective} (or \textbf{onto}) if for every element $b \in B$, there exists at least one element $a \in A$ such that $f(a) = b$.
+\end{definition}
+\begin{example}
+    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x$. This function is surjective because for every $y \in \mathbb{R}$, we can find an $x \in \mathbb{R}$ such that $f(x) = y$ (specifically, $x = y$).
+\end{example}
+\begin{example}
+    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x^2$. This function is not surjective because there is no $x \in \mathbb{R}$ such that $f(x) = -1$.
+\end{example}
+\begin{example}
+    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 4, \quad f(3) = 4
+    \]
+    This function is surjective because every element in $B$ is mapped to by at
+    least one element in $A$. However, it is not injective because $f(1) = f(2) =
+        f(3) = 4$ but $1 \neq 2 \neq 3$.
+\end{example}
+
+\begin{example}
+    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 4, \quad f(3) = 5
+    \]
+    This function is surjective because every element in $B$ is mapped to by at
+    least one element in $A$. However, it is not injective because $f(1) = f(2) =
+        4$ but $1 \neq 2$.
+\end{example}
+
+\begin{example}
+    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$. Define the function $f: A \to B$ by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 5, \quad f(3) = 6
+    \]
+    This function is neither injective nor surjective. It is not injective because
+    $ |a| <  |b|$, and it is not surjective because the element $7 \in B$ is not
+    mapped to by any element in $A$.
+\end{example}
+
+\begin{definition}
+    A function $f: A \to B$ is called \textbf{range} if it is the set of all possible outputs of $f$. Formally, the range of $f$ is defined as:
+    \[
+        \text{range}(f) = \{ f(a) \mid a \in A \}
+    \]
+\end{definition}
+\begin{fact}
+    The range of a function $f: A \to B$ is a subset of the codomain $B$. A function is surjective if and only if its range is equal to its codomain.
+\end{fact}
+\begin{example}
+    Consider the function $f: \{1, 2, 3\} \to \{4, 5\}$ defined by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
+    \]
+    The range of $f$ is $\{4, 5\}$, which is equal to the codomain $\{4, 5\}$.
+    Therefore, $f$ is surjective.
+\end{example}
+\begin{example}
+    Consider the function $f: \{1, 2, 3\} \to \{4, 5, 6\}$ defined by the following assignments:
+    \[
+        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
+    \]
+    The range of $f$ is $\{4, 5\}$, which is a subset of the codomain $\{4, 5, 6\}$
+    but not equal to it. Therefore, $f$ is not surjective.
+\end{example}
+\begin{fact}
+    f is \vocab{surjective} means that the \vocab{range} of $f$ is equal to the \vocab{codomain} of $f$.
+\end{fact}
+
+\begin{definition}
+    A function $f: A \to B$ is called \textbf{bijective} (or a \textbf{bijection}) if it is both injective and surjective or (one-to-one correspondence). This means that every element in $B$ is mapped to by exactly one element in $A$.
+\end{definition}
+\begin{example}
+    Consider the function $f: \{1, 2, 3\} \to \{4, 5, 6\}$ defined by the following assignments:
+    \[
+        f(1) = 5, \quad f(2) = 4, \quad f(3) = 6
+    \]
+    This function is bijective because it is both injective (no two elements in $A$
+    map to the same element in $B$) and surjective (every element in $B$ is mapped
+    to by some element in $A$).
+\end{example}
+Here we can notice that we have a matching between the elements of $A$ and $B$, every element of set $A$ has one and only mapping into the set $B$.
+
+\begin{example}
+    Consider the function $f: \mathbb{N} \to \mathbb{Z}$ defined by $f(x) = x$, where $\mathbb{N}$ is the set of natural numbers and $\mathbb{Z}$ is the set of integers. We claim that $f$ is injective but not surjective.
+
+    To prove that $f$ is injective, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{N}$. Then:
+    \[
+        a = b
+    \]
+    Therefore, $f$ is injective because no two different elements in $\mathbb{N}$ map to the same element in $\mathbb{Z}$.
+
+    However, $f$ is not surjective because there are elements in $\mathbb{Z}$ that are not in the range of $f$. For example, there is no $x \in \mathbb{N}$ such that $f(x) = -1$. Therefore, $f$ is not surjective.
+\end{example}
+
+
+\begin{example}
+    Consider the function $f: \mathbb{Z} \to \mathbb{N}$ defined by:
+    \[
+        f(n) = 
+        \begin{cases} 
+            2n & \text{if } n \geq 0 \\
+            2|n| - 1 & \text{if } n < 0 
+        \end{cases}
+    \]
+    We claim that $f$ is bijective.
+
+    To prove that $f$ is injective, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{Z}$. We need to show that $a = b$.
+    \begin{itemize}
+        \item If $a \geq 0$ and $b \geq 0$, then $f(a) = 2a$ and $f(b) = 2b$. Since $f(a) = f(b)$, we have $2a = 2b$, which implies $a = b$.
+        \item If $a < 0$ and $b < 0$, then $f(a) = 2 |a| - 1$ and $f(b) = 2 |b| - 1$. Since $f(a) = f(b)$, we have $2 |a| - 1 = 2 |b| - 1$, which implies $ |a| =  |b|$ and hence $a = b$.
+        \item If $a \geq 0$ and $b < 0$, then $f(a) = 2a$ and $f(b) = 2 |b| - 1$. Since $f(a) = f(b)$, we have $2a = 2  |b| - 1$, which is a contradiction because $2a$ is even and $2 |b| - 1$ is odd. Therefore, this case cannot occur.
+        \item If $a < 0$ and $b \geq 0$, then $f(a) = 2 |a| - 1$ and $f(b) = 2b$. Since $f(a) = f(b)$, we have $2 |a| - 1 = 2b$, which is a contradiction because $2 |a| - 1$ is odd and $2b$ is even. Therefore, this case cannot occur.
+    \end{itemize}
+    Therefore, $f$ is injective.
+
+    To prove that $f$ is surjective, let $m \in \mathbb{N}$. We need to find $n \in \mathbb{Z}$ such that $f(n) = m$.
+    \begin{itemize}
+        \item If $m$ is even, say $m = 2k$ for some $k \in \mathbb{N}$, then $f(k) = 2k = m$.
+        \item If $m$ is odd, say $m = 2k + 1$ for some $k \in \mathbb{N}$, then $f(-(k+1)) = 2|-(k+1)| - 1 = 2(k+1) - 1 = m$.
+    \end{itemize}
+    Therefore, $f$ is surjective.
+
+    Since $f$ is both injective and surjective, it is bijective.
+\end{example}
+
+
+\begin{example}
+    Consider the function $f: \mathbb{Z} \to \mathbb{N}$ defined by:
+    \[
+        f(n) = 
+        \begin{cases} 
+            2n & \text{if } n \geq 0 \\
+            2(-n - 1) + 1 & \text{if } n < 0 
+        \end{cases}
+    \]
+    We claim that $f$ is bijective.
+\end{example}
+
+
+%\section{January 13, 2025}
 %\section{January 15, 2025}
 %\section{January 17, 2025}
 %\section{January 20, 2025}
