@@ -1,6 +1,5 @@
 % !TEX TS-program = xelatex
 \documentclass[11pt]{article}
-\usepackage{xcolor}
 \usepackage{lindrew}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -118,8 +117,8 @@ A function $f: A \to B$ is often identified with its \textbf{graph} in $A
           \end{center}
     \item Let $A = \{1, 2, 3\}$, $B = \{4, 5\}$. The number of functions from $A$ to $B$
           is $2^3 = 8$, corresponding to the $8$ associated graphs in $A \times B$.
-    \item The number of relations from $A$ to $B$ is $2^{ |a| \cdot  |b|} = 2^{3 \cdot 2} =
-              64$, containing the $8$ graphs of functions from $A$ to $B$.
+    \item The number of relations from $A$ to $B$ is $2^{ |a| \cdot |b|} = 2^{3 \cdot 2}
+              = 64$, containing the $8$ graphs of functions from $A$ to $B$.
 \end{itemize}
 
 \begin{fact}
@@ -144,199 +143,150 @@ in the graph.
     \end{tikzpicture}
 \end{center}
 \section{January 10, 2025}
-\subsection{More about function}
+\subsection{Injection and Surjection}
 
-\(f : A \rightarrow B\) is a function.
+Let $f : A \to B$ be a function.
+
+\begin{definition}[Injectivity (One-to-One)]
+
+    $f$ is injective (one-to-one) if:
+    \[
+        \forall x, y \in A, \, f(x) = f(y) \implies x = y
+    \]
+    Equivalently:
+    \[
+        x \neq y \implies f(x) \neq f(y)
+    \]\end{definition}
+
+\begin{fact} Distinct inputs have distinct outputs.
+\end{fact}
+
+\begin{definition}[Surjectivity (Onto)]
+
+    $f$ is surjective (onto) if:
+    \[
+        \forall b \in B, \, \exists a \in A \text{ such that } f(a) = b.
+    \]
+
+\end{definition}
+
+\begin{fact}
+    Every $b \in B$ is an output of something through $f$.''
+
+\end{fact}
+
+\begin{example}
+    Here are a few examples of injectivity and surjectivity:
+    \begin{itemize}
+
+        \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5\}$ and $f: A \to B$ with $f(1), f(2),
+                  f(3)$ as elements of $B$. If $B$ has only two elements, at least two of $f(1),
+                  f(2), f(3)$ must coincide (e.g., $f(1) = f(2)$). Thus, $f$ is not injective.
+        \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$ and $f : A \to B$ where:
+              \[
+                  f(1) = 4, \, f(2) = 7, \, f(3) = 5.
+              \]
+              Distinct inputs have distinct outputs, so $f$ is injective.
+        \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$ and $f : A \to B$ where:
+              \[
+                  f(1) = 4, \, f(2) = 4, \, f(3) = 6.
+              \]
+              Here, $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$ and $f(1) = f(2)$ but $1 \neq
+                  2$, so $f$ is not injective.
+        \item Let $f : A \to B$ where $B$ has size 4 and $f(1), f(2), f(3)$ are distinct
+              elements of $B$. If $B \setminus \{f(1), f(2), f(3)\}$ is non-empty, then $b
+                  \neq f(a)$ for all \(a \in A\), implying \(f\) is non surjective.
+        \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5\}$ and $f: A \to B$ with $f(1) = 4, f(2)
+                  = 5, f(3) = 4$. $f$ is surjective.
+        \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5\}$ and $f: A \to B$ with $f(1) = 4, f(2)
+                  = 4, f(3) = 4$. $f$ is not surjective.
+    \end{itemize}
+\end{example}
+
+\subsection{Bijection and Range}
+\begin{definition} [Bijectivity]
+
+    $f$ is bijective if $f$ is both injective and surjective.
+\end{definition}
+\begin{definition}
+
+    Let $f : A \to B$ be a function. The \textit{range} of $f$ is the subset of $B$
+    defined as:
+    \[
+        \text{range}(f) := \{ b \in B \mid b = f(a) \text{ for some } a \in A \}.
+    \]
+    Thus, $f : A \to B$ is surjective \(\Longleftrightarrow\) $\text{range}(f) =
+        B$.
+\end{definition}
+
 \begin{itemize}
-    \item injective (one-to-one)
-    \item surjective (onto)
-    \item bijective (one-to-one and onto)
+    \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5, 6\}$ and $f : A \to B$ where:
+          \[
+              f(1) = 6, \, f(2) = 5, \, f(3) = 4.
+          \]
+          $f$ is a bijection.
+    \item Let $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$ and $f : A \to B$ where:
+          \[
+              f(1) = 4, \, f(2) = 4, \, f(3) = 56
+          \]
+          $f$ is neither injective nor surjective.
+
 \end{itemize}
-
-\begin{definition}
-    Let \(f: A \rightarrow B\) be a function. \(f\) is injective if for all \(x, y \in A\), if \(f(x) = f(y)\) then \(x = y\).
-\end{definition}
+\begin{question*}
+    Let $A$ and $B$ be finite sets of the same size. Prove that the following are
+    equivalent:
+    \begin{enumerate}
+        \item $f : A \to B$ is injective.
+        \item $f : A \to B$ is bijective.
+        \item $f : A \to B$ is surjective.
+    \end{enumerate}
+    Demonstrate that (1), (2), and (3) are not necessarily equivalent if $A = B = \mathbb{N}$.
+\end{question*}
 \begin{example}
-    Consider the function $f: \{1, 2, 3\} \to \{a, b, c\}$ defined by the following assignments:
+    Let $f : \mathbb{N} \to \mathbb{Z}$ be defined as:
     \[
-        f(1) = a, \quad f(2) = b, \quad f(3) = c
-    \]
-    This function is bijective because it is both injective and surjective.
-\end{example}
-
-\begin{example}
-    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = 2x + 3$. We claim that $f$ is injective.
-
-    To prove this, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{R}$. Then:
-    \[
-        2a + 3 = 2b + 3
-    \]
-    Subtracting 3 from both sides, we get:
-    \[
-        2a = 2b
-    \]
-    Dividing both sides by 2, we obtain:
-    \[
-        a = b
-    \]
-    Therefore, $f$ is injective.
-\end{example}
-
-\begin{example}
-    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x^2$. We claim that $f$ is not injective.
-
-    To see this, observe that $f(2) = 4$ and $f(-2) = 4$. Since $f(2) = f(-2)$ but
-    $2 \neq -2$, the function $f$ is not injective.
-\end{example}
-
-\begin{example}
-    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
-    \]
-    This function is not injective because $f(1) = f(3) = 4$ but $1 \neq 3$.
-\end{example}
-Here we have two elements in set $B$ but there are three elements in input in set $A$. That's why there has to be a collision. Since $ |a| >  |b|$, there must be a collision. If $f(1), f(2), f(3) \in B$, and $ |b| = 2$ Tow of those must be the same. That means that f is not one-to-one.
-
-\begin{definition}
-    A function $f: A \to B$ is called \textbf{surjective} (or \textbf{onto}) if for every element $b \in B$, there exists at least one element $a \in A$ such that $f(a) = b$.
-\end{definition}
-\begin{example}
-    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x$. This function is surjective because for every $y \in \mathbb{R}$, we can find an $x \in \mathbb{R}$ such that $f(x) = y$ (specifically, $x = y$).
-\end{example}
-\begin{example}
-    Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x^2$. This function is not surjective because there is no $x \in \mathbb{R}$ such that $f(x) = -1$.
-\end{example}
-\begin{example}
-    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 4, \quad f(3) = 4
-    \]
-    This function is surjective because every element in $B$ is mapped to by at
-    least one element in $A$. However, it is not injective because $f(1) = f(2) =
-        f(3) = 4$ but $1 \neq 2 \neq 3$.
-\end{example}
-
-\begin{example}
-    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5\}$. Define the function $f: A \to B$ by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 4, \quad f(3) = 5
-    \]
-    This function is surjective because every element in $B$ is mapped to by at
-    least one element in $A$. However, it is not injective because $f(1) = f(2) =
-        4$ but $1 \neq 2$.
-\end{example}
-
-\begin{example}
-    Consider the sets $A = \{1, 2, 3\}$ and $B = \{4, 5, 6, 7\}$. Define the function $f: A \to B$ by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 5, \quad f(3) = 6
-    \]
-    This function is neither injective nor surjective. It is not injective because
-    $ |a| <  |b|$, and it is not surjective because the element $7 \in B$ is not
-    mapped to by any element in $A$.
-\end{example}
-
-\begin{definition}
-    A function $f: A \to B$ is called \textbf{range} if it is the set of all possible outputs of $f$. Formally, the range of $f$ is defined as:
-    \[
-        \text{range}(f) = \{ f(a) \mid a \in A \}
-    \]
-\end{definition}
-\begin{fact}
-    The range of a function $f: A \to B$ is a subset of the codomain $B$. A function is surjective if and only if its range is equal to its codomain.
-\end{fact}
-\begin{example}
-    Consider the function $f: \{1, 2, 3\} \to \{4, 5\}$ defined by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
-    \]
-    The range of $f$ is $\{4, 5\}$, which is equal to the codomain $\{4, 5\}$.
-    Therefore, $f$ is surjective.
-\end{example}
-\begin{example}
-    Consider the function $f: \{1, 2, 3\} \to \{4, 5, 6\}$ defined by the following assignments:
-    \[
-        f(1) = 4, \quad f(2) = 5, \quad f(3) = 4
-    \]
-    The range of $f$ is $\{4, 5\}$, which is a subset of the codomain $\{4, 5, 6\}$
-    but not equal to it. Therefore, $f$ is not surjective.
-\end{example}
-\begin{fact}
-    f is \vocab{surjective} means that the \vocab{range} of $f$ is equal to the \vocab{codomain} of $f$.
-\end{fact}
-
-\begin{definition}
-    A function $f: A \to B$ is called \textbf{bijective} (or a \textbf{bijection}) if it is both injective and surjective or (one-to-one correspondence). This means that every element in $B$ is mapped to by exactly one element in $A$.
-\end{definition}
-\begin{example}
-    Consider the function $f: \{1, 2, 3\} \to \{4, 5, 6\}$ defined by the following assignments:
-    \[
-        f(1) = 5, \quad f(2) = 4, \quad f(3) = 6
-    \]
-    This function is bijective because it is both injective (no two elements in $A$
-    map to the same element in $B$) and surjective (every element in $B$ is mapped
-    to by some element in $A$).
-\end{example}
-Here we can notice that we have a matching between the elements of $A$ and $B$, every element of set $A$ has one and only mapping into the set $B$.
-
-\begin{example}
-    Consider the function $f: \mathbb{N} \to \mathbb{Z}$ defined by $f(x) = x$, where $\mathbb{N}$ is the set of natural numbers and $\mathbb{Z}$ is the set of integers. We claim that $f$ is injective but not surjective.
-
-    To prove that $f$ is injective, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{N}$. Then:
-    \[
-        a = b
-    \]
-    Therefore, $f$ is injective because no two different elements in $\mathbb{N}$ map to the same element in $\mathbb{Z}$.
-
-    However, $f$ is not surjective because there are elements in $\mathbb{Z}$ that are not in the range of $f$. For example, there is no $x \in \mathbb{N}$ such that $f(x) = -1$. Therefore, $f$ is not surjective.
-\end{example}
-
-
-\begin{example}
-    Consider the function $f: \mathbb{Z} \to \mathbb{N}$ defined by:
-    \[
-        f(n) = 
-        \begin{cases} 
-            2n & \text{if } n \geq 0 \\
-            2|n| - 1 & \text{if } n < 0 
+        f(n) =
+        \begin{cases}
+            n / 2              & \text{if } n \text{ is even}, \\
+            -\frac{(n + 1)}{2} & \text{if } n \text{ is odd}.
         \end{cases}
     \]
-    We claim that $f$ is bijective.
-
-    To prove that $f$ is injective, suppose $f(a) = f(b)$ for some $a, b \in \mathbb{Z}$. We need to show that $a = b$.
-    \begin{itemize}
-        \item If $a \geq 0$ and $b \geq 0$, then $f(a) = 2a$ and $f(b) = 2b$. Since $f(a) = f(b)$, we have $2a = 2b$, which implies $a = b$.
-        \item If $a < 0$ and $b < 0$, then $f(a) = 2 |a| - 1$ and $f(b) = 2 |b| - 1$. Since $f(a) = f(b)$, we have $2 |a| - 1 = 2 |b| - 1$, which implies $ |a| =  |b|$ and hence $a = b$.
-        \item If $a \geq 0$ and $b < 0$, then $f(a) = 2a$ and $f(b) = 2 |b| - 1$. Since $f(a) = f(b)$, we have $2a = 2  |b| - 1$, which is a contradiction because $2a$ is even and $2 |b| - 1$ is odd. Therefore, this case cannot occur.
-        \item If $a < 0$ and $b \geq 0$, then $f(a) = 2 |a| - 1$ and $f(b) = 2b$. Since $f(a) = f(b)$, we have $2 |a| - 1 = 2b$, which is a contradiction because $2 |a| - 1$ is odd and $2b$ is even. Therefore, this case cannot occur.
-    \end{itemize}
-    Therefore, $f$ is injective.
-
-    To prove that $f$ is surjective, let $m \in \mathbb{N}$. We need to find $n \in \mathbb{Z}$ such that $f(n) = m$.
-    \begin{itemize}
-        \item If $m$ is even, say $m = 2k$ for some $k \in \mathbb{N}$, then $f(k) = 2k = m$.
-        \item If $m$ is odd, say $m = 2k + 1$ for some $k \in \mathbb{N}$, then $f(-(k+1)) = 2|-(k+1)| - 1 = 2(k+1) - 1 = m$.
-    \end{itemize}
-    Therefore, $f$ is surjective.
-
-    Since $f$ is both injective and surjective, it is bijective.
+    is a bijection from $\mathbb{N}$ to $\mathbb{Z}$.
 \end{example}
+\begin{proof}
+    \textbf{Injectivity:} Suppose $f(n_1) = f(n_2)$. Then:
+    \begin{itemize}
+        \item If $f(n_1) = f(n_2) > 0$, then $n_1, n_2$ must be even and
+              \[
+                  \frac{n_1}{2} = f(n_1) = f(n_2) = \frac{n_2}{2} \implies n_1 = n_2.
+              \]
 
+        \item If $f(n_1) = f(n_2) < 0$, then $n_1, n_2$ must both be odd and
+              \[
+                  -\frac{n_1 + 1}{2} = f(n_1) = f(n_2) = -\frac{n_2 + 1}{2} \implies n_1 = n_2.
+              \]
+    \end{itemize}
 
-\begin{example}
-    Consider the function $f: \mathbb{Z} \to \mathbb{N}$ defined by:
+    In all cases, $n_1 = n_2$.
+
+    It follows that $f$ is injective. \\ \textbf{Surjectivity:} Let $n \in
+        \mathbb{Z}$.
+
+    \begin{itemize}
+        \item If $n > 0$, then
+              \[
+                  n = f(2n).
+              \]
+        \item If $n < 0$, then
+              \[
+                  n = f(-2n - 1).
+              \]
+    \end{itemize}
+
     \[
-        f(n) = 
-        \begin{cases} 
-            2n & \text{if } n \geq 0 \\
-            2(-n - 1) + 1 & \text{if } n < 0 
-        \end{cases}
+        \therefore \, f \text{ is surjective.}
     \]
-    We claim that $f$ is bijective.
-\end{example}
-
-
+\end{proof}
 %\section{January 13, 2025}
 %\section{January 15, 2025}
 %\section{January 17, 2025}

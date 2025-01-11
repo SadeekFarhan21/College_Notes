@@ -33,9 +33,13 @@
 
 \usepackage{amsmath, amssymb, amsthm} % standard
 \usepackage{bbm} % blackboard bold math
-\usepackage[svgnames, dvipsnames, usenames, colorlinks, urlcolor=RedViolet, linkcolor=RoyalBlue, citecolor=ForestGreen]{xcolor}
-\usepackage{hyperref}
+\usepackage{hyperref} % inserting links - copied from Jason
+\PassOptionsToPackage{svgnames, dvipsnames, usenames, colorlinks}{xcolor}
+\PassOptionsToPackage{colorlinks}{hyperref}
+\hypersetup{urlcolor = RedViolet, linkcolor = RoyalBlue, citecolor = ForestGreen}
 \urlstyle{same}
+\usepackage{mhsetup, mathtools}
+
 \usepackage[capitalize]{cleveref} % for cross-referencing theorems, etc.
 \usepackage{graphicx} % for putting pictures
 \usepackage[T1]{fontenc} % for accents, etc.
@@ -52,7 +56,7 @@
 \newcommand{\paren}[1]{\left(#1\right)}
 \newcommand{\pnorm}[1]{\left|\left|#1\right|\right|}
 \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
-
+\newcommand{\tbf}[1]{\textbf{\color{black}#1}}
 % Fixes itemize
 \usepackage{enumitem}
 \setlist{itemsep = 0.2em, topsep = 0.4em}
