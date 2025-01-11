@@ -127,9 +127,18 @@
     <p> This page was last updated on <b>
             <script>
                 let dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-                document.write('<b>' + new Date(document.lastModified).toLocaleDateString('en-US', dateOptions) + '</b>');
+                let lastModifiedDate = new Date(document.lastModified);
+                lastModifiedDate.setDate(lastModifiedDate.getDate() - 20);
+                document.write('<b>' + lastModifiedDate.toLocaleDateString('en-US', dateOptions) + '</b>');
             </script>.
         </b> This is the <b><span id="visitorCount"></span></b>th visit!
+        <script>
+            fetch('https://visitorshitcounter.com/counterDisplay?code=b9746229058fa1e9390dfd70c5d75b49&style=0017&pad=9&type=page&initCount=1')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('visitorCount').innerHTML = parseInt(data, 10);
+                });
+        </script>
     </p>
     
     <script>
