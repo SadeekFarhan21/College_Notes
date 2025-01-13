@@ -1,0 +1,70 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+\usepackage{xcolor}
+
+\usepackage{fontspec}
+
+\title{Stat 4202: Mathematical Statistics II}
+\author{\textbf{Homework 1}}
+\date{Spring 2025}
+
+\begin{document}
+
+\maketitle
+\begin{question}
+    Use the result of Example 8.4 on page 253 to show that for random samples of size \(n = 3\), the median is a biased estimator of the parameter \(\theta\) of an exponential population.
+\end{question}
+
+\begin{question}
+    Show that \(\frac{X + 1}{n + 2}\) is a biased estimator of the binomial parameter \(\theta\). Is this estimator asymptotically unbiased?
+\end{question}
+\begin{question}
+    Show that the sample proportion \(\frac{X}{n}\) is a minimum variance unbiased estimator of the binomial parameter \(\theta\). (Hint: Treat \(\frac{X}{n}\) as the mean of a random sample of size \(n\) from a Bernoulli population with the parameter \(\theta\).)
+\end{question}
+\begin{question}
+    If \(\hat{\theta}_1\) and \(\hat{\theta}_2\) are independent unbiased estimators of a given parameter \(\theta\) and \(\text{var}(\hat{\theta}_1) = 3 \cdot \text{var}(\hat{\theta}_2)\), find the constants \(a_1\) and \(a_2\) such that \(a_1 \hat{\theta}_1 + a_2 \hat{\theta}_2\) is an unbiased estimator with minimum variance for such a linear combination.
+\end{question}
+\begin{question}
+    Show that the mean of a random sample of size \(n\) from an exponential population is a minimum variance unbiased estimator of the parameter \(\theta\).
+\end{question}
+\begin{question}The information about $\theta$ in a random sample of size $n$ is also given by
+
+    \[
+        -n \cdot E \left[ \frac{\partial^2 \ln f(X)}{\partial \theta^2} \right]
+    \]
+
+    where $f(x)$ is the value of the population density at $x$, provided that the
+    extremes of the region for which $f(x) \neq 0$ do not depend on $\theta$. The
+    derivation of this formula takes the following steps:
+
+    \begin{enumerate}
+        \item[(a)] Differentiating the expressions on both sides of
+            \[
+                \int f(x) \, dx = 1
+            \]
+            with respect to $\theta$, show that
+            \[
+                \int \frac{\partial \ln f(x)}{\partial \theta} \cdot f(x) \, dx = 0
+            \]
+            by interchanging the order of integration and differentiation.
+
+        \item[(b)] Differentiating again with respect to $\theta$, show that
+            \[
+                E \left[ \left( \frac{\partial \ln f(X)}{\partial \theta} \right)^2 \right] = -E \left[ \frac{\partial^2 \ln f(X)}{\partial \theta^2} \right].
+            \]
+    \end{enumerate}
+\end{question}
+\begin{question}
+    If \(\bar{X_1}\) is the mean of a random sample of size \(n\) from a normal population with the mean \(\mu\) and the variance \(\sigma_1^2\), \( \bar{X_2}\) is the mean of a random sample of size \(n\) from a normal population with the mean \(\mu\) and the variance \(\sigma_2^2\), and the two samples are independent, show that
+    \begin{enumerate}
+        \item[(a)] \(\omega \cdot \bar{X_1} + (1 - \omega) \cdot \bar{X_2}\), where \(0 \leq \omega \leq 1\), is an unbiased estimator of \(\mu\);
+        \item[(b)] the variance of this estimator is a minimum when \(\omega =
+              \frac{\sigma_2^2}{\sigma_1^2 + \sigma_2^2}\).
+    \end{enumerate}
+\end{question}
+
+\begin{question}
+    With reference to Exercise 21, find the efficiency of the estimator of part (a) with \(\omega = \frac{1}{2}\) relative to this estimator with \(\omega = \frac{\sigma_2^2}{\sigma_1^2 + \sigma_2^2}\).
+\end{question}
+\end{document}

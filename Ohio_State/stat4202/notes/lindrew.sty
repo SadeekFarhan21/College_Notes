@@ -1,19 +1,19 @@
 \ProvidesPackage{lindrew}[2022/11/17] % with much help from Jason Chen; thank you!
 
-%\newif\iflinserif \linseriffalse % by default, uses cmbright sans serif font. 
-%\newif\iflinclass \linclasstrue % by default, numbers all theorems/definitions from 1 to N w/o regard for section
-%\newif\iflinindent \linindenttrue % by default, does do paragraph indent
-%\newif\iflinheader \linheaderfalse % by default, no header
+\newif\iflinserif \linseriffalse % by default, uses cmbright sans serif font. 
+\newif\iflinclass \linclasstrue % by default, numbers all theorems/definitions from 1 to N w/o regard for section
+\newif\iflinindent \linindenttrue % by default, does do paragraph indent
+\newif\iflinheader \linheaderfalse % by default, no header
 
-%\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
-%\DeclareOption{formal}{\linclassfalse} % if you want a document where theorems in section 1 are "theorem 1.x", etc.
-%\DeclareOption{noindent}{\linindentfalse}
-%\DeclareOption{header}{\linheadertrue}
+\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
+\DeclareOption{formal}{\linclassfalse} % if you want a document where theorems in section 1 are "theorem 1.x", etc.
+\DeclareOption{noindent}{\linindentfalse}
+\DeclareOption{header}{\linheadertrue}
 
 \ProcessOptions*
 
 \iflinserif\else
-    \usepackage{cmbright}
+    \usepackage{cmbright} % sans serif font
 \fi
 
 \iflinindent
@@ -25,12 +25,13 @@
     \usepackage[includehead,includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
-    \rhead{\textbf{Farhan Sadeek}} % change name as necessary
+    \rhead{\textbf{Andrew Lin}} % change name as necessary
 \else
     %\usepackage[left=0.8in, top=2.6cm, bottom=1.4cm, right=0.8in]{geometry}
     \usepackage[left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
 \fi
 
+\usepackage[OT1]{fontenc}
 \usepackage{amsmath, amssymb, amsthm} % standard
 \usepackage{bbm} % blackboard bold math
 \usepackage[svgnames, dvipsnames, usenames]{xcolor}
@@ -39,10 +40,7 @@
 \hypersetup{urlcolor = RedViolet, linkcolor = RoyalBlue, citecolor = ForestGreen}
 \urlstyle{same}
 \usepackage{mhsetup, mathtools}
-\usepackage{lmodern} % Latin Modern font
-\usepackage{mathptmx} % Times New Roman font for text and math
-\usepackage[scaled=0.92]{helvet} % Helvetica font for sans-serif
-\usepackage{courier} % Courier font for monospace
+
 \usepackage[capitalize]{cleveref} % for cross-referencing theorems, etc.
 \usepackage{graphicx} % for putting pictures
 \usepackage[T1]{fontenc} % for accents, etc.
@@ -54,7 +52,7 @@
 \usepackage{multicol}
 \usepackage{array,multirow}
 \usepackage[normalem]{ulem}
-
+\usepackage{fontspec}
 \newcommand{\vocab}[1]{\textbf{\color{blue!90}\boldmath #1}}
 \newcommand{\paren}[1]{\left(#1\right)}
 \newcommand{\pnorm}[1]{\left|\left|#1\right|\right|}

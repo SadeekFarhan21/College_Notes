@@ -1,0 +1,23 @@
+# Fdb version 4
+["pdflatex"] 1736278786 "c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/practice/test.tex" "test.pdf" "test" 1736278787 0
+  "C:/Users/Farhan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736278653 231426 cbcb3ff468d50aef1aadb377914074b6 ""
+  "C:/Users/Farhan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1704980659 23179432 ff903d8444c1d7ea1a7ebf0beb1e96f9 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss10.tfm" 1136765053 1316 b636689f1933f24d1294acdf6041daaa ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss12.tfm" 1136765053 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmssbx10.tfm" 1136765053 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmssi10.tfm" 1136765053 1520 ca2bb4b78ac9800bd686e30c6d19ef95 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1247593066 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1247593066 28902 2f5c04fd2884d1878057baa5aad22765 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb" 1247593066 25150 e0d09798d232ab9d00c5c0a8df6cc22d ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1669844196 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1669844196 5119 4ce42f43368f652f9c9522d943cce8e4 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1669844196 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
+  "C:/Users/Farhan/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1680178475 29768 5600b3a98028e2e01b60e7f98fbf4b9c ""
+  "c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/practice/test.tex" 1736278780 332 dfb3baef641ab0cedf6f245f6e4ab7b3 ""
+  "test.aux" 1736278787 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "test.tex" 1736278780 332 dfb3baef641ab0cedf6f245f6e4ab7b3 ""
+  (generated)
+  "test.aux"
+  "test.log"
+  "test.pdf"
+  (rewritten before read)
