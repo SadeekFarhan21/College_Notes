@@ -19,6 +19,7 @@
 \section{January 8, 2025}
 
 Dr.\ Cogdell explained the logistics of the class and also took attendance.
+This class will be no exams and graded based on only homeworks.
 
 \subsection{Conjectures in Number Theory}
 \begin{itemize}
@@ -243,7 +244,93 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     that any common divisor of \(a\) and \(b\) is a divisor of \(m\). Hence, \((a,
     b, m) = 1\).
 \end{proof}
-%\section{January 13, 2025}
+\section{January 13, 2025}
+\subsection{Euclidean Algorithm}
+Given two integers \(b\) and \(c\), now we can generate the greatest common
+divisor. There is no algorithm to this problem, but there is an algorithm.
+
+\begin{question}
+    Given a set of integers (\(bx + cy\)) how to find the greatest common divisor?
+\end{question}
+Consider the case \(b = 963\) and \(c = 657\). If we divide \(c\) into \(b\), we get the quotient \(q = 1\) and the remainder \(r = 306\). We can write this as \(b = qc + r\) or \(r = b - cq\). In particular, \(306 = 963 - 1 \cdot 657\). Now \((b, c) = (b - cq, c)\) by replacing \(a\) and \(x\) by \(c\) and \(-q\) in Theorem 1.9, so we see that
+\[
+    (963, 657) = (963 - 1 \cdot 657, 657) = (306, 657).
+\]
+The integer 963 has been replaced by the smaller integer 306, and this suggests
+that the procedure be repeated. So we divide 306 into 657 to get a quotient 2
+and a remainder 45, and
+\[
+    (306, 657) = (306, 657 - 2 \cdot 306) = (306, 45).
+\]
+Next, 45 is divided into 306 with quotient 6 and remainder 36, then 36 is
+divided into 45 with quotient 1 and remainder 9. We conclude that
+\[
+    (963, 657) = (306, 657) = (306, 45) = (45, 36) = (36, 9).
+\]
+Thus \((963, 657) = 9\), and we can express 9 as a linear combination of 963
+and 657 by sequentially writing each remainder as a linear combination of the
+two original numbers:
+\[
+    \begin{aligned}
+        306 & = 963 - 657,                                                                                          \\
+        45  & = 657 - 2 \cdot 306 = 657 - 2 \cdot (963 - 657) = 3 \cdot 657 - 2 \cdot 963,                          \\
+        36  & = 306 - 6 \cdot 45 = (963 - 657) - 6 \cdot (3 \cdot 657 - 2 \cdot 963) = 13 \cdot 963 - 19 \cdot 657, \\
+        9   & = 45 - 36 = 3 \cdot 657 - 2 \cdot 963 - (13 \cdot 963 - 19 \cdot 657) = 22 \cdot 657 - 15 \cdot 963.
+    \end{aligned}
+\]
+In terms of Theorem 1.3, where \(g = (b, c) = bx_0 + cy_0\), beginning with \(b
+= 963\) and \(c = 657\) we have used a procedure called the Euclidean algorithm
+to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these values for
+\(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\) will do
+where \(k\) is any integer.
+
+To find the greatest common divisor \((b, c)\) of any two integers \(b\) and
+\(c\), we now generalize what is done in the special case above. The process
+will also give integers \(x_0\) and \(y_0\) satisfying the equation \(bx_0 +
+cy_0 = (b, c)\). The case \(c = 0\) is special: \((b, 0) = |b|\). For \(c \neq
+0\), we observe that \((b, c) = (b, -c)\) by Theorem 1.9, and hence, we may
+presume that \(c\) is positive.
+
+\begin{theorem}[The Euclidean Algorithm]
+    Given integers \( b \) and \( c > 0 \), we make a repeated application of the division algorithm, Theorem 1.2, to obtain a series of equations:
+    \[
+        \begin{aligned}
+            b       & = cq_1 + r_1, \quad 0 < r_1 < c,                                         \\
+            c       & = r_1q_2 + r_2, \quad 0 < r_2 < r_1,                                     \\
+            r_1     & = r_2q_3 + r_3, \quad 0 < r_3 < r_2,                                     \\
+                    & \ \, \vdots \quad \quad \quad \quad \quad \quad \quad \quad \quad \vdots \\
+            r_{j-2} & = r_{j-1}q_j + r_j, \quad 0 < r_j < r_{j-1},                             \\
+            r_{j-1} & = r_jq_{j+1}.
+        \end{aligned}
+    \]
+
+    The greatest common divisor \((b, c)\) of \( b \) and \( c \) is \( r_j \), the
+    last nonzero remainder in the division process. Values of \( x_0 \) and \( y_0
+    \) in \((b, c) = bx_0 + cy_0 \) can be obtained by writing each \( r_i \) as a
+    linear combination of \( b \) and \( c \).
+\end{theorem}
+
+\begin{proof}
+    The chain of equations is obtained by dividing \(c\) into \(b\), \(r_1\) into \(c\), \(r_2\) into \(r_1\), and so on, until \(r_j\) into \(r_{j-1}\). The process stops when the division is exact, that is, when the remainder is zero. Thus, in our application of Theorem 1.2, we have written the inequalities for the remainder without an equality sign. For example, \(0 < r_1 < c\) instead of \(0 \leq r_1 < c\), because if \(r_1\) were equal to zero, the chain would stop at the first equation \(b = cq_1\), in which case the greatest common divisor of \(b\) and \(c\) would be \(c\).
+
+    We now prove that \(r_j\) is the greatest common divisor \(g\) of \(b\) and
+    \(c\). By Theorem 1.9, we observe that
+    \[
+        (b, c) = (c, r_1) = (r_1, r_2) = \cdots = (r_{j-1}, r_j) = (r_j, 0) = r_j.
+    \]
+
+    To see that \(r_j\) is a linear combination of \(b\) and \(c\), we argue by
+    induction that each \(r_i\) is a linear combination of \(b\) and \(c\).
+    Clearly, \(r_1\) is such a linear combination, and likewise \(r_2\). In
+    general, \(r_i\) is a linear combination of \(r_{i-1}\) and \(r_{i-2}\). By the
+    inductive hypothesis, we may suppose that these latter two numbers are linear
+    combinations of \(b\) and \(c\), and it follows that \(r_i\) is also a linear
+    combination of \(b\) and \(c\).
+\end{proof}
+
+\begin{example}
+    We will find the g.c.d of 42823 and 6409.
+\end{example}
 %\section{January 15, 2025}
 %\section{January 17, 2025}
 %\section{January 20, 2025}
