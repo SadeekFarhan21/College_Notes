@@ -469,7 +469,7 @@ The order axioms are: There is as subset of \(P \subset \RR\) called the set of
 \end{proposition}
 \begin{proof}
     Since, \(x \in \PP, x \neq 0\). Therefore, \(x^{-1}\) exists. By P3, \(x^{-1} > 0, x^{-1} = 0  \), or \(x^{-1} < 0\).
-If \(x^{-1} = 0\), then \(1 = x \times x^{-1} = x \times 0 = 0\)
+    If \(x^{-1} = 0\), then \(1 = x \times x^{-1} = x \times 0 = 0\)
     [Contradiction] Assume \(x^{-1} < 0\). Then \(-x^{-1} \in \PP\) by P3. Then \(x
     \times (-x^{-1}) \in \PP\) by P2. But \(x \times (-x^{-1}) = -1\), which
     contradicts P3 since \(-1 \notin \PP\). Therefore, \(x^{-1} \in \PP\).
@@ -477,6 +477,155 @@ If \(x^{-1} = 0\), then \(1 = x \times x^{-1} = x \times 0 = 0\)
 \begin{corollary}
     If \(x, y \in \PP\), and \(x < y\), then \(\frac{1}{y} < \frac{1}{x}\).
 \end{corollary}
+
+\section{January 13, 2025}
+Homework 1 is due on January 21, 2025.\\
+\begin{definition}
+    We define \(\max \colon \RR \times \RR \Rightarrow \RR\) by \[\max(a, b) = \begin{cases}
+            a & \text{if } a \geq b \\
+            b & \text{if } b \geq a
+        \end{cases}\]
+\end{definition}
+
+\begin{definition}
+    We define \(\max \colon \RR \times \RR \to \RR\) by \[\max(a, b) = \begin{cases}
+            a & \text{if } a \geq b \\
+            b & \text{if } b > a
+        \end{cases}\]
+\end{definition}
+\begin{definition}
+    We define \(|x|\) \(\colon \RR \rightarrow \RR\) as follows:
+    \[
+        |x| = \begin{cases}
+            x  & \text{if } x \geq 0 \\
+            -x & \text{if } x < 0
+        \end{cases}
+    \]
+\end{definition}
+\begin{proposition}
+    For all \(x \in \RR\), \(|-x| =  |x|\).
+\end{proposition}
+\begin{proof}
+    By P3, x > 0, x = 0, or x < 0. \\
+    \begin{itemize}
+        \item Case 1: If \(x > 0\), then \(|x| = x\) and \(|-x| = -(-x) = x\). Thus, \(|x| =
+              |-x|\).
+        \item Case 2: If \(x = 0\), then \(|x| = 0\) and \(|-x| = -0 = 0\). Thus, \(|x| =
+              |-x|\).
+        \item Case 3: If \(x < 0\), then \(|x| = -x\) and \(|-x| = -(-x) = x\). Thus, \(|x| =
+              |-x|\).
+    \end{itemize}
+\end{proof}
+
+\begin{theorem} [The Triangle \(\Delta\) Inequality]
+    For all \(a, b, \in \RR\) \[ |a + b| = \leq |a| + |b| \] with equality if and only if either \( a \geq 0\) and \( b \geq 0\) or \(a \leq
+    0\) and \(b \leq 0\).
+\end{theorem}
+
+\begin{proof}
+    By P3, oen of the following 8 Cases must hold: \\
+    \begin{center}
+
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+              & a          & b            & a + b        \\ \hline
+            1 & \(\geq\) 0 & \(\geq\) 0   & Row 2, Col 4 \\ \hline
+            2 & \(\geq\) 0 & \(\geq\) 0   & Row 3, Col 4 \\ \hline
+            3 & \(\geq\) 0 & \( < \) 0    & Row 4, Col 4 \\ \hline
+            4 & \(\geq\) 0 & \( < \) 0    & Row 5, Col 4 \\ \hline
+            5 & \(< \) 0   & Row 6, Col 3 & Row 6, Col 4 \\ \hline
+            6 & \(< \) 0   & Row 7, Col 3 & Row 7, Col 4 \\ \hline
+            7 & \(< \) 0   & Row 8, Col 3 & Row 8, Col 4 \\ \hline
+            8 & \(< \) 0   & Row 8, Col 3 & Row 8, Col 4 \\ \hline
+        \end{tabular}
+    \end{center}
+    Case 2 and 7 is not possible. But we will prove the rest of the cases:
+    \begin{itemize}
+        \item[(1)] \(|a| = a\), \(|b| = b\), \(|a + b| = a + b\), $\therefore$ \(|a + b| = a + b = |a| + b\)
+        \item [(3)]
+        \item [(4)] \(|a| = a, |b| = -b, |a + b| = a + b\)
+              \begin{align*}
+                  |a + b| = - a- b = - 0 - b & = (-a \leq 0)                           \\
+                                             & \leq a + 0 \quad \text{(since $b < 0$)} \\
+                                             & = |a| + |b|
+              \end{align*}
+        \item [(5)] Follows the similarly by symmetry.
+
+    \end{itemize}
+    Finish this for exercise.
+\end{proof}
+The picture of the Triangle identity
+\begin{center}
+
+    \begin{tikzpicture}
+        \coordinate [label=left:A] (A) at (0,0);
+        \coordinate [label=right:B] (B) at (4,0);
+        \coordinate [label=above:C] (C) at (2,3);
+
+        \draw (A) -- node[below] {$c$} (B);
+        \draw (B) -- node[right] {$a$} (C);
+        \draw (C) -- node[left] {$b$} (A);
+    \end{tikzpicture}
+\end{center}
+\[ |a| = ||\vec{BC}|| \leq |b| + |c| = ||\vec{AC}|| + ||\vec{AB}|| \]
+\begin{proposition}
+    For all \(a, b, \in \RR\) \[ |ab| = |a|\cdot|b|\]
+\end{proposition}
+\begin{proof}
+    If \(a = 0\) or \(b = 0\), then \(|ab| = |0| = 0 = |a|\cdot|b|\)
+    Let's assume that \(a \neq 0, b \neq 0\).
+    \begin{itemize}
+        \item \(a > 0, b > 0\) Then P2 implies \(ab > 0\) so, \(|ab| = ab = |a||b|\)
+        \item \(a < 0, b > 0\). Then \(ab < 0\). Then \(|ab| = -ab = (-a)b = |a||b|\)
+        \item \(a > 0, b < 0\). This follows from case 2 by symmetry.
+        \item \(a < 0, b < 0\).Then \(ab > 0\). Hence, \(|ab| = ab = (-a)(-b) = |a||b|\)
+    \end{itemize}
+\end{proof}
+
+\begin{theorem} [Bernouli's Inequality]
+    For all \(x \in \RR\) with \(x > -1\) and \(n \in \NN\), if \(n \geq 1\), then \[(1 + x)^n \geq 1 + nx\]
+\end{theorem}
+\begin{proof}
+    We proceed by induction on \(n\). \\
+    Base Case: \(n = 1\) \(\colon (1 + x)^{1} = 1 + x = 1 + 1 \cdot x\)\\
+    Inductive Step: Assume
+    \[
+        (1 + x)^N \geq 1 + Nx
+    \]
+    We want to show \((1 + x)^{N + 1} \geq 1 + (N + 1) \cdot x\). First, since \(x
+    > -1\), \(x + 1 > 0\). \\ Multiplying both sides by \(x + 1\),
+    \begin{align*}
+        (1 + x)(1 + x)^N & \geq (1 + Nx)(1 + x)                                          \\
+                         & = 1 + (N + 1)x + Nx^2 \quad \text{(field axioms)}             \\
+                         & \geq 1 + (N + 1)x \quad \text{(since \(N > 0\), \(x^2 > 0\))}
+    \end{align*}
+    Hence, \((1 + x)^{N + 1} \geq 1 + (N + 1)x\).
+\end{proof}
+
+\subsection{The completeness axiom}
+    Let \(B \subseteq \RR\). We say the following:
+    \begin{itemize}
+        \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
+              of \(B\) if
+              \begin{itemize}
+                  \item \(b_1 \in B\), and
+                  \item \(b_1 \leq b\) for all \(b \in B\).
+              \end{itemize}
+              We write \(b_1 = \min B\).
+    \end{itemize}    
+        \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
+              of \(B\) if
+              \begin{itemize}
+                  \item \(b_1 \in B\), and
+                  \item \(b_1 \leq b\) for all \(b \in B\).
+              \end{itemize}
+              We write \(b_1 = \min B\).
+\begin{example}
+    Let \(B = [\(1, 2\)]\). Then \(\min B = 1\).
+\end{example}
+\begin{proof}
+    
+\end{proof}
 %\section{January 15, 2025}
 %\section{January 17, 2025}
 %\section{January 20, 2025}
