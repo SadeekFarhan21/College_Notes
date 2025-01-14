@@ -1,13 +1,13 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  14 JAN 2025 12:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  13 JAN 2025 22:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_St
-ate/math4573/notes/math4573.tex"
+ate/physics2301/notes/physics2301.tex"
 
 (c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_Stat
-e/math4573/notes/math4573.tex
+e/physics2301/notes/physics2301.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30>
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1318,35 +1318,35 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
-)) (math4573.aux)
-\openout1 = `math4573.aux'.
+)) (physics2301.aux)
+\openout1 = `physics2301.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-5.
+3.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1382,123 +1382,144 @@ LaTeX Font Info:    ... okay on input line 15.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 15.
-(math4573.out) (math4573.out)
+Package hyperref Info: Link coloring ON on input line 13.
+(physics2301.out) (physics2301.out)
 \@outlinefile=\write4
-\openout4 = `math4573.out'.
+\openout4 = `physics2301.out'.
 
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 
-17.
+16.
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\ot1cmbr.fd
 File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
- 17.
+ 16.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line
- 17.
+ 16.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omscmbrs.fd
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 47.
-Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
-ine 47.
+(mdframed)              on input line 33.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 33.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
+ []
 
 [1
 
-]
+] [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 54.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 64.
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 64.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 77.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 89.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 93.
- [2]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 97.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 100.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 112.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 118.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 123.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 127.
+(mdframed)              on input line 139.
  [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 148.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 162.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 169.
+(mdframed)              on input line 206.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
+t line 206.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 210.
  [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 209.
+(mdframed)              on input line 239.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 221.
+(mdframed)              on input line 270.
  [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 230.
-Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 253.
+(mdframed)              on input line 290.
  [6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 294.
+(mdframed)              on input line 372.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 372.
+
+Overfull \hbox (0.2776pt too wide) detected at line 383
+\OML/cmbrm/m/it/10.95 y[] \OT1/cmbr/m/n/10.95 = [] [] \OML/cmbrm/m/it/10.95 y d
+m \OT1/cmbr/m/n/10.95 = [] [][](\OML/cmbrm/m/it/10.95 R [] ^^R\OT1/cmbr/m/n/10.
+95 )(2\OML/cmbrm/m/it/10.95 ^^YR[]^^[ [] ^^R d^^R\OT1/cmbr/m/n/10.95 ) = \OML/c
+mbrm/m/it/10.95 R [][] [] ^^R [] ^^R d^^R \OT1/cmbr/m/n/10.95 = [][][] = []\OML
+/cmbrm/m/it/10.95 :
+ []
+
+[7]
+Overfull \hbox (60.90582pt too wide) detected at line 447
+[] \OT1/cmbr/m/n/10.95 = [] [] = [] [] \OMS/cmbrs/m/n/10.95 ^^B [] \OT1/cmbr/m/
+n/10.95 + [] [] \OMS/cmbrs/m/n/10.95 ^^B [] \OT1/cmbr/m/n/10.95 = [] [] \OMS/cm
+brs/m/n/10.95 ^^B \OT1/cmbr/m/n/10.95 (\OML/cmbrm/m/it/10.95 m[][]\OT1/cmbr/m/n
+/10.95 ) + [] [] \OMS/cmbrs/m/n/10.95 ^^B \OT1/cmbr/m/n/10.95 ([] + []) = 0 + [
+] [] \OMS/cmbrs/m/n/10.95 ^^B [] \OT1/cmbr/m/n/10.95 = [] \OML/cmbrm/m/it/10.95
+ ^^\[]:
+ []
+
+[8]
+Overfull \hbox (91.67361pt too wide) detected at line 472
+[] \OT1/cmbr/m/n/10.95 = [] [] = []([]\OML/cmbrm/m/it/10.95 r[] \OMS/cmbrs/m/n/
+10.95 ^^@ []\OML/cmbrm/m/it/10.95 r[]\OT1/cmbr/m/n/10.95 ) \OMS/cmbrs/m/n/10.95
+ ^^B \OML/cmbrm/m/it/10.95 m[]\OT1/cmbr/m/n/10.95 ([]\OML/cmbrm/m/it/10.95 r[] 
+\OMS/cmbrs/m/n/10.95 ^^@ []\OML/cmbrm/m/it/10.95 r[]\OT1/cmbr/m/n/10.95 ) + [](
+[] \OMS/cmbrs/m/n/10.95 ^^@ []\OT1/cmbr/m/n/10.95 ) \OMS/cmbrs/m/n/10.95 ^^B \O
+ML/cmbrm/m/it/10.95 m[]\OT1/cmbr/m/n/10.95 ([]\OML/cmbrm/m/it/10.95 r[] \OMS/cm
+brs/m/n/10.95 ^^@ []\OML/cmbrm/m/it/10.95 r[]\OT1/cmbr/m/n/10.95 ) = 0 + []([] 
+\OMS/cmbrs/m/n/10.95 ^^@ []\OT1/cmbr/m/n/10.95 ) \OMS/cmbrs/m/n/10.95 ^^B \OT1/
+cmbr/m/n/10.95 ([] + [] \OMS/cmbrs/m/n/10.95 ^^@ \OML/cmbrm/m/it/10.95 m[][]r[]
+\OT1/cmbr/m/n/10.95 )\OML/cmbrm/m/it/10.95 ;
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 332.
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 332.
- [7] [8] (math4573.aux)
+(mdframed)              on input line 497.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 497.
+[9]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 520.
+ [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 588.
+ [11]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 619.
+ [12] [13]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 698.
+ [14] (physics2301.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `math4573.out' has not changed.
-(rerunfilecheck)             Checksum: 073B66099A6CB58043540AB0BFEB34CE;860.
+Package rerunfilecheck Info: File `physics2301.out' has not changed.
+(rerunfilecheck)             Checksum: A4A90ABB83B5B32C59EACD7FB9AD9714;3267.
  ) 
 Here is how much of TeX's memory you used:
- 39659 strings out of 411463
- 944554 string characters out of 5817803
- 1865290 words of memory out of 5000000
- 59319 multiletter control sequences out of 15000+600000
+ 39920 strings out of 411463
+ 949946 string characters out of 5817803
+ 1866290 words of memory out of 5000000
+ 59580 multiletter control sequences out of 15000+600000
  521256 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,10n,99p,872b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,99p,878b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math4573.pdf (8 pages).
+Output written on physics2301.pdf (14 pages).
