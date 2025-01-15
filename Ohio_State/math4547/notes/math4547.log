@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  13 JAN 2025 18:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  15 JAN 2025 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1318,8 +1318,7 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
-))
-No file math4547.aux.
+)) (math4547.aux)
 \openout1 = `math4547.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1333,6 +1332,7 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
 2.
+
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -1383,11 +1383,10 @@ LaTeX Font Info:    ... okay on input line 12.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 12.
+(math4547.out) (math4547.out)
 \@outlinefile=\write4
 \openout4 = `math4547.out'.
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1569,82 +1568,73 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 585.
  [13]
-
-c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_State
-/math4547/notes/math4547.tex:616: LaTeX Error: Lonely \item--perhaps a missing 
-list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616         \item W
-                     e say \(b_1 \subseteq\) is a \underline{least element} ...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 616
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 624.
+(mdframed)              on input line 625.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 624.
-
-c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_State
-/math4547/notes/math4547.tex:624: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624     Let \(B = [\(
-                       1, 2\)]\). Then \(\min B = 1\).
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_State
-/math4547/notes/math4547.tex:624: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624     Let \(B = [\(1, 2\)]\)
-                                . Then \(\min B = 1\).
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[14] (math4547.aux)
+t line 625.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 629.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 636.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 645.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 648.
+ [14]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 655.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 658.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 667.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 671.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 679.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 684.
+ [15]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 694.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 698.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 705.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 713.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 715.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 721.
+ [16] [17] (math4547.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `math4547.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `math4547.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  47D31845E665A9A67CD2A0E079F5E109;1586.
+Package rerunfilecheck Info: File `math4547.out' has not changed.
+(rerunfilecheck)             Checksum: FFB2C788BA6E01DE2F7C005FEECC8778;1867.
  ) 
 Here is how much of TeX's memory you used:
- 39742 strings out of 411463
- 946241 string characters out of 5817803
- 1863290 words of memory out of 5000000
- 59407 multiletter control sequences out of 15000+600000
- 522348 words of font info for 80 fonts, out of 8000000 for 9000
+ 39785 strings out of 411463
+ 947089 string characters out of 5817803
+ 1864290 words of memory out of 5000000
+ 59442 multiletter control sequences out of 15000+600000
+ 522356 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,99p,872b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math4547.pdf (14 pages).
+Output written on math4547.pdf (17 pages).

@@ -601,32 +601,143 @@ The picture of the Triangle identity
     \end{align*}
     Hence, \((1 + x)^{N + 1} \geq 1 + (N + 1)x\).
 \end{proof}
-
+\section{January 15, 2025}
 \subsection{The completeness axiom}
-    Let \(B \subseteq \RR\). We say the following:
-    \begin{itemize}
-        \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
-              of \(B\) if
-              \begin{itemize}
-                  \item \(b_1 \in B\), and
-                  \item \(b_1 \leq b\) for all \(b \in B\).
-              \end{itemize}
-              We write \(b_1 = \min B\).
-    \end{itemize}    
-        \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
-              of \(B\) if
-              \begin{itemize}
-                  \item \(b_1 \in B\), and
-                  \item \(b_1 \leq b\) for all \(b \in B\).
-              \end{itemize}
-              We write \(b_1 = \min B\).
+Let \(B \subseteq \RR\). We say the following:
+\begin{itemize}
+    \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
+          of \(B\) if
+          \begin{itemize}
+              \item \(b_1 \in B\), and
+              \item \(b_1 \leq b\) for all \(b \in B\).
+          \end{itemize}
+          We write \(b_1 = \min B\).
+
+    \item We say \(b_1 \subseteq\) is a \underline{least element} or \underline{minimum}
+          of \(B\) if
+          \begin{itemize}
+              \item \(b_1 \in B\), and
+              \item \(b_1 \leq b\) for all \(b \in B\).
+          \end{itemize}
+          We write \(b_1 = \min B\).
+\end{itemize}
 \begin{example}
-    Let \(B = [\(1, 2\)]\). Then \(\min B = 1\).
+    Let \(B = \{1, 2, 3\}\). Then \(\min B = 1\) and \(\max B = 3\).
+\end{example}
+
+\begin{proposition}
+    Let \(B \subseteq R\). The maximum of \(B\) (if it exists) is unique. Let Similarly, the minimum of \(B\) is unique.
+\end{proposition}
+\begin{proof}
+    Suppose \(a, b \in \RR\) are both maximum of \(B\). Since \(a \in B\) and \(b\) is a max of \(B\), \(a ,\leqslant b\). Similarly, \(b \leqslant a\).Since \(a \leqslant b\) and \(b \leqslant a\), \(a = b\)
+\end{proof}
+
+\begin{definition}
+    Let \(B \subseteq \mathbb{R}\).
+    \begin{itemize}
+        \item We say \(h\) is a \vocab{lower bound} of \(B\) if \(h \leq b\) for all \(b \in
+              B\).
+        \item We say \(h\) is an \vocab{upper bound} of \(B\) if \(b \leq h\) for all \(b \in
+              B\).
+    \end{itemize}
+\end{definition}
+\begin{example}
+    Let \(B = [1, 2)\). Then \(1\) is a lower bound of \(B\) and \(2\) is an upper bound of \(B\). Note that \(1\) is the minimum of \(B\), but \(2\) is not the maximum of \(B\) since \(2 \notin B\).
+\end{example}
+\begin{definition}
+    Let \(B \in \RR\). We say \(B\) is \begin{itemize}
+        \item \vocab{bounded above} if there exists an upper bound of \(B\).
+        \item \vocab{bounded below} if there exists a lower bound of \(B\).
+        \item \vocab{bounded} if there exists an upper bound and a lower bound of \(B\).
+    \end{itemize}
+\end{definition}
+\begin{fact}
+
+\end{fact}
+\begin{example}
+    \begin{itemize}
+        \item \(\NN\) is bounded below, but not bounded above.
+        \item \((- \infty, 1]\) is bounded above but not bounded below
+        \item \((1, 3)\) is bounded.
+    \end{itemize}
+\end{example}
+
+\subsection{Completeness Axiom}
+\begin{definition}
+    A set \(B \subseteq \mathbb{R}\) is said to be \textbf{bounded above} if there exists a real number \(M\) such that \(b \leq M\) for all \(b \in B\). The number \(M\) is called an \textbf{upper bound} of \(B\).
+\end{definition}
+
+\begin{definition}
+    A real number \(s\) is called the \textbf{supremum} or \textbf{least upper bound} of a set \(B \subseteq \mathbb{R}\) if:
+    \begin{enumerate}
+        \item \(s\) is an upper bound of \(B\).
+        \item If \(u\) is any upper bound of \(B\), then \(s \leq u\).
+    \end{enumerate}
+    We denote the supremum of \(B\) by \(\sup B\).
+\end{definition}
+
+\begin{theorem}[Completeness Axiom]
+    Every non-empty set \(B \subseteq \mathbb{R}\) that is bounded above has a supremum.
+\end{theorem}
+
+\begin{example}
+    \(2 = \sup([1, 2])\)
 \end{example}
 \begin{proof}
-    
+    Suppose, \(t\) is an upper bound of \(B\). Suppose towards a contradiction that \(t < 2\). Then \[1 \leqslant t < \frac{t + 2}{2} < \frac{2 + 2}{2} = 2\]
+    So, \(\frac{t + 2}{2}\) is an element of the set \(B\) that is strictly bigger
+    than \(t\) but we arrived to a contradictiopn. Therefore, \(2 \leqslant t\).
+    Since \(2\) is an upper bound of \(B\) = sup(\(B\)).
 \end{proof}
-%\section{January 15, 2025}
+
+\begin{example}
+    The empty set \(\phi \in \RR\) has no supremeum since \(\RR\) is the set of upper bounds of \(\phi\) and \(\RR\) has no leas element.
+\end{example}
+
+\begin{proposition}
+    If \(B \in \RR\) and \(\max(B)\) exists then \(\max(B) = \sup(B)\).
+\end{proposition}
+
+\begin{proof}
+    Let \(A = \max(B)\). Then \( B\) is non-empty and bounded is above by \(a\). If \(C = \sup(B)\), then \(a \leq c\). Since \(c\) is an upper bound \(a \in B\). Also \(c \leqslant a\). Since, \(c\) is the least upper bound. \(\therefore a = c\)
+\end{proof}
+
+\begin{proposition}[The approximation property of suprema]
+    Let \(B \subseteq \RR\) be non-empty and bounded above. For any \(\epsilon > 0\), there exists an element \(b \in B\) such that \(\sup B - \epsilon < b \leq \sup B\).
+\end{proposition}
+\begin{proof}
+    Suppose for contradicton there was some \(\epsilon > 0\) such that no \(b\) as above exists. Then for all \(c \in B, c \leqslant \sup(B) - \epsilon\) i.e. \(\sup(B) - \epsilon\) is an upper bound of \(B\). But \(\sup(B)\) is the least upper bound of \(B\), so \(\sup(B) - \epsilon < \sup(B)\). This is a contradiction. Therefore, there must exist some \(b \in B\) such that \(\sup(B) - \epsilon < b \leq \sup(B)\).
+\end{proof}
+
+\begin{remark}
+    To prove \(a\) is a supremum of \(B\), we need show the following:
+    \begin{itemize}
+        \item \(a\) is an upper bound of \(B\).
+        \item If \(c\) is an upper bound of \(B\), then \(a \leqslant c\).
+    \end{itemize}
+\end{remark}
+
+\begin{theorem}
+    Suppose, \(F \subseteq \RR\) is non-empty and bounded below. Then, there exist a \vocab{greatest lower bound} of \(\FF\), called \vocab{infimum} of F, denoted \(\inf(F)\).
+\end{theorem}
+\begin{proof}
+    Let \(B = \{x \in \RR \mid -x \in F\}\). We will show:
+    \begin{itemize}
+        \item \(B\) is bounded above and non-empty, hence \(a = \sup(B)\) exists.
+        \item \(-a\) is a lower bound of \(F\).
+        \item If \(c\) is a lower bound of \(F\), then \(c \leqslant -a\).
+    \end{itemize}
+    \begin{itemize}
+        \item Since \(F\) is non-empty, \(B\) is non-empty. Suppose \(c\) is a lower bound
+              of \(F\). Let \(x \in B\). Then \(-x \in F\), so \(-x \geqslant
+              c \rightarrow x \leqslant -c\). Hence, \(c\) is an upper bound of \(B\).
+              Therefore, \(B\) is bounded above.
+        \item Let \(f \in F\). Then \(-f \in B\), so \(-f \leq a\) (since \(a = \sup(B)\)).
+              Therefore, \(f \geq -a\). Hence, \(-a\) is a lower bound of \(F\). 
+        \item Let \(c\) be a lower bound of \(F\). Let \(b \in B\). Then \(-b \in F\), so \(-b \geq c \rightarrow b \leq -c\). Hence, \(-c\) is an upper bound of \(B\). Therefore, \(-a \leq -c \rightarrow c \leq -a\). 
+    \end{itemize}
+\end{proof}
+
 %\section{January 17, 2025}
 %\section{January 20, 2025}
 %\section{January 22, 2025}
