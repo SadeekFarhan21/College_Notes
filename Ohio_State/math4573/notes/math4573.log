@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  14 JAN 2025 12:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  15 JAN 2025 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1480,25 +1480,41 @@ ut line 253.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 294.
+ [7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 332.
+(mdframed)              on input line 333.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 332.
- [7] [8] (math4573.aux)
+t line 333.
+Package hyperref Info: bookmark level for unknown solution defaults to 0 on inp
+ut line 336.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 360.
+ [8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 396.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 400.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 407.
+ [9] (math4573.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `math4573.out' has not changed.
-(rerunfilecheck)             Checksum: 073B66099A6CB58043540AB0BFEB34CE;860.
+(rerunfilecheck)             Checksum: F0713378904D3BFDDDED5BD308FDCD82;989.
  ) 
 Here is how much of TeX's memory you used:
- 39659 strings out of 411463
- 944554 string characters out of 5817803
+ 39682 strings out of 411463
+ 945002 string characters out of 5817803
  1865290 words of memory out of 5000000
- 59319 multiletter control sequences out of 15000+600000
+ 59342 multiletter control sequences out of 15000+600000
  521256 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,10n,99p,872b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math4573.pdf (8 pages).
+Output written on math4573.pdf (9 pages).

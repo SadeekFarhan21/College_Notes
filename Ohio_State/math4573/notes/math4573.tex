@@ -9,7 +9,7 @@
 \usepackage{hyperref}
 \usepackage{fontspec}
 \title{Math 4573: Number Theory}
-\author{Lecturer: \textbf{  Profesor James Cogdell}\\Notes by: Farhan Sadeek}
+\author{Lecturer: \textbf{Profesor James Cogdell}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
 
 \begin{document}
@@ -328,10 +328,96 @@ presume that \(c\) is positive.
     combination of \(b\) and \(c\).
 \end{proof}
 
+\section{January 15, 2025}
 \begin{example}
     We will find the g.c.d of 42823 and 6409.
 \end{example}
-%\section{January 15, 2025}
+\begin{solution}
+
+    We apply the Euclidean algorithm to divide \(c\) into \(b\), where \(b =
+    42823\) and \(c = 6409\). We obtain a quotient \(q_1 = 6\) and a remainder
+    \(r_1 = 4369\). Continuing, if we divide 4369 into 6409, we get a quotient
+    \(q_2 = 1\) and a remainder \(r_2 = 2040\). Dividing 2040 into 4369 gives \(q_3
+    = 2\) and \(r_3 = 289\). Dividing 289 into 2040 gives \(q_4 = 7\) and \(r_4 =
+    17\). Since 17 is an exact divisor of 289, the solution is that the g.c.d. is
+    17.
+
+    We can write this in tabular form:
+    \[
+        \begin{aligned}
+            42823 & = 6 \cdot 6409 + 4369, \\
+            6409  & = 1 \cdot 4369 + 2040, \\
+            4369  & = 2 \cdot 2040 + 289,  \\
+            2040  & = 7 \cdot 289 + 17,    \\
+            289   & = 17 \cdot 17.
+        \end{aligned}
+    \]
+    Thus, \((42823, 6409) = (6409, 4369) = (4369, 2040) = (2040, 289) = (289, 17) =
+    17\).
+\end{solution}
+
+\begin{example}
+    Find integers \(x\) and \(y\) such that \(42823x + 6409y = 17\).
+\end{example}
+\begin{solution}
+
+    We find integers \(x\) and \(y\) such that \(42823x + 6409y = 17\).
+
+    Here it is natural to consider \(i = 1, 2, \ldots\), but to initiate the
+    process we also consider \(i = 0\) and \(i = -1\). We put \(r_{-1} = 42823\),
+    and write
+    \[42823 \cdot 1 + 6409 \cdot 0 = 42823.\]
+    Similarly, we put \(r_0 = 6409\), and write
+    \[42823 \cdot 0 + 6409 \cdot 1 = 6409.\]
+    We multiply the second of these equations by \(q_1 = 6\), and subtract the
+    result from the first equation, to obtain
+    \[42823 \cdot 1 + 6409 \cdot (-6) = 4369.\]
+    We multiply this equation by \(q_2 = 1\), and subtract it from the preceding
+    equation to find that
+    \[42823 \cdot (-1) + 6409 \cdot 7 = 2040.\]
+    We multiply this by \(q_3 = 2\), and subtract the result from the preceding
+    equation to find that
+    \[42823 \cdot 3 + 6409 \cdot (-20) = 289.\]
+    Next we multiply this by \(q_4 = 7\), and subtract the result from the
+    preceding equation to find that
+    \[42823 \cdot (-22) + 6409 \cdot 147 = 17.\]
+    On dividing 17 into 289, we find that \(q_5 = 17\) and that \(289 = 17 \cdot
+    17\). Thus \(r_4\) is the last positive remainder, so that \(g = 17\), and we
+    may take \(x = -22\), \(y = 147\). These values of \(x\) and \(y\) are not the
+    only ones possible. In Section 5.1, an analysis of all solutions of a linear
+    equation is given.
+\end{solution}
+
+\begin{remark}
+    Section 5.1 on Analysis
+\end{remark}
+
+\begin{definition}
+    The integers \(a_1, a_2, \ldots , a_n\) all different from zero, have a common \(b\) if \(a_i \mid b\) for \(i = 1, 2, \ldots, n\). The least positive multiple is is called \vocab{least common multiple} and it's denoted \([a_1, a_2, \ldots, a_n]\)
+\end{definition}
+
+\begin{theorem}
+    If \(b\) is any common multiple of \(a_1, a_2, \ldots, a_n\), then \([a_1, a_2, \ldots, a_n] \mid b\). This is the same as saying that if \(h\) denotes \([a_1, a_2, \ldots, a_n]\), then \(0, \pm h, \pm 2h, \pm 3, \ldots\) comprise all the common multiples of \(a_1, a_2, \ldots, a_n\).
+\end{theorem}
+\begin{proof}
+    Let \(m\) be any common multiple and divide \(m\) by \(h\). By Division Algorithm, there is a quotient \(q\) and a remainder \(r\) such that \(m = qh + r\), where \(0 \leqslant r < h\). We must prove that \(r = 0\). If \(r \neq -\), we argue as follows. For each \(i = 1, 2, \ldots, n\), we know that \(a_i \mid h\) and \(a_i \mid m\), so that \(a_i \mid r\). Thus \(r\) is a positive common multiple of \(a_1, a_2, \ldots, a_n\) contrary to the fact that \(h\) is the least of all common positive multiple.
+\end{proof}
+
+\begin{theorem}
+    If \(m > 0\) \([ma, mb] = m[a, b]\). Also, \([a,b] \cdot (a, b) = |ab|\)
+\end{theorem}
+\begin{proof}
+    Let \( H = [ma, mb] \) and \( h = [a, b] \). Then \( mh \) is a multiple of \( ma \) and \( mb \), so that \( mh \mid H \). Also, \( H \) is a multiple of both \( ma \) and \( mb \), so \( H / m \) is a multiple of \( a \) and \( b \). Thus, \( H / m \mid h \), from which it follows that \( mh = H \), and this establishes the first part of the theorem.
+
+    It will suffice to prove the second part for positive integers \( a \) and \( b \), since \( [a, -b] = [a, b] \). We begin with the special case where \( (a, b) = 1 \). Now \( [a, b] \) is a multiple of \( a \), say \( ma \). Then \( b \mid ma \) and \( (a, b) = 1 \), so by Theorem 1.10 we conclude that \( b \mid m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a positive common multiple of \( b \) and \( a \), cannot be less than the least common multiple, so \( ba = ma = [a, b] \).
+
+    Turning to the general case where \( (a, b) = g > 1 \), we have \( (a/g, b/g) = 1 \) by Theorem 1.7. Applying the result of the preceding paragraph, we obtain
+    \[
+        \left[ \frac{a}{g}, \frac{b}{g} \right] = \frac{ab}{g^2}.
+    \]
+    Multiplying by \( g^2 \) and using Theorem 1.6 as well as the first part of the present theorem, we get \( [a, b](a, b) = ab \).
+\end{proof}
+
 %\section{January 17, 2025}
 %\section{January 20, 2025}
 %\section{January 22, 2025}
