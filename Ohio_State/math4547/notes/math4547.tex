@@ -728,17 +728,80 @@ Let \(B \subseteq \RR\). We say the following:
         \item If \(c\) is a lower bound of \(F\), then \(c \leqslant -a\).
     \end{itemize}
     \begin{itemize}
-        \item Since \(F\) is non-empty, \(B\) is non-empty. Suppose \(c\) is a lower bound
-              of \(F\). Let \(x \in B\). Then \(-x \in F\), so \(-x \geqslant
-              c \rightarrow x \leqslant -c\). Hence, \(c\) is an upper bound of \(B\).
-              Therefore, \(B\) is bounded above.
+        \item Since \(F\) is non-empty, \(B\) is non-empty. Suppose \(c\) is a lower bound of
+              \(F\). Let \(x \in B\). Then \(-x \in F\), so \(-x \geqslant c \rightarrow x
+              \leqslant -c\). Hence, \(c\) is an upper bound of \(B\). Therefore, \(B\) is
+              bounded above.
         \item Let \(f \in F\). Then \(-f \in B\), so \(-f \leq a\) (since \(a = \sup(B)\)).
-              Therefore, \(f \geq -a\). Hence, \(-a\) is a lower bound of \(F\). 
-        \item Let \(c\) be a lower bound of \(F\). Let \(b \in B\). Then \(-b \in F\), so \(-b \geq c \rightarrow b \leq -c\). Hence, \(-c\) is an upper bound of \(B\). Therefore, \(-a \leq -c \rightarrow c \leq -a\). 
+              Therefore, \(f \geq -a\). Hence, \(-a\) is a lower bound of \(F\).
+        \item Let \(c\) be a lower bound of \(F\). Let \(b \in B\). Then \(-b \in F\), so
+              \(-b \geq c \rightarrow b \leq -c\). Hence, \(-c\) is an upper bound of \(B\).
+              Therefore, \(-a \leq -c \rightarrow c \leq -a\).
     \end{itemize}
 \end{proof}
 \section{January 17, 2025}
+\begin{corollary}
+    Let \(F\) be a non-empty and bounded below for each \(\epsilon > 0\), there exists \(f \in F\) such that \[ \inf (F) \leqslant f < \inf(F) + \epsilon\]
+\end{corollary}
 
+\begin{theorem}
+    There is a unique positive number \(\alpha\) such that \(\alpha^2 = 2\).
+\end{theorem}
+
+\begin{proof}
+    Let \(E = \{x \in \RR \mid x^2 < 2\}\). Since, \(x^1 = 1 < 2\), so \(1 \in E\), so \(E \neq 0\). \\
+    Suppose, \(x \geqslant 2\). Then \(x^2 \geqslant 2^2 = 4 > 2\). Hence, \(x \notin E\).
+    Therefore, if \(x \in E\), then \(x < 2\). \\
+    Hence, \(E \neq 0\), and bounded above by 2. \\
+    Let \(\alpha = \sup(E)\). \\
+    We know that \(1 \leqslant \alpha \leqslant 2\). \\
+    If \(\alpha^2 \neq 2\), then either \(\alpha^2 = 2\), then either \(\alpha^2 > 0\) or \(\alpha^2 < 2\). We'll show that both these cases lead to contradiction!
+    \begin{itemize}
+        \item[Case 1:] When \(\alpha^2 < 2\) Let \(h = \frac{1}{2} \min(\alpha, \frac{2 -
+                \alpha^2}{3\alpha})\). Note \(h > 0, h < \alpha\) and \(h < \frac{2
+                -\alpha^2}{3\alpha}\). Note that \((\alpha + h)^2 = \alpha^2 + 2\alpha h + h^2
+            < \alpha^2 + 3\alpha h < \alpha^2 + 3\alpha \frac{2 - \alpha^2}{3\alpha} = 2\).
+            So \(\alpha + h \in E\). Since \(\alpha + h > \alpha\), this contradicts
+            \(\alpha = \sup(E)\).
+        \item[Case 2:] When \(\alpha^2 > 2\) We set \(h = \frac{1}{2} \frac{\alpha^2 -
+                2}{2\alpha} > 0\). Since \(\alpha - h < \alpha\), the approximation property
+            says that there exists \(e \in E\) such that \[\alpha - h < e \leqslant \alpha\]. Then \((\alpha - h)^2 < e^2\). Then \(\alpha^2 - 2\alpha h + h^2 < 2 \Rightarrow \alpha^2 - 2\alpha h < 2\). Therefore, \(h > \frac{\alpha^2 - 2}{2\alpha}\). And we arrived at a contradiction. Since \(\alpha^2 < 2\) and \(\alpha^2 > 2\) cannot hold, so \(\alpha^2 = 2\).
+    \end{itemize}
+    Suppose \(\alpha^2 = \beta^2 = 2\) and \(\alpha, \beta > 0\). Then \(\alpha^2 - \beta^2 = (\alpha + \beta)(\alpha - \beta) = 0\). Since \(\alpha + \beta > 0, \alpha - \beta = 0 \). Hence, \(\alpha = \beta\)
+\end{proof}
+
+\begin{remark}
+    The same proof shows \{\(\alpha \in \QQ \mid \alpha^2 = 2\)\} cannot have to a supremum in \(\QQ\) i.e. completeness doesn't hold.
+\end{remark}
+
+% Create a notation thing for this notes
+\begin{remark}
+    We denote \(\alpha\) as above using \(\sqrt{2}\) by modifying the previous proof.
+\end{remark}
+
+\begin{theorem}
+    For any positive real number \(x\), there exist unique postitive real number, denoted \(\sqrt{2}\), such that \((\sqrt{x})^2 = x\).
+\end{theorem}
+
+\begin{theorem}[Archimedean Property for Real Numbers]
+    Let \(x \in \RR\). Then there exists a natural number \(n \in \NN\) such that \(n > x\).
+\end{theorem}
+
+\begin{proof}
+    Suppose this theorem is not true for some \(x \in \RR\). Then \(x\) is an upper bound of \(\NN\). Since \(\NN \neq 0, \alpha = \sup(\NN)\) exists. By approximation theorem, there exists some \(n \in \NN\) such that \[\alpha - 1< n \leqslant \alpha \]. Hence, \(\alpha < n +1\). Since \(n + 1\) is a natural number, this contradicts \(\alpha = \sup(\NN)\)
+\end{proof}
+\begin{corollary}
+    Let \(\epsilon > 0\). Then there exists some \(n \in \NN\) such that \(\frac{1}{n} < \epsilon\).
+\end{corollary}
+\begin{proof}
+    Apply the Archimedian property to \(\frac{1}{\epsilon}\)
+\end{proof}
+
+\begin{definition} 
+    A \vocab{sequence} is a function \(a \colon \NN \to \RR\). We denote the \(n\)th term of the sequence as \(a_n\). We usually write \(\alpha(n)\) as \(\alpha_n\)
+\end{definition}
+
+We write \(\alpha\) as \(((\alpha_n)_{n = 1})^\infty\) or simply as \(\alpha_n\). Let \(a_n\) and \(b_n\) be sequencces and \(c \in \RR\) then we define \(a_n\) 
 %\section{January 20, 2025}
 %\section{January 22, 2025}
 %\section{January 24, 2025}
