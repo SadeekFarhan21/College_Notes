@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  15 JAN 2025 12:20
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  17 JAN 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1501,20 +1501,49 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 407.
- [9] (math4573.aux)
+ [9]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 431.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 434.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 437.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 447.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 455.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 463.
+ [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 500.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 504.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 510.
+ [11] [12] (math4573.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `math4573.out' has not changed.
-(rerunfilecheck)             Checksum: F0713378904D3BFDDDED5BD308FDCD82;989.
+(rerunfilecheck)             Checksum: 84A7460886541CA8AC23654E35A635E8;1118.
  ) 
 Here is how much of TeX's memory you used:
- 39682 strings out of 411463
- 945002 string characters out of 5817803
+ 39702 strings out of 411463
+ 945498 string characters out of 5817803
  1865290 words of memory out of 5000000
- 59342 multiletter control sequences out of 15000+600000
+ 59362 multiletter control sequences out of 15000+600000
  521256 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,10n,99p,872b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math4573.pdf (9 pages).
+Output written on math4573.pdf (12 pages).

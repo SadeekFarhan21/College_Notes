@@ -139,9 +139,9 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     shown that \(l \mid b\).
 
     Since \(g\) is the greatest common divisor of \(b\) and \(c\), we may write \(l
-    = bx_0 + cy_0 = g(Bx_0 + Cy_0)\). Then, \(g \mid l\) and by parts of theorem
-    1.1, we have shown \(g \leq l\). Now, \(g < l\) is impossible since, \(g\)is
-    the greatest common divisor, so \(g = l = bx_0 + cy_0\).
+    = bx_0 + cy_0 = g(Bx_0 + Cy_0)\). Then, \(g \mid l\) and we have shown \(g \leq
+    l\). Now, \(g < l\) is impossible since, \(g\)is the greatest common divisor,
+    so \(g = l = bx_0 + cy_0\).
 \end{proof}
 
 \begin{theorem}
@@ -409,16 +409,114 @@ presume that \(c\) is positive.
 \begin{proof}
     Let \( H = [ma, mb] \) and \( h = [a, b] \). Then \( mh \) is a multiple of \( ma \) and \( mb \), so that \( mh \mid H \). Also, \( H \) is a multiple of both \( ma \) and \( mb \), so \( H / m \) is a multiple of \( a \) and \( b \). Thus, \( H / m \mid h \), from which it follows that \( mh = H \), and this establishes the first part of the theorem.
 
-    It will suffice to prove the second part for positive integers \( a \) and \( b \), since \( [a, -b] = [a, b] \). We begin with the special case where \( (a, b) = 1 \). Now \( [a, b] \) is a multiple of \( a \), say \( ma \). Then \( b \mid ma \) and \( (a, b) = 1 \), so by Theorem 1.10 we conclude that \( b \mid m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a positive common multiple of \( b \) and \( a \), cannot be less than the least common multiple, so \( ba = ma = [a, b] \).
+    It will suffice to prove the second part for positive integers \( a \) and \( b
+    \), since \( [a, -b] = [a, b] \). We begin with the special case where \( (a,
+    b) = 1 \). Now \( [a, b] \) is a multiple of \( a \), say \( ma \). Then \( b
+    \mid ma \) and \( (a, b) = 1 \), so by Theorem 1.10 we conclude that \( b \mid
+    m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a positive
+    common multiple of \( b \) and \( a \), cannot be less than the least common
+    multiple, so \( ba = ma = [a, b] \).
 
-    Turning to the general case where \( (a, b) = g > 1 \), we have \( (a/g, b/g) = 1 \) by Theorem 1.7. Applying the result of the preceding paragraph, we obtain
+    Turning to the general case where \( (a, b) = g > 1 \), we have \( (a/g, b/g) =
+    1 \) by Theorem 1.7. Applying the result of the preceding paragraph, we obtain
     \[
         \left[ \frac{a}{g}, \frac{b}{g} \right] = \frac{ab}{g^2}.
     \]
-    Multiplying by \( g^2 \) and using Theorem 1.6 as well as the first part of the present theorem, we get \( [a, b](a, b) = ab \).
+    Multiplying by \( g^2 \) and using Theorem 1.6 as well as the first part of the
+    present theorem, we get \( [a, b](a, b) = ab \).
 \end{proof}
 
-%\section{January 17, 2025}
+\section{January 17, 2025}
+\begin{definition}
+    An integer \(p > 1\) is called a \vocab{prime number} or \vocab{prime} in case there is no divisor of \(d\) of \(p\) satisfying \(1 < d < p\). An integer \(a > 1\) is not a prime, it is called \vocab{composite number}.
+\end{definition}
+\begin{example}
+    \(2, 3, 5, 7\) are primes, but \(4, 6, 8, 9\) are composite.
+\end{example}
+\begin{theorem}
+    Every integer \(n\) greater than \(1\) can be expressed as a product of primes.
+\end{theorem}
+
+\begin{proof}
+    If the integer \(n\) is a prime, then the integer itself stands as a `product' with a single factor. Otherwise, \(n\) it can be factored into say \(n_1, n_2\), where \(1 < n_1 < n\) and \( 1 < n_2 < n\). If \(n_1\) is prime then let it stand. Otherwise, it will factor into say \(n_3, n4\) where \(1 < n_3 < n\) and \(1 < n_4 < n\). Simliarly, for \(n_2\). The process of writing each composite number that arises as a product of factors must termiate because the factors are smaller than the composite itself, yet each factor is an integer greater than 1. Thus we can conclude \(n\) as a product of \(q\) primes, and since the prime factors are not necessarily so the result can be written in the form
+    \[ n = p_1^{\alpha_1}p_2^{\alpha_2}p_3^{\alpha_3}\ldots p_n^{\alpha_n}\]
+    where the \(p_1, p_2, p_3, \ldots, p_n\) are distinct primes and \(\alpha_1,
+    \alpha_2, \ldots, \alpha_n\) are positive
+\end{proof}
+\begin{fact}
+    This representation of \(n\) as a product of primes is called the canonical
+    factoring of \(n\) into prime numbers. It turns out that the representation is
+    unique in the sense that, for \(a\) fixed \(n\) any other representation is
+    merely a reordering, or a perumtation of factors, nevertheles it requires
+    proof.
+\end{fact}
+
+\begin{theorem}
+    If \(p \mid ab, p\) being a prime, then \(p \mid a\) or \(p \mid b\). More generally, if \(p \mid a_1 a_2\), then \(p\) at least one factor of \(a_1\).
+\end{theorem}
+
+\begin{proof}
+    If \(p \nmid b\), since \((a, p) = 1\), by a previous theorem, \(p \mid b\). We may regard as a proof of the general cae of the statement mathematical induction. So we assume that the property holds when \(n\) divides a factor with fewer than \(n\) primes.
+    Now, if \(p \mid a_1a_2\ldots a_n\), that is \(p \mid ac\), where \(c = a_1a_2\ldots a_n\), then \(p \mid a_1\) or \(p \mid c\).If \(p \mid c\), we apply the induction hypthesis to conclude that \(p \mid i\), for some subscript \(i = 1, 2, \ldots, n\).
+\end{proof}
+
+\begin{theorem}[The Fundamental Theorem of Arithmetic or the Unique Factorization Theorem]
+    The facoring of \(n > 1\) into primes is unique and apart from the order of the primes.
+\end{theorem}
+
+\begin{proof}
+    Suppose there is an integer \(n\) with two different factorizations. Dividing out any primes common to the two representations, we would have an equality of the form
+    \[
+        p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_s
+    \]
+    where the factors \(p_i\) and \(q_j\) are primes, not necessarily all distinct,
+    but where no prime on the left side occurs on the right side. But this is
+    impossible because \(p_1 \mid q_1 q_2 \cdots q_s\), so by Theorem 1.15, \(p_1\)
+    is a divisor of at least one of the \(q_j\). That is, \(p_1\) must be identical
+    with at least one of the \(q_j\). This contradicts our assumption that no prime
+    on the left side occurs on the right side. Therefore, the factorization of
+    \(n\) into primes is unique.
+\end{proof}
+
+In the applications of the fundamental theorem, we frequently write the integer
+\(a > \leqslant\) 1, in the form,
+\[
+    a = \prod_{i=1}^{n} p_i^{\alpha_i}
+\]
+where \(\alpha(p)\) is a non-negative integer for all sufficiently large
+primes, \(p\). If \(a = 1\), then \(\alpha(p) = 0\), for all primes, \(p\) and
+the product may be considered to be empty. We may write \(a = \prod
+p^{\alpha}\)
+
+It \(a = \prod_{p} p^{\alpha(p)}, b = \prod_{p} p^{\beta(p)}, c = \prod_{p}
+p^{\beta(p)}\) and \(a = b = c\) then \(\alpha(p) + \beta(p) = \gamma(p)\) for
+all \(p\). So, \(a \mid c\), we must note that \(\alpha(p) \leqslant
+\gamma(p)\) for all \(p\) that we may define an integer \(b =
+\prod_{p}p^{\beta(p)}\) with \(\beta = \gamma(p) - \alpha(p)\). So \(a \mid
+c\). Note that the greatest common divisor and least common multiple can be
+written as \[(a, b) = \prod_{p} p^{\min(\alpha(p), \beta(p))}\] \[[a, b] = \prod_{p} p^{\min(\alpha(p), \beta(p))}\]
+
+\begin{example}
+    \(a = 108, b = 225\), then \(a = 2^2 \cdot 3^3 \cdot 5^0\) and \(b = 2^0 \cdot 3^2 \cdot 5^2\). So \((a, b) = 2^0 \cdot 3^2 \cdot 5^0 = 9\), and \([a, b] = 2^2 \cdot 3^3 \cdot 5^2 = 2700\).
+\end{example}
+
+\begin{definition}
+    \(a\) is a \vocab{square (or perfect square)} if it can be written as \(n^2\)
+\end{definition}
+\begin{remark}
+    \(a\) is auare free if \(1\) is the largest square dividing \(a\). So \(\alpha(p)\) is square free if the only numbers are \(0\) and \(1\).
+\end{remark}
+
+\begin{theorem}[Euclid]
+    THenumber of primes is inifite. i.e. there is no end to the sequence of primes. \[2, 3, 5, 7, 11, 13, \ldots\]
+\end{theorem}
+
+\begin{proof}
+    Suppose that \(p_1, p_2, \ldots, p_n\) are the first \(r\) primes. Then form the number \[n = 1 + p_1 p_2\ldots p_r\]
+    Note that \(n\) is not divisible by \(p_1\) or \(p_2\) or \(\ldots\), or
+    \(p_r\) Hencce, ayny prime divisor is distinct from \(p_1, p2, \ldots, p_r\).
+    Since \(n\) is neither a prime or has a prime factor factor \(p\). This impl
+\end{proof}
 %\section{January 20, 2025}
 %\section{January 22, 2025}
 %\section{January 24, 2025}
