@@ -1,0 +1,51 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt]{article}
+\usepackage{lindrew}
+\usepackage{xcolor}
+
+\usepackage{fontspec}
+
+\title{Stat 4202: Mathematical Statistics II}
+\author{\textbf{Homework 2}}
+\date{Spring 2025}
+
+\begin{document}
+
+\maketitle
+\begin{question}
+    Show that the estimator of \(\omega = \frac{\sigma_2^2}{\sigma_1^2 + \sigma_2^2}\) is consistent.
+\end{question}
+
+\begin{question}
+    To show that an estimator can be consistent without being unbiased or even asymptotically unbiased, consider the following estimation procedure: To estimate the mean of a population with the finite variance $\sigma^2$, we first take a random sample of size $n$. Then we randomly draw one of $n$ slips of paper numbered from 1 through $n$, and if the number we draw is 2, 3, \(\ldots\), or $n$, we use as our estimator the mean of the random sample; otherwise, we use the estimate $n^2$. Show that this estimation procedure is
+    \begin{itemize}
+        \item [(a)] consistent;
+        \item [(b)] neither unbiased nor asymptotically unbiased;
+    \end{itemize}
+\end{question}
+\begin{question}
+    If $X_1, X_2, \ldots, X_n$ constitute a random sample of size $n$ from an exponential population, show that $\overline{X}$ is a sufficient estimator of the parameter $\theta$.
+\end{question}
+\begin{question}
+    If \(X_1\) and \(X_2\) constitute a random sample of size \(n = 2\) from a Poisson population, show that the mean of the sample is a sufficient estimator of the parameter of \(\lambda\).
+\end{question}
+\begin{question}
+    Show that the mean of a random sample of size \(n\) from an exponential population is a minimum variance unbiased estimator of the parameter \(\theta\).
+\end{question}
+\begin{question}
+    Given a random sample of size \(n\) from a uniform population with \(\alpha = 0\), find an estimator of \(\beta\) by the method of moments.
+\end{question}
+\begin{question}
+    If \(X_1, X_2, \ldots, X_n\) constitute a random sampmle of size \(n\) from a population given by 
+    \[
+g(x; \theta, \delta) = \begin{cases}
+\frac{1}{\theta} \cdot e^{-\frac{x - \delta}{\theta}} & \text{for } x > \delta \\
+0 & \text{elsewhere}
+\end{cases}
+\]
+\end{question}
+
+\begin{question}
+    Given a random sample of size \(n\) from a continous uniform population , use the method of moments to find formulas for the parameters \(\alpha\), and \(beta\).
+\end{question}
+\end{document}

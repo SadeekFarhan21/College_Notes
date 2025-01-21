@@ -25,12 +25,36 @@ calling it a day!
 
 \textbf{Hints for today:}
 \begin{itemize}
+    \item Think about how your data stucture is storing the data. For example, an empty
+          stack is an edge case, and the same with full elements.
     \item \texttt{constructorTest()}: You will create a new instance of the stack being tested.
-    \item \texttt{}~
+    \item You need to identify the possible cases, for all the cases.
+    \item
 \end{itemize}
-\section{January 15, 2025}
+%\section{January 15, 2025}
 %\section{January 17, 2025}
-%\section{January 20, 2025}
+\section{January 21, 2025}
+Today we are doing Lab \(5\), called \texttt{Sequence on Stack}. The way you
+would approach this will be like following:
+\begin{itemize}
+    \item Here you have two stacks, and you will use them to create a sequence. So for
+          example Stack is FIFO (First In First Out), and you will use the two stacks to
+          create a data structure called \texttt{Sequence} where you can add and remove
+          elements from both ends.
+    \item For \texttt{setLengthOfLeftStack} if the length of the \texttt{leftStack} is
+          less than the desired length, you will need to pop elements from the
+          \texttt{rightStack} and push them onto the \texttt{leftStack}. If the length of
+          the \texttt{leftStack} is greater than the desired length, you will need to pop
+          elements from the \texttt{leftStack} and push them onto the
+          \texttt{rightStack}.
+
+    \item For \texttt{add} and \texttt{remove} method, you will use the
+          \texttt{setLengthOfLeftStack} method to adjust the length of the left stack add
+          and remove elements accordingly.
+    \item\ No hints for the \texttt{length} method. I hope you all can figure it out. 
+\end{itemize}
+
+Good luck with labs! Let us know if you have any questions!
 %\section{January 22, 2025}
 %\section{January 24, 2025}
 %\section{January 27, 2025}
