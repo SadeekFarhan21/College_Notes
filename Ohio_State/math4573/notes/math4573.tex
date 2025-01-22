@@ -518,7 +518,119 @@ written as \[(a, b) = \prod_{p} p^{\min(\alpha(p), \beta(p))}\] \[[a, b] = \prod
     Since \(n\) is neither a prime or has a prime factor factor \(p\). This impl
 \end{proof}
 %\section{January 20, 2025}
-%\section{January 22, 2025}
+\section{January 22, 2025}
+\begin{theorem}
+    There are arbitrarily large gapes in the series of primes stated otherwise, given any \(k\), there exit \(k\) consequetive composite integers.
+\end{theorem}
+\begin{proof}
+    Consider the integers
+    \[(k + 1)! + 2, (k + 1)! + 3 \ldots, (k + 1)! + k, (k + 1)! + k + 1\]
+    Every one of these composite because \(j\) divides \((k + 1)!\) and \(j
+    \leqslant k\).
+\end{proof}
+
+The primes are spaced rather irregularly, as the last theorem suggests. If we
+denote the number of pirmes that do not exceed \(x\) by \(\pi(x)\), but we may
+ask about the nature of this function. Because of this irregular occurence of
+primes, we cannnot expect a simple formula for \(\pi(x)\), but we may week to
+estimate the rate of it's growth.
+
+\begin{theorem}
+    For any real number \(y \geqslant 2\), we have
+    \[\sum_{p \leqslant y} \frac{1}{p} \log \log y - 1\]
+\end{theorem}
+
+\begin{fact}
+    From this, it follows that the infinite series \(\sum_{1}^{p}\) diverges, which is a second proof for our theorem 35.
+\end{fact}
+
+\subsection{The Binomial Theorem}
+We first define the \texttt{binomial coefficients} and describe them
+combinatorially.
+
+\begin{definition}
+    Let \(\alpha\) be any real number, and let \(k\) be a non-negative integer. Then the binomial coefficient \(\binom{\alpha}{k}\) is given by the formula:
+    \[
+        \binom{\alpha}{k} = \frac{\alpha(\alpha - 1)(\alpha - 2) \cdots (\alpha - k + 1)}{k!}
+    \]
+    Suppose that \(n\) and \(k\) are both integers. From the formula, we see that
+    if \(0 \leq k \leq n\), then
+    \[
+        \binom{n}{k} = \frac{n!}{k!(n - k)!},
+    \]
+    whereas if \(n < k\), then
+    \[
+        \binom{n}{k} = 0.
+    \]
+    Here we employ the convention \(0! = 1\).
+\end{definition}
+
+\begin{theorem}
+    Let \(\mathbb{S}\) be a set containing exactly \(n\) elements. For any non-negative integer \(k\), the number of subsets \(\mathbb{S}\) containing precisely \(k\) elements \(\binom{n}{k}\).
+\end{theorem}
+
+\begin{proof}
+    Let \(\mathbb{S}\) be a set containing exactly \(n\) elements. For any non-negative integer \(k\), the number of subsets \(\mathbb{S}\) containing precisely \(k\) elements is \(\binom{n}{k}\).
+
+    Suppose that \(\mathbb{S} = \{1, 2, \ldots, n\}\). These numbers may be listed
+    in various orders, called permutations, here denoted by \(\pi\). There are
+    \(n!\) of these permutations \(\pi\), because the first term may be any one of
+    the \(n\) numbers, the second term any one of the \(n - 1\) remaining numbers,
+    the third term any one of the still remaining \(n - 2\) numbers, and so on.
+
+    We count the permutations in a way that involves the number \(X\) of subsets
+    containing precisely \(k\) elements. Let \(N\) be a specific subset of
+    \(\mathbb{S}\) with \(k\) elements. There are \(k!\) permutations of the
+    elements of \(N\), each permutation having \(k\) terms. Similarly, there are
+    \((n - k)!\) permutations of the \(n - k\) elements not in \(N\). If we attach
+    any one of these \((n - k)!\) permutations to the right end of any one of the
+    \(k!\) previous permutations, the ordered sequence of \(n\) elements thus
+    obtained is one of the permutations \(\pi\) of \(\mathbb{S}\). Thus we can
+    generate \(k!(n - k)!\) of the permutations \(\pi\) in this way. To get all the
+    permutations \(\pi\) of \(\mathbb{S}\), we repeat this procedure with \(N\)
+    replaced by each of the subsets in question. Let \(X\) denote the number of
+    these subsets. Then there are \(k!(n - k)!X\) permutations \(\pi\), and
+    equating this to \(n!\) we find that
+    \[
+        X = \frac{n!}{k!(n - k)!}.
+    \]
+
+    We now see that the quotient \(\frac{n!}{k! (n - k)!}\) is an integer, because
+    it represents the number of ways of doing something. In this way, combinatorial
+    interpretations can be useful in number theory.
+\end{proof}
+\begin{theorem}
+    The product of any \(k\) consecutive integers is divisible by \(k!\)
+\end{theorem}
+\begin{proof}
+    Let's write the product as \(n(n - 1) \cdots (n - k + 1)\). If \(n \geq k\), then we write this in the form \(\binom{n}{k} \cdot k!\) and note that \(\binom{n}{k}\) is an integer, by Theorem 1.20. If \(0 \leq n < k\), then one of the factors of our product is 0, so the product vanishes, and is therefore a multiple of \(k!\) in this case also. Finally, if \(n < 0\), we note that the product may be written as
+    \[
+        (-1)^k (-n)(-n + 1) \cdots (-n + k - 1) = (-1)^k \binom{-n + k - 1}{k} k!.
+    \]
+    Note that in this case the upper member \(-n + k - 1\) is at least \(k\), so
+    that by Theorem 1.20 the binomial coefficient is an integer.
+
+    In the formula for the binomial coefficients we note a symmetry:
+    \[
+        \binom{n}{k} = \binom{n}{n - k}.
+    \]
+\end{proof}
+
+\begin{theorem}[The Binomial Theorem]
+    For any integer \(n \geqslant 1\), and any real numbers \(x\) and \(y\), we have
+    \[
+        (x + y)^n = \sum_{k = 0}^{n} \binom{n}{k} x^k y^{n - k}.
+    \]
+\end{theorem}
+\begin{proof}
+    We first consider the product and obtain
+    \[\prod_{ i = 1}^{n} (x_i + y_i)\]
+    On multiplying this out, we obtain \(2^n\) monomial terms of the form
+    \[
+        \prod_{i \in \mathbb{A}} x_i \prod_{j \in \mathbb{A}} y_j
+    \]
+    where \(\mathbb{A}\) is any subset of \{1, 2, \ldots, n\}. For each fixed \(k, 0 \leqslant k \leqslant n\), we consider the monomial terms obtained from those subsets of \(\mathbb{A}\) of \{1, 2, 3, \ldots, n\} having exactly \(k\) elements. The number of such subsets is \(\binom{n}{k}\), and the set \(x_i = x\) and \(y_i = y\) for all \(i\) and note that such a monomial has a value of \(x^k y^{n - k}\) for the subsets in question. Since there are \(\binom{n}{k}\)
+\end{proof}
 %\section{January 24, 2025}
 %\section{January 27, 2025}
 %\section{January 29, 2025}
