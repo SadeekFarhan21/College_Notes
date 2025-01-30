@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  10 JAN 2025 15:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  28 JAN 2025 08:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -131,15 +131,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks17
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
-) (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 
-112.
-
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\ot1cmbr.fd
-File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
-))
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip50
 
@@ -1063,73 +1055,31 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 Package: ulem 2019/11/18
 \ULdepth=\dimen312
 )
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
-se.sty
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-03-30 L3 programming layer (loader) 
-
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xe
-tex.def
-File: l3backend-xetex.def 2023-03-30 L3 backend support: XeTeX
-\g__graphics_track_int=\count329
-\l__pdf_internal_box=\box117
-\g__pdf_backend_object_int=\count330
-\g__pdf_backend_annotation_int=\count331
-\g__pdf_backend_link_int=\count332
-))
-Package: xparse 2023-02-02 L3 Experimental document command parser
-)
-Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xete
-x.sty
-Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
-X
-\l__fontspec_script_int=\count333
-\l__fontspec_language_int=\count334
-\l__fontspec_strnum_int=\count335
-\l__fontspec_tmp_int=\count336
-\l__fontspec_tmpa_int=\count337
-\l__fontspec_tmpb_int=\count338
-\l__fontspec_tmpc_int=\count339
-\l__fontspec_em_int=\count340
-\l__fontspec_emdef_int=\count341
-\l__fontspec_strong_int=\count342
-\l__fontspec_strongdef_int=\count343
-\l__fontspec_tmpa_dim=\dimen313
-\l__fontspec_tmpb_dim=\dimen314
-\l__fontspec_tmpc_dim=\dimen315
- (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
-))
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip68
-\enit@outerparindent=\dimen316
+\enit@outerparindent=\dimen313
 \enit@toks=\toks52
-\enit@inbox=\box118
-\enit@count@id=\count344
-\enitdp@description=\count345
+\enit@inbox=\box117
+\enit@count@id=\count329
+\enitdp@description=\count330
 ) (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.st
 y
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
-\ttl@box=\box119
+\ttl@box=\box118
 \beforetitleunit=\skip69
 \aftertitleunit=\skip70
-\ttl@plus=\dimen317
-\ttl@minus=\dimen318
+\ttl@plus=\dimen314
+\ttl@minus=\dimen315
 \ttl@toksa=\toks53
-\titlewidth=\dimen319
-\titlewidthlast=\dimen320
-\titlewidthfirst=\dimen321
+\titlewidth=\dimen316
+\titlewidthlast=\dimen317
+\titlewidthfirst=\dimen318
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thmtools.sty
 Package: thmtools 2023/05/04 v0.76
 \thmt@toks=\toks54
-\c@thmt@dummyctr=\count346
+\c@thmt@dummyctr=\count331
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-patch.sty
 Package: thm-patch 2023/05/04 v0.76
@@ -1165,9 +1115,25 @@ Package: thm-amsthm 2023/05/04 v0.76
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
+se.sty
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
+
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xe
+tex.def
+File: l3backend-xetex.def 2023-03-30 L3 backend support: XeTeX
+\g__graphics_track_int=\count332
+\l__pdf_internal_box=\box119
+\g__pdf_backend_object_int=\count333
+\g__pdf_backend_annotation_int=\count334
+\g__pdf_backend_link_int=\count335
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count347
+\etb@tempcnta=\count336
 ) (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.st
 y
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
@@ -1177,7 +1143,7 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count348
+\c@abspage=\count337
 Package zref Info: New property: abspage on input line 67.
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.st
@@ -1185,7 +1151,7 @@ y
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip71
-\c@mdf@globalstyle@cnt=\count349
+\c@mdf@globalstyle@cnt=\count338
 \mdf@skipabove@length=\skip72
 \mdf@skipbelow@length=\skip73
 \mdf@leftmargin@length=\skip74
@@ -1262,38 +1228,38 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@horizontalspaceofbox=\skip135
 \mdfsubtitleheight=\skip136
 \mdfsubsubtitleheight=\skip137
-\c@mdfcountframes=\count350
+\c@mdfcountframes=\count339
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count351
-\c@mdf@env@i=\count352
-\c@mdf@env@ii=\count353
-\c@mdf@zref@counter=\count354
+\mdf@envdepth=\count340
+\c@mdf@env@i=\count341
+\c@mdf@env@ii=\count342
+\c@mdf@zref@counter=\count343
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/silence\silence.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
 sages
-\sl@Save=\count355
-\sl@StateNumber=\count356
-\sl@MessageCount=\count357
-\sl@Casualties=\count358
+\sl@Save=\count344
+\sl@StateNumber=\count345
+\sl@MessageCount=\count346
+\sl@Casualties=\count347
 \sl@Filter=\toks57
 \sl@Message=\toks58
 \sl@UnexpandedMessage=\toks59
 \sl@Mess@ge=\toks60
-\sl@WarningCount=\count359
-\sl@WarningNumber=\count360
-\sl@WarningCasualties=\count361
+\sl@WarningCount=\count348
+\sl@WarningNumber=\count349
+\sl@WarningCasualties=\count350
 \sl@TempBOW=\toks61
 \sl@BankOfWarnings=\toks62
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count362
-\sl@ErrorNumber=\count363
-\sl@ErrorCasualties=\count364
+\sl@ErrorCount=\count351
+\sl@ErrorNumber=\count352
+\sl@ErrorCasualties=\count353
 \sl@TempBOE=\toks63
 \sl@BankOfErrors=\toks64
 LaTeX Info: Redefining \GenericError on input line 601.
@@ -1301,60 +1267,116 @@ LaTeX Info: Redefining \GenericError on input line 601.
 Package thmtools Info: Key `mdframed' (with value `style = mdredbox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=defbox' on input line 161.
+(thmtools)             that uses `style=defbox' on input line 162.
 Package thmtools Info: Key `mdframed' (with value `style = mdbluebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmbox' on input line 162.
+(thmtools)             that uses `style=thmbox' on input line 163.
 Package thmtools Info: Key `mdframed' (with value `style = mdgreenbox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=exbox' on input line 163.
+(thmtools)             that uses `style=exbox' on input line 164.
 Package thmtools Info: Key `mdframed' (with value `style = mdorangebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=notebox' on input line 164.
+(thmtools)             that uses `style=notebox' on input line 165.
 Package thmtools Info: Key `mdframed' (with value `style = mdpurplebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=lembox' on input line 165.
+(thmtools)             that uses `style=lembox' on input line 166.
 Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line
- 169.
+ 170.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thmdef-mdfram
 ed.sty
 Package: thmdef-mdframed 2023/05/04 v0.76
 )
-\c@theorem=\count365
-) (stat4202.aux)
+\c@theorem=\count354
+)
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xete
+x.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count355
+\l__fontspec_language_int=\count356
+\l__fontspec_strnum_int=\count357
+\l__fontspec_tmp_int=\count358
+\l__fontspec_tmpa_int=\count359
+\l__fontspec_tmpb_int=\count360
+\l__fontspec_tmpc_int=\count361
+\l__fontspec_em_int=\count362
+\l__fontspec_emdef_int=\count363
+\l__fontspec_strong_int=\count364
+\l__fontspec_strongdef_int=\count365
+\l__fontspec_tmpa_dim=\dimen319
+\l__fontspec_tmpb_dim=\dimen320
+\l__fontspec_tmpc_dim=\dimen321
+ (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
+))
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip138
+\f@nch@O@elh=\skip139
+\f@nch@O@erh=\skip140
+\f@nch@O@olh=\skip141
+\f@nch@O@orh=\skip142
+\f@nch@O@elf=\skip143
+\f@nch@O@erf=\skip144
+\f@nch@O@olf=\skip145
+\f@nch@O@orf=\skip146
+)
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/titlecaps\titlecaps.st
+y
+Package: titlecaps 2022/04/12\ 1.3\ Routines for setting rich-text input into T
+itling Caps
+
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/ifnextok\ifnextok.sty
+Package: ifnextok 2011/06/27 v0.3 test next token (UL)
+) (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@lcword@index=\count366
+\c@word@count=\count367
+\c@lc@words=\count368
+\c@dia@count=\count369
+\c@arg@@@index=\count370
+)
+(stat4202.aux)
 \openout1 = `stat4202.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-1.
+5.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1390,7 +1412,7 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 15.
 (stat4202.out) (stat4202.out)
 \@outlinefile=\write4
 \openout4 = `stat4202.out'.
@@ -1399,81 +1421,132 @@ Package hyperref Info: Link coloring ON on input line 11.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
+LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 
+19.
+(C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\ot1cmbr.fd
+File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
+)
 LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
- 15.
+ 19.
+
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line
- 15.
+ 19.
 
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omscmbrs.fd
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 21.
+(mdframed)              on input line 25.
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 21.
+nput line 25.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 25.
+(mdframed)              on input line 29.
 
 [1
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 56.
+(mdframed)              on input line 60.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 56.
+line 60.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 64.
+(mdframed)              on input line 68.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 64.
+put line 68.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 70.
- [2]
+(mdframed)              on input line 74.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.69998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.69998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.69998pt}.
+
+[2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
- [3]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 133.
-Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
-ine 133.
+(mdframed)              on input line 126.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.69998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.69998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.69998pt}.
+
+[3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 137.
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
+ine 137.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 141.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 137.
+t line 141.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 142.
+(mdframed)              on input line 146.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 148.
- [4]
+(mdframed)              on input line 152.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.69998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.69998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.69998pt}.
+
+[4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 166.
- [5] (stat4202.aux)
+(mdframed)              on input line 170.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.69998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.69998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.69998pt}.
+
+[5] (stat4202.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `stat4202.out' has not changed.
-(rerunfilecheck)             Checksum: DB43949414E96977DF8EBD4437104C87;1525.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `stat4202.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `stat4202.out':
+(rerunfilecheck)             Before: F8533B830A82F4252A45DF5FD718A4D3;330
+(rerunfilecheck)             After:  DB43949414E96977DF8EBD4437104C87;1525.
  ) 
 Here is how much of TeX's memory you used:
- 39639 strings out of 411463
- 944150 string characters out of 5817803
- 1859290 words of memory out of 5000000
- 59299 multiletter control sequences out of 15000+600000
- 521248 words of font info for 76 fonts, out of 8000000 for 9000
+ 40128 strings out of 411463
+ 951279 string characters out of 5817803
+ 1860290 words of memory out of 5000000
+ 59776 multiletter control sequences out of 15000+600000
+ 521256 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,10n,99p,872b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,99p,872b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on stat4202.pdf (5 pages).
