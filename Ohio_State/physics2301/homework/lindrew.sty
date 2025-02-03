@@ -5,7 +5,7 @@
 \newif\iflinindent \linindenttrue % by default, does do paragraph indent
 \newif\iflinheader \linheaderfalse % by default, no header
 
-%\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
+\DeclareOption{serif}{\linseriftrue}  % if you don't like the font
 \DeclareOption{formal}{\linclassfalse} % if you want a document where theorems in section 1 are "theorem 1.x", etc.
 \DeclareOption{noindent}{\linindentfalse}
 \DeclareOption{header}{\linheadertrue}
@@ -13,10 +13,8 @@
 \ProcessOptions*
 
 \iflinserif\else
-    \usepackage[OT1]{fontenc}
-	\renewcommand*\familydefault{\sfdefault}
+    \usepackage{cmbright}
 \fi
-
 
 \iflinindent
 \else
@@ -24,7 +22,7 @@
 \fi
 
 \iflinheader
-    \usepackage[includehead,includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
+    \usepackage[includehead, includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \rhead{\textbf{Andrew Lin}} % change name as necessary
@@ -58,7 +56,7 @@
 \newcommand{\paren}[1]{\left(#1\right)}
 \newcommand{\pnorm}[1]{\left|\left|#1\right|\right|}
 \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
-
+\newcommand{\tbf}[1]{\textbf{\color{black}#1}}
 % Fixes itemize
 \usepackage{enumitem}
 \setlist{itemsep = 0.2em, topsep = 0.4em}
@@ -112,6 +110,8 @@
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\codim}{codim}
 
 % physics
 \newcommand{\ket}[1]{\left|#1\right\rangle}
@@ -201,6 +201,13 @@
 
 \declaretheorem[style=plain, name=Remark, sibling=theorem]{remark}
 \declaretheorem[style=plain, name=Remark, numbered=no]{remark*}
+
+
+\declaretheorem[style=plain, name=Note, sibling=theorem]{note}
+\declaretheorem[style=plain, name=Note, numbered=no]{note*}
+
+\declaretheorem[style=plain, name=Solution, numbered=no]{solution}
+
 
 % Makes title bold 
 \makeatletter

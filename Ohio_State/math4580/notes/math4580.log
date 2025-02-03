@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  11 JAN 2025 07:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.12) (preloaded format=xelatex 2024.12.30)  24 JAN 2025 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1480,7 +1480,12 @@ put line 236.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 246.
- [6] (math4580.aux)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 292.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
+t line 292.
+ [6] [7] (math4580.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1488,12 +1493,12 @@ Package rerunfilecheck Info: File `math4580.out' has not changed.
 (rerunfilecheck)             Checksum: B84B12EAD7A2978AFD3098F8A92605CF;1268.
  ) 
 Here is how much of TeX's memory you used:
- 39816 strings out of 411463
- 947658 string characters out of 5817803
+ 39820 strings out of 411463
+ 947748 string characters out of 5817803
  1859290 words of memory out of 5000000
- 59475 multiletter control sequences out of 15000+600000
+ 59479 multiletter control sequences out of 15000+600000
  521264 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,10n,106p,870b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math4580.pdf (6 pages).
+Output written on math4580.pdf (7 pages).

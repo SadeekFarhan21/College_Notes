@@ -287,6 +287,30 @@ Let $f : A \to B$ be a function.
         \therefore \, f \text{ is surjective.}
     \]
 \end{proof}
+
+
+    \begin{theorem}[Taylor's Theorem]
+        Let \( f \) be a function that is \( n \)-times differentiable at \( a \). Then for each \( x \) in the interval containing \( a \), there exists a \( \xi \) between \( a \) and \( x \) such that
+        \[
+            f(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x - a)^n + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1}.
+        \]
+    \end{theorem}
+
+    \begin{proof}
+        By the mean value theorem, for each \( x \) in the interval containing \( a \), there exists a \( \xi \) between \( a \) and \( x \) such that
+        \[
+            f(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x - a)^n + R_{n+1}(x),
+        \]
+        where \( R_{n+1}(x) \) is the remainder term. The remainder term can be expressed as
+        \[
+            R_{n+1}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1}.
+        \]
+        Therefore, we have
+        \[
+            f(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x - a)^n + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1}.
+        \]
+    \end{proof}
+
 %\section{January 13, 2025}
 %\section{January 15, 2025}
 %\section{January 17, 2025}

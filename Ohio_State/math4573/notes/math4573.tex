@@ -56,11 +56,11 @@ This concept has been known since the time of Euclid.
 
 There are two derivative notions:
 \begin{itemize}
-    \item If $0 < a < b$, then $a$ is called a \textbf{proper divisor} of $b$.
+    \item If $0 < a < b$, then $a$ is called a \vocab{proper divisor} of $b$.
     \item If $a^k \mid\mid b$, it means $a^k \mid b$ and $a^{k + 1} \nmid b$.
 \end{itemize}
 
-\begin{theorem}
+\begin{theorem}\label{1.1}
     Let $a$, $b$, and $c$ be integers. Then the following are true:
     \begin{itemize}
         \item If $a \mid b$, then $a \mid bc$.
@@ -74,7 +74,7 @@ There are two derivative notions:
     \end{itemize}
 \end{theorem}
 
-\begin{theorem}[The Division Algorithm]
+\begin{theorem}[The Division Algorithm]\label{1.2}
     Given integers \(a\) and \(b\) with \(a > 0\), there exist unique integers \(q\) and \(r\) such that
     \[
         b = qa + r, \quad 0 \leq r < a.
@@ -98,18 +98,18 @@ There are two derivative notions:
 \end{fact}
 
 \begin{definition}[Common Divisor]
-    The integer $a$ is a \textbf{common divisor} of $b$ and $c$ if $a \mid b$ and $a \mid c$. Since there is only a finite number of divisors of any non-zero integer, there is only a finite number of common divisors of $b$ and $c$ except in the case $b = c = 0$.
+    The integer $a$ is a \vocab{common divisor} of $b$ and $c$ if $a \mid b$ and $a \mid c$. Since there is only a finite number of divisors of any non-zero integer, there is only a finite number of common divisors of $b$ and $c$ except in the case $b = c = 0$.
 \end{definition}
 
-If at least one of \( b \) and \( c \) is not \( 0 \), the \textbf{greatest
-    common divisor} is called the \textbf{gcd} \( \text{gcd}(b, c) \)
+If at least one of \( b \) and \( c \) is not \( 0 \), the \vocab{greatest
+    common divisor} is called the \vocab{gcd} \( \text{gcd}(b, c) \)
 (\textit{greatest common divisor of \( b \) and \( c \)}), and is denoted by \(
 (b, c) \). Similarly, we have the greatest common divisor \( g \) of the
 integers \( b_1, b_2, \ldots, b_n \) (\textit{not all \( 0 \)}) denoted by \(
 (b_1, b_2, \ldots, b_n) \).
 
-\begin{theorem}
-    If $g$ is the \textbf{gcd} of \( b \) and \( c \), then there exist integers \( x_0 \) and \( y_0 \) such that \[g = bx_0 + cy_0\]
+\begin{theorem}\label{1.3}
+    If $g$ is the \vocab{gcd} of \( b \) and \( c \), then there exist integers \( x_0 \) and \( y_0 \) such that \[g = bx_0 + cy_0\]
 \end{theorem}
 
 \section{January 10, 2025}
@@ -118,10 +118,6 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
 \begin{definition}[Common Divisor]
     The integer $a$ is a common divisor of $b$ and $c$ if $a \mid b$ and $a \mid c$. Since there is only a finite number of divisors of any nonzero integer, there is only a finite number of common divisors of $b$ and $c$, except in the case $b = c = 0$. If at least one of $b$ and $c$ is not $0$, the greatest among their common divisors is called the greatest common divisor of $b$ and $c$ and is denoted by $(b, c)$. Similarly, we denote the greatest common divisor $g$ of the integers $b_1, b_2, \ldots, b_n$, not all zero, by $(b_1, b_2, \ldots, b_n)$.
 \end{definition}
-
-\begin{theorem}
-    If $g$ is the greatest common divisor of $b$ and $c$, then there exist integers $x_0$ and $y_0$ such that $g = (b, c) = bx_0 + cy_0$.
-\end{theorem}
 
 \begin{fact}
     Another fundamental way to to state this is that the linear combination of \( b \) and \( c \) is with integgral multipliers \( x_0 \) and \( y_0 \). This assertion of holds for any finite collection.
@@ -144,7 +140,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     so \(g = l = bx_0 + cy_0\).
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{1.6}
     The greatest common divisor \(g\) of \(b\) and \(c\) can be characterized in the following two ways:
     \begin{itemize}
         \item It is the least positive value of \(bx + cy\) where \(x\) and \(y\) range over
@@ -155,7 +151,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
 \end{theorem}
 
 \begin{proof}
-    Part 1 follows from the proof of Theorem \(1.3\). To prove part 2, we observe that if \(d\) is any common divisor of \(b\) and \(c\), then \(d \mid g\) by part 3 of Theorem \(1.1\). Moreover, there cannot be two distinct integers with property 2, because of Theorem \(1.1\), part 4.
+    Part 1 follows from the proof of Theorem \(\cref{1.3}\). To prove part 2, we observe that if \(d\) is any common divisor of \(b\) and \(c\), then \(d \mid g\) by part 3 of Theorem \(1.1\). Moreover, there cannot be two distinct integers with property 2, because of Theorem \(1.1\), part 4.
 \end{proof}
 
 \begin{remark}
@@ -230,7 +226,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     If (\(a, m\)) = (\(b, m\)) = 1, then (\(ab, m\)) = 1
 \end{theorem}
 \begin{proof}
-    By Theorem 1.3, there exist integers \(x_0, y_0, x_1, y_1\) such that
+    By Theorem \cref{1.3}, there exist integers \(x_0, y_0, x_1, y_1\) such that
     \[1 = ax_0 + my_0 = bx_1 + my_1.\]
     Thus, we may write
     \[
@@ -278,11 +274,11 @@ two original numbers:
         9   & = 45 - 36 = 3 \cdot 657 - 2 \cdot 963 - (13 \cdot 963 - 19 \cdot 657) = 22 \cdot 657 - 15 \cdot 963.
     \end{aligned}
 \]
-In terms of Theorem 1.3, where \(g = (b, c) = bx_0 + cy_0\), beginning with \(b
-= 963\) and \(c = 657\) we have used a procedure called the Euclidean algorithm
-to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these values for
-\(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\) will do
-where \(k\) is any integer.
+In terms of Theorem \cref{1.3}, where \(g = (b, c) = bx_0 + cy_0\), beginning
+with \(b = 963\) and \(c = 657\) we have used a procedure called the Euclidean
+algorithm to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these
+values for \(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\)
+will do where \(k\) is any integer.
 
 To find the greatest common divisor \((b, c)\) of any two integers \(b\) and
 \(c\), we now generalize what is done in the special case above. The process
@@ -339,7 +335,7 @@ presume that \(c\) is positive.
     \(r_1 = 4369\). Continuing, if we divide 4369 into 6409, we get a quotient
     \(q_2 = 1\) and a remainder \(r_2 = 2040\). Dividing 2040 into 4369 gives \(q_3
     = 2\) and \(r_3 = 289\). Dividing 289 into 2040 gives \(q_4 = 7\) and \(r_4 =
-    17\). Since 17 is an exact divisor of 289, the solution is that the g.c.d. is
+    17\). Since 17 is an exact divisor of 289, the solution is that the g.c.d is
     17.
 
     We can write this in tabular form:
@@ -451,7 +447,7 @@ presume that \(c\) is positive.
     proof.
 \end{fact}
 
-\begin{theorem}
+\begin{theorem}\label{1.15}
     If \(p \mid ab, p\) being a prime, then \(p \mid a\) or \(p \mid b\). More generally, if \(p \mid a_1 a_2\), then \(p\) at least one factor of \(a_1\).
 \end{theorem}
 
@@ -460,7 +456,7 @@ presume that \(c\) is positive.
     Now, if \(p \mid a_1a_2\ldots a_n\), that is \(p \mid ac\), where \(c = a_1a_2\ldots a_n\), then \(p \mid a_1\) or \(p \mid c\).If \(p \mid c\), we apply the induction hypthesis to conclude that \(p \mid i\), for some subscript \(i = 1, 2, \ldots, n\).
 \end{proof}
 
-\begin{theorem}[The Fundamental Theorem of Arithmetic or the Unique Factorization Theorem]
+\begin{theorem}[The Fundamental Theorem of Arithmetic or the Unique Factorization Theorem]\label{1.16}
     The facoring of \(n > 1\) into primes is unique and apart from the order of the primes.
 \end{theorem}
 
@@ -600,7 +596,7 @@ combinatorially.
     interpretations can be useful in number theory.
 \end{proof}
 \begin{theorem}
-    The product of any \(k\) consecutive integers is divisible by \(k!\)
+    The product of any \(k\) consecutive integers is divisible by \(k!\).
 \end{theorem}
 \begin{proof}
     Let's write the product as \(n(n - 1) \cdots (n - k + 1)\). If \(n \geq k\), then we write this in the form \(\binom{n}{k} \cdot k!\) and note that \(\binom{n}{k}\) is an integer, by Theorem 1.20. If \(0 \leq n < k\), then one of the factors of our product is 0, so the product vanishes, and is therefore a multiple of \(k!\) in this case also. Finally, if \(n < 0\), we note that the product may be written as
@@ -629,13 +625,351 @@ combinatorially.
     \[
         \prod_{i \in \mathbb{A}} x_i \prod_{j \in \mathbb{A}} y_j
     \]
-    where \(\mathbb{A}\) is any subset of \{1, 2, \ldots, n\}. For each fixed \(k, 0 \leqslant k \leqslant n\), we consider the monomial terms obtained from those subsets of \(\mathbb{A}\) of \{1, 2, 3, \ldots, n\} having exactly \(k\) elements. The number of such subsets is \(\binom{n}{k}\), and the set \(x_i = x\) and \(y_i = y\) for all \(i\) and note that such a monomial has a value of \(x^k y^{n - k}\) for the subsets in question. Since there are \(\binom{n}{k}\)
+    where \(\mathbb{A}\) is any subset of \{1, 2, \ldots, n\}. For each fixed \(k,
+    0 \leqslant k \leqslant n\), we consider the monomial terms obtained from those
+    subsets of \(\mathbb{A}\) of \{1, 2, 3, \ldots, n\} having exactly \(k\)
+    elements. The number of such subsets is \(\binom{n}{k}\), and the set \(x_i =
+    x\) and \(y_i = y\) for all \(i\) and note that such a monomial has a value of
+    \(x^k y^{n - k}\) for the subsets in question. Since there are \(\binom{n}{k}\)
 \end{proof}
-%\section{January 24, 2025}
-%\section{January 27, 2025}
-%\section{January 29, 2025}
-%\section{January 31, 2025}
-%\section{February 3, 2025}
+\section{January 24, 2025}
+The binomial theorem can also be proved analytically by appealing the following
+simple results.
+\begin{lemma}
+    Let \(P(z) = \sum_{k = 0}^{n} a_k z^k\) be a polynomial with real coefficients. Then \(a_r = \frac{P^{(r)}(0)}{r!}\) for \(r = 0, 1, 2, \ldots, n\), where \(P^{(r)}(0)\) denotes the \(r^{th}\) derivative of \(P(z)\) evaluated at \(z = 0\).
+\end{lemma}
+
+The binomial coefficients arise in many identities, The simplest relations is
+the recurrence relation
+\[
+    \binom{n}{k} + \binom{n}{k + 1} = \binom{n + 1}{k + 1}
+\]
+Maybe used in many ways, for example to construct the Pascal's Triangle which
+is the infinite array of numbers. The pascal's triangle could be used to expand
+the binomial theorem, for example \({(x + y)}^5 = 1x^5 + 5x^4y + 10x^3y^2 +
+10x^2y^3 + 5xy^4 + 1y^5\) \\
+\begin{center}
+    \begin{tikzpicture}
+        \node at (0, 4) {1};
+        \node at (-1, 3) {1};
+        \node at (1, 3) {1};
+        \node at (-2, 2) {1};
+        \node at (0, 2) {2};
+        \node at (2, 2) {1};
+        \node at (-3, 1) {1};
+        \node at (-1, 1) {3};
+        \node at (1, 1) {3};
+        \node at (3, 1) {1};
+        \node at (-4, 0) {1};
+        \node at (-2, 0) {4};
+        \node at (0, 0) {6};
+        \node at (2, 0) {4};
+        \node at (4, 0) {1};
+        \node at (-5, -1) {1};
+        \node at (-3, -1) {5};
+        \node at (-1, -1) {10};
+        \node at (1, -1) {10};
+        \node at (3, -1) {5};
+        \node at (5, -1) {1};
+    \end{tikzpicture}
+\end{center}
+
+This is also obtained by the proceeding row, just to left and just to the
+right. In general the \(n^{th}\) row is the coefficients of the expansion of
+\((x + y)^{n - 1}\)
+
+\subsection{Congruences}
+\subsubsection{Congruences}
+A congruence is nothing more than the statement about divisibility.
+\begin{definition}
+    If an integer \(m \neq 0\), divide the difference \(a - b\), then we say that \underline{\(a\) is congruent to \(b\) modulo \(m\)}, and write we will write \(a \equiv (b \mod{m})\). If \(a - b\) is not divisible by \(n\), we say that \(a\) is not congruent to \(b\) modulo \(m\), and write \(a \not\equiv b \mod{m}\).
+\end{definition}
+
+\begin{fact}
+    Since \(a - b\) is divisible by \(m\), if \(a - b\) is divisible by \(-m\), we generally take the remainder to be the smallest positive integer.
+\end{fact}
+
+\begin{theorem}\label{2.1}
+    Let \(a, b, c, d \in \mathbb{Z}\). Then
+    \begin{enumerate}
+        \item \(a \equiv b \pmod{m}\), \(b \equiv a \pmod{m}\), and \(a - b \equiv 0 \pmod{m}\) are equivalent statements.
+        \item If \(a \equiv b \pmod{m}\) and \(b \equiv c \pmod{m}\), then \(a \equiv c
+              \pmod{m}\).
+        \item If \(a \equiv b \pmod{m}\) and \(c \equiv d \pmod{m}\), then \(a + c \equiv b +
+              d \pmod{m}\).
+        \item If \(a \equiv b \pmod{m}\) and \(c \equiv d \pmod{m}\), then \(ac \equiv bd
+              \pmod{m}\).
+        \item If \(a \equiv b \pmod{m}\) and \(d \mid m\), \(d > 0\), then \(a \equiv b
+              \pmod{d}\).
+        \item If \(a \equiv b \pmod{m}\), then \(ac \equiv bc \pmod{mc}\) for \(c > 0\).
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    Let \(f\) denote a polynomial with integral coefficients. If \(a \equiv b \pmod{m}\), then \(f(a) \equiv f(b) \pmod{m}\).
+\end{theorem}
+\begin{proof}
+    We can suppose \( f(x) = c_n x^n + c_{n-1} x^{n-1} + \cdots + c_0 \) where the \( c_i \) are integers. Since \( a \equiv b \pmod{m} \), we can apply Theorem 2.1, part 4, repeatedly to find \( a^2 \equiv b^2 \), \( a^3 \equiv b^3 \), \(\ldots\), \( a^n \equiv b^n \pmod{m} \), and then \( c_i a^j \equiv c_i b^j \pmod{m} \) and finally \( c_n a^n + c_{n-1} a^{n-1} + \cdots + c_0 \equiv c_n b^n + c_{n-1} b^{n-1} + \cdots + c_0 \pmod{m} \).
+\end{proof}
+
+\begin{theorem}\label{2.3}
+    For \(a, b, m \in \mathbb{Z}\), \(m > 0\), the situations hold:
+    \begin{itemize}
+        \item \(ax \equiv ay \pmod{m}\) if an only if \(x \equiv y \pmod{\frac{m}{(a, m)}}\)
+        \item If \(ax \equiv ay \pmod{m}\) and \((a, m) = 1\), then \(x \equiv y \pmod{m}\).
+        \item \(x \equiv y\pmod{m_i}\) for \(i = 1, 2, \ldots, r\) if and only if \(x \equiv y \pmod{[m_1, m2, \ldots, m]}\)
+    \end{itemize}
+\end{theorem}
+
+\begin{proof}
+    \begin{itemize}
+        \item If \(ax \equiv ay \pmod{m}\), then \(ay - ax = mz\) for some integer \(z\).
+              Hence we have
+              \[
+                  a(y - x) = mz,
+              \]
+              and thus
+              \[
+                  \frac{a}{(a, m)} (y - x) = \frac{m}{(a, m)} z.
+              \]
+              But \(\left(\frac{a}{(a, m)}, \frac{m}{(a, m)}\right) = 1\) by Theorem 1.7 and
+              therefore \(\frac{m}{(a, m)} \mid (y - x)\) by Theorem 1.10. That is,
+              \[
+                  x \equiv y \pmod{\frac{m}{(a, m)}}.
+              \]
+        \item Conversely, if \(x \equiv y \pmod{\frac{m}{(a, m)}}\), we multiply by \(a\) to
+              get \(ax \equiv ay \pmod{a \cdot \frac{m}{(a, m)}}\) by use of Theorem 2.1,
+              part 6. But \((a, m)\) is a divisor of \(a\), so we can write \(ax \equiv ay
+              \pmod{m}\) by Theorem 2.1, part 5.
+    \end{itemize}
+    For example, \(15x \equiv 15y \pmod{10}\) is equivalent to \(x \equiv y \pmod{2}\), which amounts to saying that \(x\) and \(y\) have the same parity.
+\end{proof}
+
+\begin{proof}
+    \begin{itemize}
+        \item If \(x \equiv y \pmod{m_i}\) for \(i = 1, 2, \ldots, r\), then \(m_i \mid (y -
+              x)\) for \(i = 1, 2, \ldots, r\). That is, \(y - x\) is a common multiple of
+              \(m_1, m_2, \ldots, m_r\), and therefore (see Theorem 1.12) \([m_1, m_2,
+                      \ldots, m_r] \mid (y - x)\). This implies \(x \equiv y \pmod{[m_1, m_2, \ldots,
+                          m_r]}\).
+        \item If \(x \equiv y \pmod{[m_1, m_2, \ldots, m_r]}\), then \(x \equiv y
+              \pmod{m_i}\) by Theorem 2.1 part 5, since \(m_i \mid [m_1, m_2, \ldots, m_r]\).
+    \end{itemize}
+\end{proof}
+\section{January 27, 2025}
+In deadling with integers modulo \(m\), we are essentially peforming the
+aritmetic but are disregarding the multiples of \(m\). In a sense, not
+disregarding between \(a\) and \(a + mx\), where \(x \in \mathbb{Z}\). Given
+any integer, \(a\), let \(q\) and \(r\) be the quotient and the remainder on
+\(m\); thus \(a = qm + r\). Now \(a \equiv r \pmod{m})\), and since \(r\)
+satistifies the inequalities \(0 \leqslant r < m\), we see that every integer
+is congruent modulo \(m\) to one of the values \(0, 1, 2, \ldots, m - 1\).
+Also, it is clear that no two of these \(m\) integers are congruent modulo
+\(m\). These \(m\) values constitute a complete residue system modulo \(m\),
+and we now give a general definition of this term.
+
+\begin{definition}
+    If \(x \equiv y \pmod {m}\) then \(y\) is called a residue of \(x\) \vocab{modulo} \(m\). A set \(x_1, x_2, \ldots, x_m\) is called a complete residue system modulo \(m\) if for every integer \(y\) there is one and only \(x_j\) such that \(y \equiv x_j\pmod {m}\).
+\end{definition}
+
+It is obvious that there are infinitely many complete residue systems
+\vocab{modulo} m, the set \(1, 2, \ldots, m - 1, m\) being another example.
+
+A set of \(m\) integers forms a complete residue system modulo \(m\) if and
+only if no two integers in the set are congruent modulo \(m\).
+
+For fixed integer \(x \equiv a \pmod {m}\) is the arithmetic progression
+\[
+    \ldots, a - 3m, a - 2m, a - m, a, a + m, a + 2m, a + 3m, \ldots
+\]
+This set is called a \vocab{residue class} or \vocab{congruence class} modulo
+\(m\). There are \(m\) distinct residue classe modulo \(m\), obtained from
+taking \(a = 0, 1, 2, \ldots, m \).
+\begin{theorem} \label{1.8}
+    If \(b \equiv c \pmod{m}\), then \((b, m) = (c, m)\).
+\end{theorem}
+
+\begin{proof}
+    We have \(c = b + mx\) for some \(x \in \mathbb{Z}\). Let \(d = (b, m)\). Then \(d \mid b\) and \(d \mid m\). Since \(d \mid m\), we have \(d \mid mx\). Therefore, \(d \mid (b + mx)\), which implies \(d \mid c\). Thus, \(d\) is a common divisor of \(c\) and \(m\), so \(d \leq (c, m)\).
+
+    Conversely, let \(d' = (c, m)\). Then \(d' \mid c\) and \(d' \mid m\). Since
+    \(c = b + mx\), we have \(d' \mid (b + mx)\). But \(d' \mid m\), so \(d' \mid
+    b\). Thus, \(d'\) is a common divisor of \(b\) and \(m\), so \(d' \leq (b,
+    m)\).
+
+    Therefore, \((b, m) = (c, m)\).
+\end{proof}
+
+\begin{definition}
+    A \vocab{reduced residue system} modulo \(m\) is a set of integers \(r_i\) such that \((r_i, m) = 1, r_i \not\equiv r_j \pmod m\) if \(i \neq j\), and such that every \(x\) prime to \(m\) is congruent modulo \(m\) to some member \(r_i\) of the set.
+\end{definition}
+
+\begin{remark}
+    In view of the preceding theorem, it is clear that a reduced residue system modulo \(m\) can be obtained by deleting from a complete residue system modulo \(m\) and those members that are not relatively prime to \(m\). Furthermore, all reduced residue system modulo \(m\) have the same number of members, namely \(\phi(m)\). This is called \vocab{Euler's \(\phi\) function}, sometimes called the \vocab{totient function}. By applying the definition of \(\phi(m)\), we can see that \(\phi(p) = p - 1\) for any prime \(p\).
+\end{remark}
+
+\begin{theorem}
+    The number \(\phi (m)\) is the number of positive integers less than or equal to \(m\) that are relatively prime to \(m\).
+\end{theorem}
+
+Euler's function \(phi (m)\) is of considerable interest. We will consider that
+in further sections.
+\begin{theorem}\label{2.6}
+    Let \(a, m = 1\). Let \(r_1, r_2, \ldots, r_n\) be a complete, or a reduced residue system modulo \(m\). Then \(ar_1, ar_2, \ldots, ar_n\) is a complete, or a reduced, residue system, respectively, modulo \(m\).
+\end{theorem}
+\begin{proof}
+    If \(r_i, m = 1\), then \(ar_i, m\) = 1. There are the same number of \(ar_1, ar_2, \ldots, ar_n\) as of \(r_1, r_2, \ldots, r_n\). Therefore, we need to only show that \(ar_i \not \equiv ar_j \pmod{m}\) if \(i \neq j\). But \cref{2.3} shows that \(ar_i \equiv ar_j \pmod{m}\) implies \(r_i \equiv r_j \pmod{m}\), hence \(i = j\).
+\end{proof}
+\begin{example}
+    For example, since \(1, 2, 3, 4\) is a reduced residue system modulo \(5\), so also is \(2, 4, 6, 8\). Since \(1, 3, 7, 9\) is a reduced residue system modulo \(10\), so also is \(3, 9, 21, 27\).
+\end{example}
+
+\begin{theorem}[Fermat's Little Theorem]\label{2.7}
+    If \(p \nmid a\), then \((a, p) = 1\) and \(a^{p-1} \equiv 1 \pmod{p}\). To find \(\varphi(p)\), we refer to Theorem 2.5. All the integers \(1, 2, \ldots, p - 1\) are relatively prime to \(p\). Thus we have \(\varphi(p) = p - 1\), and the first part of Fermat's theorem follows. The second part is now obvious.
+
+\end{theorem}
+
+\section{January 29, 2025}
+\begin{theorem}[Euler's generalization of Fermat's Theorem]\label{2.8}
+    If \((a, m) = 1\) then \[a^{\varphi(m)} \equiv 1\pmod{m}\]
+\end{theorem}
+\begin{proof}
+    Let \(r_1, r_2, \ldots, r_{\varphi(m)}\) be a reduced residue system modulo \(m\). Then by Theorem \cref{2.6}, \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) is also a reduced residue system modulo \(m\). Hence, corresponding to each \(r_i\) there is one and only one \(ar_j\) such that \(r_i \equiv ar_j \pmod{m}\). Furthermore, different \(r_i\) will have different corresponding \(ar_j\). This means that the numbers \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) are just the residues modulo \(m\) of \(r_1, r_2, \ldots, r_{\varphi(m)}\), but not necessarily in the same order. Multiplying and using Theorem \cref{2.1}, part 4, we obtain
+    \[
+        \prod_{j=1}^{\varphi(m)} ar_j \equiv \prod_{i=1}^{\varphi(m)} r_i \pmod{m},
+    \]
+    and hence
+    \[
+        a^{\varphi(m)} \prod_{j=1}^{\varphi(m)} r_j \equiv \prod_{j=1}^{\varphi(m)} r_j \pmod{m}.
+    \]
+    Now \((r_j, m) = 1\), so we can use Theorem \ref{2.3}, part 2, to cancel the
+    \(r_j\) and we obtain \(a^{\varphi(m)} \equiv 1 \pmod{m}\).
+\end{proof}
+
+\begin{theorem}\label{2.9}
+    If \((a, m) = 1\). then there is an \(x\) such that \(ax = 1 \pmod{m}\) and any two such \(x\) are congurent \(pmod{m}\). If \((a, m) > 1\), then there is no such \(x\).
+\end{theorem}
+
+\begin{proof}
+    If \(a, m = 1\), then there exist \(x\) and \(y\) such that \(ax + my = 1\) That is. \(ax \equiv 1\), Conversely, if \(ax \equiv 1 \pmod{m}\), then there is a \(y\) such that \(ax + by = 1\), so that \((a, m) = 1\). Thus if, \(ax_1 \equiv ax_2 \equiv 1 \pmod{m}\), then \((a, m) = 1\), and that follows from \cref{2.3}, part 2.
+\end{proof}
+\begin{note}
+
+    The relation \(ax \equiv 1 \pmod{m}\) asserts that there is a residue system x
+    that is multiplicative inverse of the class \(a\). To avoid confusion rational
+    number \(a^{-1} = \frac{1}{m}\), we denote that this residue \(\bar{a}\). The
+    value of \(\bar{a}\) is quickly found by employing the Eucledian Algorithm, as
+    asserted. The existence of \(\bar{a}\) is also evident from \cref{2.6}, if
+    \((a, m) = 1\) then the members \(a, 2a, \ldots, ma\) form a complete system of
+    residues, which is to say, that is one of them is \(\equiv 1 \pmod{m}\). In
+    additional it can be inferred in the form \(\bar{a} = a^{\varphi(m)} - 1\)
+\end{note}\
+
+\begin{lemma}
+    Let \(p\) be a prime number. Then \(x^2 \equiv 1 \pmod{m} \Longleftrightarrow x = \pm 1 \pmod{m}\). In a later section, we will establish a more general result which the following is easily derived, but we are giving a direct proof for now, because the observation has many useful applications.
+\end{lemma}
+\begin{proof}
+    This is a quadratic congruence. It may be expressed as \(x^2  - 1\equiv 0 \pmod{m}\). That is \((x - 1)(x - 2) \equiv 0 \pmod{p}\), which is to say that \(\mid (x - 1)(x - 1)\mid\). By \cref{1.15} it follows that \(p \mid (x - 1)\) or \(p \mid (x + 1)\). So \(x \equiv 1 \pmod{m}\) or \(x \equiv -1 \pmod{m}\) .Conversely, it either
+\end{proof}
+
+\begin{theorem}[Wilson's Theorem]\label{2.11}
+    If \(p\) is a prime, then \((p  - 1) \equiv -1 \pmod{m}\)
+\end{theorem}
+
+\section{January 31, 2025}
+\begin{proof}
+    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by Theorem \ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of Theorem \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
+\end{proof}
+\begin{theorem}\label{2.12}
+    Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solution \(\Longleftrightarrow p = 2\) or \(p \equiv 1 \pmod{4}\)
+\end{theorem}
+
+\begin{proof}
+    If \(p = 2\), we have the solution \(x = 1\). FOr any odd prime \(p\), we can write Wilson's theorem in the form
+
+    \[\left(1 \cdot 2 \ldots j \ldots \frac{p - 1}{2}\right)\left(\frac{p + 1}{2} \ldots (p - j) \ldots (p - 2)(p - 1)\right) \equiv -1 \pmod{p}\]
+    The product on the left has divided into two parts, each with the same number
+    of factors. Pairing off \(j\) in the first half with \(p - j\) in the second
+    half, we can rewrite the congruence in the form
+    \[\prod_{j = 1}^{\frac{p - 1}{2}} j (p - j)\equiv \pmod{p}\]
+    But \(j(p - j) \equiv -j^2 \pmod{p}\), and so the above is
+    \[\prod_{j = 1}^{\frac{p - 1}{2}}(-j^2) \equiv (-1)^{\frac{p - 1}{2}}\left(\prod_{j = 1}^{\frac{p - 1}{2}} j \pmod{p}.\right)\]
+    If \(p \equiv 1 \pmod{4}\) then the first factor on the right is 1, and we see
+    that \(x = \left(\frac{p - 1}{2}\right)!\) is a solution of \(x^2 \equiv -1
+    \pmod{p}\).
+
+    Suppose, conversely, that there is an \(x\) such that \(x^2 \equiv -1
+    \pmod{p}\). We note that for such an \(x, p \nmid x\). We suppose that \(p >
+    2\), and raise both sides of the congruence to the power \(\frac{p - 1}{2}\) to
+    see that
+    \[(-1)^\frac{p - 1}{2} \equiv (x^2)^{\frac{ p - 1}{2}} = x^{p - 1} \pmod{p}\].
+
+    By Fermat's congruence, the right side here is \(\equiv 1 \pmod{p}\). The left
+    hand side is \(\pm 1\). Since \(-1 \not \equiv 1 \pmod{m}\), we deduce that \[(-1)^{\frac{p - 1}{2}} = 1.\] Thus \(\frac{p - 1}{2}\) is even; that is, \(p \equiv 1 \pmod{4}\).
+
+    In the case \(p \equiv 1 \pmod {4}\), we have expilcitly constructed a solution
+    of the congruence, \(x^2 \equiv -1 \pmod{p}\). However, the amout of
+    calculation required to evaluate \(\frac{p - 1}{2}! \pmod{p}\) is no smaller
+    than the exhausting \(x = 1, x 2, \ldots, x = \frac{p - 1}{2}\). In a later
+    section, we will develop a method by which the desired \(x\) can be quickly
+    determined.
+\end{proof}
+
+\begin{theorem}\label{2.12}
+    Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solutions if and only if \(p = 2\) or \(p \equiv 1 \pmod{4}\).
+\end{theorem}
+
+\section{February 3, 2025}
+
+Theorem \ref{2.12} provides a key piece of informatoin needed to determine
+which integers can be written as the sum of two squares. We began by showing
+that a a class of prime numbers can be represented in this manner.
+
+\begin{lemma}\label{2.13}
+    If \(p\) is a prime numebr and \(p \equiv 1 \pmod{4}\) then there exist positive integers \(a\) and \(b\) such that \(a^2 + b^2 = p.\) This was first stated in 1632 by Albert Girard on the basis of numericla evidence. The first proof was given by Fermat in 1654.
+\end{lemma}
+
+\begin{lemma}\label{2.14}
+    Let \(q\) be prime of the form \(a^2 + b^2\). If \(q \equiv 3 \pmod{4}\). then \(q \mid a\) and \(q \mid b\).
+\end{lemma}
+
+\begin{theorem}[Fermat]\label{2.15}
+    Write the canonical factorization of \(n\) in the form
+
+    \[n = 2^{\alpha} \prod_{p \equiv 1   (4)} p ^{\beta}\prod_{p \equiv 3   (4)} q ^{\gamma}\]
+    Then \(n\) can be expressed as a sum of the two squres \(\Longleftrightarrow\)
+    all exponents \(\gamma\) are there.
+\end{theorem}
+
+\begin{note}
+    We note that the identity holds:
+    \[(a^2 + b^2 ) (c^2 + d^2 ) = (ac - bd)^2 + (ac + bc)^2\]
+\end{note}
+The Theorem of Fermat is the first of many such theorems. The object of constructing a coherent theorey of quadratic forms was the primary in the instance on research for seveveral centuries. This first setep in the theory is to generate Theorem \cref{2.12}. This is accomplished in the law of quadratic reciprocity, whcih we study in the initial chapters of the following chapters. With this tool in hand, we deelop some of the few fundamentals concerting quadratic forms in the latter part of Chapter 3. In particular, in sections, we apply the general theory of the sum of two squares, to give not only a proof of Theorem \cref{2.15} but also some further results.
+
+\subsection[Solutions of Congruences]{Solutions of Congruences}
+Let \(f(x)\) denote a polynomial with the integer coefficients
+\[f(x) = a_n x^n + a_{n + 1}x^{n - 1} + \cdots + a_0\]. If \(n\) is an integer such that \(f(u) \equiv 0 \pmod{m}\) we say that it is a solution of the congruence \(f(x) \equiv 0 \pmod{m}\). Whether or not an integer \(a\) is a solution of a congruence  depends on the modulo \(m\).
+
+If the integer \(u\) is a solution of \(f(x) \equiv 0 \pmod{m}\) and if \(v
+\equiv u \pmod{m}\), then Theorem \(\cref{2.2}\) shows that \(v\) is also a
+solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning
+that every integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0
+\pmod{m}\).
+\begin{example}
+    The congruence \(x^2 - x + 4 \equiv 0 \pmod{10}\) has the solution \(x = 3\) and the solution \(x = 8\). It also has solutions \(x = 13\) and \(x = 18\) and all other numbers obtained by adding and subtracting 10 as often as we wish. In counting the number of solutions of a congruence, we can restrict our attention to complete residue system belong to the modolus. In the example \(x^2 - x + 4 \equiv 0 \pmod{10}\) because \(x = 3\) and \(x = 8\) are the only numbers among \(0, 1, 2, \ldots, 9\) that are solutions. The two solutions can be written in the form \(x = 3\) or \(x = 8\) on in congruence from \(x \equiv 3 \pmod{10}\) and \(x \equiv 8 \pmod{10}\).
+\end{example}
+
+\begin{example}
+    The congruence
+    \[x^2 - 7x + 2 \equiv 0 \pmod{10}\]
+    has exactly 4 solutions, \(x = 3 4, 8, 9\). The reason for counting the number of solutions in this way is that if \(f(x) \equiv 0 \pmod{m}\) has a solution \(x = a\), then it follows that all integers \(x\) satisfying \(x \equiv a \pmod{m}\) are automatically solutions, so this entire congruenec class is counted as a single solution. 
+\end{example}
+
+\begin{definition}
+    Let \(r_1, r_2, \ldots, r_m\) denote a complete system of residues \(\pmod{m}\) Then the number of solutions of \(f(x) \equiv 0 \pmod{m}\) is the number of solutions \(r_i\) such that \(f(r_1) \equiv 0 \pmod{m}\).
+\end{definition}
+
 %\section{February 5, 2025}
 %\section{February 7, 2025}
 %\section{February 10, 2025}
