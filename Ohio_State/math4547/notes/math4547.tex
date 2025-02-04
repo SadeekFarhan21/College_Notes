@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{fontspec}
+\usepackage{bookmark}
 \title{Math 4547: Real Analysis I}
 \author{Lecturer: \textbf{Professor Alex Margolis}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
@@ -892,11 +893,345 @@ So \(\frac{1}{3}\) seems like a choice of limit \(L\).
 For large even \(n\), \[a_n = \frac{n^2}{n^2 + 1} = \frac{1}{1 + \frac{1}{n^2}}\]
 For large odd \(n\), \[a_n = \frac{-n^2}{n^2 + 1} = -\frac{1}{1 + \frac{1}{n^2}}\]
 
+\section{January 27, 2025}
+\begin{theorem}[Limits respect Weak Inequalities]
+    Let $(a_n)$ and $(b_n)$ be sequences such that $(a_n) \to L$ and $(b_n) \to M$. If $a_n \geq b_n$ for all $n$, then $L \geq M$.
+\end{theorem}
 
-%\section{January 27, 2025}
-%\section{January 29, 2025}
+\section{January 27, 2025}
+\begin{proof}
+    Suppose, for a contradiction, that $L < M$. Set $\epsilon = \frac{M - L}{2} > 0$. Since $a_n \to L$, there exists $N_1$ such that $n \geq N_1 \implies |a_n - L| < \epsilon$. Similarly, since $b_n \to M$, there exists $N_2$ such that $n \geq N_2 \implies |b_n - M| < \epsilon$. Therefore, for $n \geq \max(N_1, N_2)$, we have:
+    \[
+        a_n < L + \epsilon = \frac{L + M}{2} \quad \text{and} \quad b_n > M - \epsilon = \frac{L + M}{2}
+    \]
+    Hence, for $n \geq \max(N_1, N_2)$, we have $a_n < \frac{L + M}{2} < b_n$,
+    which contradicts $a_n \geq b_n$ for all $n$.
+\end{proof}
+
+\begin{remark}
+    Clearly, $\lim$ does not respect strict inequalities: e.g. $\frac{1}{n} > 0$ for all $n \geq 1$ but $0 = \lim \frac{1}{n} > \lim 0 = 0$ is false.
+\end{remark}
+
+\begin{theorem}[Squeeze Theorem]
+    Suppose that $x_n \leq a_n \leq y_n$ for all $n$ and that $L = \lim x_n = \lim y_n$. Then $a_n \to L$ as $n \to \infty$.
+\end{theorem}
+
+\begin{proof}
+    Let $\epsilon > 0$. Then there exist $N_1$ and $N_2$ such that $x_n - L > -\epsilon$ for all $n \geq N_1$, and $y_n - L < \epsilon$ for all $n \geq N_2$. So for $n \geq \max(N_1, N_2)$, we have:
+    \[
+        -\epsilon < x_n - L \leq a_n - L \leq y_n - L < \epsilon
+    \]
+    which shows that $a_n \to L$ also.
+\end{proof}
+
+\subsection{The Algebra of Limits}
+Most sequences can be built up from simpler ones using addition,
+multiplication, etc. The algebra of limits tells us how the corresponding
+limits behave. Throughout the following, $(a_n)$ and $(b_n)$ denote sequences.
+
+\begin{proposition}[AOL: Constants]
+    If $a_n = a$ for all $n$, then $a_n \to a$.
+\end{proposition}
+
+\begin{proof}
+    For any $\epsilon > 0$, take $N = 1$; $n \geq N \implies |a_n - a| = 0 < \epsilon$.
+\end{proof}
+
+\begin{proposition}[AOL: Sums]
+    If $a_n \to a$ and $b_n \to b$, then $a_n + b_n \to a + b$.
+\end{proposition}
+
+\begin{proof}
+    Let $\epsilon > 0$. Then $\frac{\epsilon}{2} > 0$ and so:
+    \[
+        \exists N_1 : n \geq N_1 \implies |a_n - a| < \frac{\epsilon}{2}, \quad \exists N_2 : n \geq N_2 \implies |b_n - b| < \frac{\epsilon}{2}
+    \]
+    Put $N_3 = \max(N_1, N_2)$. Then for all $n \geq N_3$, we have:
+    \[
+        |(a_n + b_n) - (a + b)| \leq |a_n - a| + |b_n - b| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+    \]
+\end{proof}
+
+\begin{proposition}[AOL: Scalar Products]
+    If $a_n \to a$ as $n \to \infty$ and $\lambda \in \mathbb{R}$, then $\lambda a_n \to \lambda a$.
+\end{proposition}
+
+\begin{proof}
+    Let $\epsilon > 0$. Then $\frac{\epsilon}{|\lambda| + 1} > 0$ and so there exists $N$ such that $|a_n - a| < \frac{\epsilon}{|\lambda| + 1}$ for all $n \geq N$. Hence:
+    \[
+        |\lambda a_n - \lambda a| = |\lambda| |a_n - a| \leq \frac{|\lambda| \epsilon}{|\lambda| + 1} < \epsilon
+    \]
+    for all $n \geq N$.
+\end{proof}
+
+\begin{corollary}[AOL: Differences]
+    If $a_n \to a$ and $b_n \to b$, then $a_n - b_n \to a - b$.
+\end{corollary}
+
+\begin{corollary}[AOL: Translations]
+    If $a_n \to a$ and $c \in \mathbb{R}$, then $a_n + c \to a + c$.
+\end{corollary}
+
+\begin{lemma}
+    If $x_n \to 0$ and $y_n \to 0$, then $x_n y_n \to 0$.
+\end{lemma}
+
+\begin{proof}
+    Given $\epsilon > 0$, let $\epsilon_1 = \min(1, \epsilon) > 0$. Then:
+    \[
+        \exists N_1 : n \geq N_1 \implies |x_n| < \epsilon_1, \quad \exists N_2 : n \geq N_2 \implies |y_n| < \epsilon_1
+    \]
+    So if $n \geq \max(N_1, N_2)$, we have:
+    \[
+        |x_n y_n| \leq |x_n| |y_n| < \epsilon_1^2 \leq \epsilon
+    \]
+    which completes the proof.
+\end{proof}
+
+\begin{proposition}[AOL: Products]
+    If $a_n \to a$ and $b_n \to b$, then $a_n b_n \to ab$.
+\end{proposition}
+
+\begin{proof}
+    Note that:
+    \[
+        a_n b_n - ab = (a_n - a)(b_n - b) + b(a_n - a) + a(b_n - b)
+    \]
+    By the previous lemma, $(a_n - a)(b_n - b) \to 0$, and by Proposition 2.2.3,
+    $b(a_n - a) \to 0$ and $a(b_n - b) \to 0$. Hence $a_n b_n \to ab$ by
+    Proposition 2.2.2.
+\end{proof}
+\section{January 29, 2025}
+\begin{proposition}[AOL: Reciprocals]
+    If $a_n \to a$ and $a_n \neq 0$ for all $n$ and $a \neq 0$, then $\frac{1}{a_n} \to \frac{1}{a}$.
+\end{proposition}
+
+\begin{proof}
+    Let $\epsilon > 0$. As $a \neq 0$ then $\frac{|a|}{2} > 0$. So there exists $N_1$ such that for $n \geq N_1$ we have $|a_n - a| < \frac{|a|}{2}$. By the Triangle Inequality
+    \[
+        |a| \leq |a_n| + |a - a_n| = |a_n| + |a_n - a|
+    \]
+    and so $|a_n| > \frac{|a|}{2}$ and $\left|\frac{1}{a_n}\right| <
+        \frac{2}{|a|}$. Further, as $\frac{|a| \epsilon}{2} > 0$ then there exists
+    $N_2$ such that for $n \geq N_2$
+    \[
+        |a_n - a| < \frac{|a| \epsilon}{2}.
+    \]
+    Set $N_3 = \max(N_1, N_2)$ so that for $n \geq N_3$
+    \[
+        \left|\frac{1}{a_n} - \frac{1}{a}\right| = \frac{|a_n - a|}{|a_n| |a|} < \frac{\frac{|a| \epsilon}{2}}{\frac{|a|}{2} |a|} = \epsilon.
+    \]
+\end{proof}
+
+\begin{corollary}[AOL: Quotients]
+    If $a_n \to a$, $b_n \to b$, and $b_n \neq 0$ for all $n$ and $b \neq 0$, then $\frac{a_n}{b_n} \to \frac{a}{b}$.
+\end{corollary}
+
+\begin{proposition}[AOL: Modulus]
+    If $a_n \to a$ then $|a_n| \to |a|$.
+\end{proposition}
+
+\begin{proof}
+    Exercise.
+\end{proof}
+
+\begin{example}
+    $a_n = \frac{n^2 + n + 1}{3n^2 + 4} \to \frac{1}{3}$
+\end{example}
+
+\begin{proof}
+    We write
+    \[
+        \frac{n^2 + n + 1}{3n^2 + 4} = \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{3 + \frac{4}{n^2}} \to \frac{1 + 0 + 0}{3 + 0} = \frac{1}{3}
+    \]
+    noting
+    \begin{itemize}
+        \item $\frac{1}{n} \to 0$ by the Archimedean Property;
+        \item $\frac{1}{n^2} \to 0$ by Proposition 2.2.7;
+        \item $1 \to 1$;
+        \item $1 + \frac{1}{n} + \frac{1}{n^2} \to 1$ by Proposition 2.2.2;
+        \item $3 + \frac{4}{n^2} \to 3$ by Proposition 2.2.2;
+        \item $\frac{1}{3 + \frac{4}{n^2}} \to \frac{1}{3}$ by Corollary 2.2.9;
+        \item $a_n \to \frac{1}{3}$ by Proposition 2.2.7.
+    \end{itemize}
+\end{proof}
+
+\begin{example}
+    Suppose $a_1 = 1$, $a_2 = 1$, and we recursively define $a_{n+2} = a_{n+1} + a_n$, for $n \geq 1$.
+\end{example}
+
+\begin{proposition}
+    $(\frac{a_{n+1}}{a_n})$ is convergent.
+\end{proposition}
+
+\begin{proof}
+    By induction, $a_n \geq 1$ for all $n$. So for $n \geq 1$
+    \[
+        \frac{a_{n+2}}{a_{n+1}} = 1 + \frac{a_{n+1}}{a_n}.
+    \]
+
+    Write \(x_n = \frac{a_{n+1}}{a_n}\) for \(n \geq 1\). Note that \(x_n > 0\) for
+    all \(n\). Then \(x_1 = 1\) and \(x_{n+1} = 1 + \frac{1}{x_n}\). Suppose that
+    we did have convergence and that \(x_n \to x\). Since \(x_{n+1}\) is a tail of
+    \(x_n\), we see that \((x_{n+1}) \to x$ and so $1 + \frac{1}{x_n} \to 1 +
+    \frac{1}{x}$ by AOL. So
+        \[
+            x = 1 + \frac{1}{x}
+        \]
+        by the Uniqueness of Limits. Hence $x^2 - x - 1 = 0$ giving $x = \frac{1 \pm
+        \sqrt{5}}{2}$. But $x_n \geq 0$ for all $n$, and so $x \geq 0$ by Theorem
+        2.1.10 giving
+        \[
+            x = \frac{1 + \sqrt{5}}{2} > 1.
+        \]
+        At this point we don't yet know the sequence is convergent. We only know that
+        if the sequence converges, then it must converge to the real number $\frac{1 +
+        \sqrt{5}}{2}$, which we will denote $\phi$. Now we will show that $(x_n)$ does
+        indeed converge to $\phi$. $\phi$ is called the Golden Ratio.
+        \[
+            x_{n+1} - \phi = 1 + \frac{1}{x_n} - \phi = 1 + \frac{1}{x_n} - 1 - \frac{1}{\phi} = \frac{1}{x_n} - \frac{1}{\phi} = \frac{x_n - \phi}{x_n \phi}
+        \]
+        as $\phi^2 = \phi + 1$. So
+        \[
+            \frac{x_{n+1} - \phi}{x_n - \phi} = \frac{1}{|x_n| |\phi|} = \frac{1}{\phi x_n} \leq \frac{1}{\phi}
+        \]
+        as $x_n \geq 1$ for all $n$. By induction, we get
+        \[
+            -\frac{1}{\phi^n} \leq x_n - \phi \leq \frac{1}{\phi^n}.
+        \]
+        and are done by the Squeeze Theorem, since $\phi > 1$ and so $(\pm
+    \frac{1}{\phi^n}) \to 0$.
+\end{proof}
 %\section{January 31, 2025}
-%\section{February 3, 2025}
+\section{February 3, 2025}
+\begin{example}\label{2.3.2}
+    Let $a_n = n$ and $b_n = (2n + 1)^2$. Then $(a_n)$ and $(b_n)$ are strictly increasing.
+\end{example}
+
+\begin{definition}\label{2.3.3}
+    We say that a sequence $(a_n)$ is:
+    \begin{enumerate}
+        \item bounded above if the set $S = \{a_n \mid n \in \mathbb{N}\}$ is bounded above.
+        \item bounded below if the set $S = \{a_n \mid n \in \mathbb{N}\}$ is bounded below.
+        \item bounded if the set $S = \{a_n \mid n \in \mathbb{N}\}$ is bounded.
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}[Monotone Convergence Theorem] \label{2.3.4}
+    The power of this theorem is that we can show a sequence converges without first calculating its limit.
+    \begin{enumerate}
+        \item Let $(a_n)$ be an increasing, bounded above sequence. Then $(a_n)$ converges.
+        \item Let $(a_n)$ be a decreasing, bounded below sequence. Then $(a_n)$ converges.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    If $(a_n)$ is decreasing and bounded below, then $(-a_n)$ is increasing and bounded above, so it suffices to prove (1). We thus assume $(a_n)$ is increasing and bounded above.
+    Let $L = \sup \{a_n \mid n \in \mathbb{N}\}$; this exists by the completeness axiom as the set is bounded above and non-empty. Let $\epsilon > 0$. By the Approximation Property there exists $N \in \mathbb{N}$ such that
+    \[
+        L - \epsilon < a_N \leq L.
+    \]
+    As the sequence is increasing, then for any $n \geq N$
+    \[
+        L - \epsilon < a_N \leq a_n \leq L,
+    \]
+    which implies $\forall n \geq N \mid a_n - L \mid < \epsilon$. That is $(a_n)
+        \to L$.
+\end{proof}
+
+\begin{corollary}\label{2.3.5}
+    Let $(a_n)$ be a bounded monotone sequence. Then $(a_n)$ converges.
+\end{corollary}
+
+\begin{example}\label{2.3.6}
+    Let $x > 0$. Set $a_1 = 1$ and $a_{n+1} = \frac{1}{2} \left( a_n + \frac{x}{a_n} \right)$ for each $n$. Then $(a_n)$ converges to some positive number $a$ such that $a^2 = x$.
+\end{example}
+
+\begin{proof}
+    By induction, it follows that $a_n$ is defined and $a_n > 0$ for all $n \geq 1$. We remark that for all $n$, we have $2a_n a_{n+1} = a_n^2 + x$. Therefore,
+    \[
+        0 \leq (a_n - a_{n+1})^2 = a_n^2 - 2a_n a_{n+1} + a_{n+1}^2 = a_{n+1}^2 - x,
+    \]
+    and so $a_{n+1}^2 \geq x$ for all $n \geq 1$. We now show that $(a_{n+1})$ is
+    decreasing. Indeed, for $n \geq 2$,
+    \[
+        a_n - a_{n+1} = a_n - \frac{1}{2} \left( a_n + \frac{x}{a_n} \right) = \frac{a_n^2 - x}{2a_n} \geq 0.
+    \]
+    Therefore, $a_n \geq a_{n+1}$ for all $n \geq 2$. Therefore the sequence
+    $(a_{n+1})$ is decreasing and bounded below by $0$, hence converges to some $a
+        \geq 0$. Since $a_{n+1}^2 \geq x$ for all $n \geq 1$, AOL implies $a^2 \geq x >
+        0$, and so $a > 0$. Moreover, since $(a_{n+1})$ is a tail of $(a_n)$, it
+    follows that $(a_n)$ also converges to $a$. Since $a_{n+1} = \frac{1}{2} \left(
+        a + \frac{x}{a} \right)$, $a > 0$ and $a > 0$, AOL implies that
+    \[
+        a = \frac{1}{2} \left( a + \frac{x}{a} \right).
+    \]
+    Rearranging gives $x = a^2$, as required.
+\end{proof}
+
+\subsection{Subsequences}
+
+\begin{example}\label{2.4.1}
+    Let $a_n = \frac{1}{n^2}$, i.e.
+    \[
+        (a_n) = \left( 1, \frac{1}{4}, \frac{1}{9}, \frac{1}{16}, \frac{1}{25}, \ldots \right).
+    \]
+    We can get new sequences by looking at:
+    \begin{itemize}
+        \item everything after the second place $\left( \frac{1}{9}, \frac{1}{16},
+                  \frac{1}{25}, \ldots \right)$
+        \item all odd terms $\left( 1, \frac{1}{9}, \frac{1}{25}, \ldots \right)$
+        \item all prime terms $\left( \frac{1}{4}, \frac{1}{9}, \frac{1}{25}, \ldots \right)$
+    \end{itemize}
+\end{example}
+
+\begin{definition}\label{2.4.2}
+    Let $(a_n)$ be a sequence. We say that a sequence $(b_n)$ is a subsequence of $(a_n)$ if there is a strictly increasing sequence of natural numbers $(f(n))$ such that $(b_n) = (a_{f(n)})$. (There may be more than one such function $f$.) Often we write $n_r$ for $f(r)$ and write a subsequence as $(a_{n_r})$ or $(a_{n_r})_{r=1}^\infty$.
+\end{definition}
+
+\begin{example}\label{2.4.3}
+    Let
+    \[
+        (a_n) = \left( n^2 \right) = (1, 4, 9, 16, \ldots)
+    \]
+    \[
+        (b_n) = (0) = (0, 0, 0, 0, \ldots)
+    \]
+    \[
+        (f(n)) = (2n) = (2, 4, 6, 8, \ldots)
+    \]
+    \[
+        (g(n)) = (2n - 1) = (1, 3, 5, 7, \ldots)
+    \]
+    Then
+    \[
+        (a_{f(n)}) = (a_{2n}) = (4, 16, 36, 64, \ldots)
+    \]
+    \[
+        (a_{g(n)}) = (a_{2n+1}) = (1, 9, 25, 49, \ldots)
+    \]
+    \[
+        (b_{f(n)}) = (b_{2n}) = (0, 0, 0, 0, \ldots)
+    \]
+    \[
+        (b_{g(n)}) = (b_{2n+1}) = (0, 0, 0, 0, \ldots)
+    \]
+\end{example}
+
+\begin{proposition}\label{2.4.4}
+    Suppose that the sequence $(a_n)$ converges to $L$. Then every subsequence $(a_{n_r})$ also converges to $L$.
+\end{proposition}
+
+\begin{proof}
+    Let $\epsilon > 0$. Then there exists $N$ such that
+    \[
+        n \geq N \implies |a_n - L| < \epsilon.
+    \]
+    As $r \mapsto n_r$ is increasing then $n_r \geq r$ for all $r$ and so
+    \[
+        r \geq N \implies n_r \geq N \implies |a_{n_r} - L| < \epsilon.
+    \]
+\end{proof}
 %\section{February 5, 2025}
 %\section{February 7, 2025}
 %\section{February 10, 2025}
