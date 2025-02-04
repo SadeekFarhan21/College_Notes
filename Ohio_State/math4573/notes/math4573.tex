@@ -8,6 +8,7 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{fontspec}
+\usepackage{cleveref}
 \title{Math 4573: Number Theory}
 \author{Lecturer: \textbf{Profesor James Cogdell}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
@@ -140,7 +141,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     so \(g = l = bx_0 + cy_0\).
 \end{proof}
 
-\begin{theorem}\label{1.6}
+\begin{theorem}\label{1.4}
     The greatest common divisor \(g\) of \(b\) and \(c\) can be characterized in the following two ways:
     \begin{itemize}
         \item It is the least positive value of \(bx + cy\) where \(x\) and \(y\) range over
@@ -151,7 +152,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
 \end{theorem}
 
 \begin{proof}
-    Part 1 follows from the proof of Theorem \(\cref{1.3}\). To prove part 2, we observe that if \(d\) is any common divisor of \(b\) and \(c\), then \(d \mid g\) by part 3 of Theorem \(1.1\). Moreover, there cannot be two distinct integers with property 2, because of Theorem \(1.1\), part 4.
+    Part 1 follows from the proof of \cref{1.3}. To prove part 2, we observe that if \(d\) is any common divisor of \(b\) and \(c\), then \(d \mid g\) by part 3 of \cref{1.1}. Moreover, there cannot be two distinct integers with property 2, because of \cref{1.1}, part 4.
 \end{proof}
 
 \begin{remark}
@@ -161,7 +162,7 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     \(x\) and \(y\), then \((b, c) = 1\).
 \end{remark}
 
-\begin{theorem}
+\begin{theorem}\label{1.5}
     Given any integers $b_1, b_2, \ldots, b_n$ not all zero, with greatest common divisor $g$, there exist integers $x_1, x_2, \ldots, x_n$ such that
     \[
         g = (b_1, b_2, \ldots, b_n) = \sum_{j=1}^{n} b_j x_j.
@@ -201,32 +202,32 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     divisible by every common divisor.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{1.6}
     For any positive integer\(m\) we have \[(ma, mb) = m(a, b)\]
 \end{theorem}
 
 \begin{proof}
-    By Theorem 1.4 we have
+    By \cref{1.4} we have
     \begin{align*}
         (ma, mb) & = \text{least positive value of } max + mby           \\
                  & = m \cdot \{\text{least positive value of } ax + by\} \\
                  & = m(a, b).
     \end{align*}
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{1.7}
     If \(d \mid a\) and \(d \mid b\), \(d > 0\), then \[(\frac{a}{b}, \frac{b}{d} ) = \frac{1}{d}(a, b)\]
     If (\(a, b) = g\), then \[(\frac{a}{g}, \frac{b}{g}) = 1\]
 \end{theorem}
 
 \begin{proof}
-    The second assertion is the special case of the first obtained by using the greatest common divisor \(g\) of \(a\) and \(b\) in the role of \(d\). The first assertion in turn is a direct consequence of Theorem 1.6 obtained by replacing \(m, a, b\) in that theorem by \(d, \frac{a}{d}, \frac{b}{d}\) respectively.
+    The second assertion is the special case of the first obtained by using the greatest common divisor \(g\) of \(a\) and \(b\) in the role of \(d\). The first assertion in turn is a direct consequence of \cref{1.6} obtained by replacing \(m, a, b\) in that theorem by \(d, \frac{a}{d}, \frac{b}{d}\) respectively.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{1.8}
     If (\(a, m\)) = (\(b, m\)) = 1, then (\(ab, m\)) = 1
 \end{theorem}
 \begin{proof}
-    By Theorem \cref{1.3}, there exist integers \(x_0, y_0, x_1, y_1\) such that
+    By \cref{1.3}, there exist integers \(x_0, y_0, x_1, y_1\) such that
     \[1 = ax_0 + my_0 = bx_1 + my_1.\]
     Thus, we may write
     \[
@@ -236,9 +237,47 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     \[
         a x_0 - b x_1 = m y_2.
     \]
-    From the equation \(a x_0 - b x_1 = m y_2\), we note, by part 3 of Theorem 1.1,
-    that any common divisor of \(a\) and \(b\) is a divisor of \(m\). Hence, \((a,
-    b, m) = 1\).
+    From the equation \(a x_0 - b x_1 = m y_2\), we note, by part 3 \cref{1.1}, that any common divisor of \(a\) and \(b\) is a divisor of \(m\).
+    Hence, \((a, b, m) = 1\).
+\end{proof}
+\begin{theorem}\label{1.9}
+    For any integers \(a\) and \(b\), the following equalities hold:
+    \[
+        (a, b) = (b, a) = (a, -b) = (a, b + ax).
+    \]
+\end{theorem}
+\begin{proof}
+    The equality \((a, b) = (b, a)\) follows from the definition of the greatest common divisor, as the order of the arguments does not affect the set of common divisors.
+
+    The equality \((a, b) = (a, -b)\) holds because the set of common divisors of
+    \(a\) and \(b\) is the same as the set of common divisors of \(a\) and \(-b\).
+
+    To prove \((a, b) = (a, b + ax)\), we note that any common divisor of \(a\) and
+    \(b\) is also a divisor of \(b + ax\) (since \(b + ax = b + a \cdot x\)).
+    Conversely, any common divisor of \(a\) and \(b + ax\) is also a divisor of
+    \(b\) (since \(b = (b + ax) - a \cdot x\)). Therefore, the set of common
+    divisors of \(a\) and \(b\) is the same as the set of common divisors of \(a\)
+    and \(b + ax\), which implies that \((a, b) = (a, b + ax)\).
+\end{proof}
+\begin{theorem}\label{1.10}
+    If \(c \mid ab\) and \((b, c) = 1\), then \(c \mid a\).
+\end{theorem}
+
+\begin{proof}
+    Since \((b, c) = 1\), there exist integers \(x\) and \(y\) such that \(bx + cy = 1\). Multiplying both sides by \(a\), we get
+    \[
+        abx + acy = a.
+    \]
+    Since \(c \mid ab\), there exists an integer \(k\) such that \(ab = ck\).
+    Substituting this into the equation, we get
+    \[
+        ckx + acy = a.
+    \]
+    Factoring out \(c\) from the left-hand side, we get
+    \[
+        c(kx + ay) = a.
+    \]
+    Therefore, \(c \mid a\).
 \end{proof}
 \section{January 13, 2025}
 \subsection{Euclidean Algorithm}
@@ -248,7 +287,7 @@ divisor. There is no algorithm to this problem, but there is an algorithm.
 \begin{question}
     Given a set of integers (\(bx + cy\)) how to find the greatest common divisor?
 \end{question}
-Consider the case \(b = 963\) and \(c = 657\). If we divide \(c\) into \(b\), we get the quotient \(q = 1\) and the remainder \(r = 306\). We can write this as \(b = qc + r\) or \(r = b - cq\). In particular, \(306 = 963 - 1 \cdot 657\). Now \((b, c) = (b - cq, c)\) by replacing \(a\) and \(x\) by \(c\) and \(-q\) in Theorem 1.9, so we see that
+Consider the case \(b = 963\) and \(c = 657\). If we divide \(c\) into \(b\), we get the quotient \(q = 1\) and the remainder \(r = 306\). We can write this as \(b = qc + r\) or \(r = b - cq\). In particular, \(306 = 963 - 1 \cdot 657\). Now \((b, c) = (b - cq, c)\) by replacing \(a\) and \(x\) by \(c\) and \(-q\) in \cref{1.9}, so we see that
 \[
     (963, 657) = (963 - 1 \cdot 657, 657) = (306, 657).
 \]
@@ -274,7 +313,7 @@ two original numbers:
         9   & = 45 - 36 = 3 \cdot 657 - 2 \cdot 963 - (13 \cdot 963 - 19 \cdot 657) = 22 \cdot 657 - 15 \cdot 963.
     \end{aligned}
 \]
-In terms of Theorem \cref{1.3}, where \(g = (b, c) = bx_0 + cy_0\), beginning
+In terms of \cref{1.3}, where \(g = (b, c) = bx_0 + cy_0\), beginning
 with \(b = 963\) and \(c = 657\) we have used a procedure called the Euclidean
 algorithm to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these
 values for \(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\)
@@ -284,11 +323,11 @@ To find the greatest common divisor \((b, c)\) of any two integers \(b\) and
 \(c\), we now generalize what is done in the special case above. The process
 will also give integers \(x_0\) and \(y_0\) satisfying the equation \(bx_0 +
 cy_0 = (b, c)\). The case \(c = 0\) is special: \((b, 0) = |b|\). For \(c \neq
-0\), we observe that \((b, c) = (b, -c)\) by Theorem 1.9, and hence, we may
-presume that \(c\) is positive.
+0\), we observe that \((b, c) = (b, -c)\) by \cref{1.9}, and hence, we
+may presume that \(c\) is positive.
 
-\begin{theorem}[The Euclidean Algorithm]
-    Given integers \( b \) and \( c > 0 \), we make a repeated application of the division algorithm, Theorem 1.2, to obtain a series of equations:
+\begin{theorem}[The Euclidean Algorithm]\label{1.11}
+    Given integers \( b \) and \( c > 0 \), we make a repeated application of the division algorithm, \cref{1.2}, to obtain a series of equations:
     \[
         \begin{aligned}
             b       & = cq_1 + r_1, \quad 0 < r_1 < c,                                         \\
@@ -307,10 +346,10 @@ presume that \(c\) is positive.
 \end{theorem}
 
 \begin{proof}
-    The chain of equations is obtained by dividing \(c\) into \(b\), \(r_1\) into \(c\), \(r_2\) into \(r_1\), and so on, until \(r_j\) into \(r_{j-1}\). The process stops when the division is exact, that is, when the remainder is zero. Thus, in our application of Theorem 1.2, we have written the inequalities for the remainder without an equality sign. For example, \(0 < r_1 < c\) instead of \(0 \leq r_1 < c\), because if \(r_1\) were equal to zero, the chain would stop at the first equation \(b = cq_1\), in which case the greatest common divisor of \(b\) and \(c\) would be \(c\).
+    The chain of equations is obtained by dividing \(c\) into \(b\), \(r_1\) into \(c\), \(r_2\) into \(r_1\), and so on, until \(r_j\) into \(r_{j-1}\). The process stops when the division is exact, that is, when the remainder is zero. Thus, in our application of \cref{1.2}, we have written the inequalities for the remainder without an equality sign. For example, \(0 < r_1 < c\) instead of \(0 \leq r_1 < c\), because if \(r_1\) were equal to zero, the chain would stop at the first equation \(b = cq_1\), in which case the greatest common divisor of \(b\) and \(c\) would be \(c\).
 
     We now prove that \(r_j\) is the greatest common divisor \(g\) of \(b\) and
-    \(c\). By Theorem 1.9, we observe that
+    \(c\). By \cref{1.9}, we observe that
     \[
         (b, c) = (c, r_1) = (r_1, r_2) = \cdots = (r_{j-1}, r_j) = (r_j, 0) = r_j.
     \]
@@ -392,14 +431,14 @@ presume that \(c\) is positive.
     The integers \(a_1, a_2, \ldots , a_n\) all different from zero, have a common \(b\) if \(a_i \mid b\) for \(i = 1, 2, \ldots, n\). The least positive multiple is is called \vocab{least common multiple} and it's denoted \([a_1, a_2, \ldots, a_n]\)
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}\label{1.12}
     If \(b\) is any common multiple of \(a_1, a_2, \ldots, a_n\), then \([a_1, a_2, \ldots, a_n] \mid b\). This is the same as saying that if \(h\) denotes \([a_1, a_2, \ldots, a_n]\), then \(0, \pm h, \pm 2h, \pm 3, \ldots\) comprise all the common multiples of \(a_1, a_2, \ldots, a_n\).
 \end{theorem}
 \begin{proof}
     Let \(m\) be any common multiple and divide \(m\) by \(h\). By Division Algorithm, there is a quotient \(q\) and a remainder \(r\) such that \(m = qh + r\), where \(0 \leqslant r < h\). We must prove that \(r = 0\). If \(r \neq -\), we argue as follows. For each \(i = 1, 2, \ldots, n\), we know that \(a_i \mid h\) and \(a_i \mid m\), so that \(a_i \mid r\). Thus \(r\) is a positive common multiple of \(a_1, a_2, \ldots, a_n\) contrary to the fact that \(h\) is the least of all common positive multiple.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{1.13}
     If \(m > 0\) \([ma, mb] = m[a, b]\). Also, \([a,b] \cdot (a, b) = |ab|\)
 \end{theorem}
 \begin{proof}
@@ -408,18 +447,19 @@ presume that \(c\) is positive.
     It will suffice to prove the second part for positive integers \( a \) and \( b
     \), since \( [a, -b] = [a, b] \). We begin with the special case where \( (a,
     b) = 1 \). Now \( [a, b] \) is a multiple of \( a \), say \( ma \). Then \( b
-    \mid ma \) and \( (a, b) = 1 \), so by Theorem 1.10 we conclude that \( b \mid
-    m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a positive
-    common multiple of \( b \) and \( a \), cannot be less than the least common
-    multiple, so \( ba = ma = [a, b] \).
+    \mid ma \) and \( (a, b) = 1 \), so by \cref{1.10} we conclude that \(
+    b \mid m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a
+    positive common multiple of \( b \) and \( a \), cannot be less than the least
+    common multiple, so \( ba = ma = [a, b] \).
 
     Turning to the general case where \( (a, b) = g > 1 \), we have \( (a/g, b/g) =
-    1 \) by Theorem 1.7. Applying the result of the preceding paragraph, we obtain
+    1 \) by \cref{1.7}. Applying the result of the preceding paragraph, we
+    obtain
     \[
         \left[ \frac{a}{g}, \frac{b}{g} \right] = \frac{ab}{g^2}.
     \]
-    Multiplying by \( g^2 \) and using Theorem 1.6 as well as the first part of the
-    present theorem, we get \( [a, b](a, b) = ab \).
+    Multiplying by \( g^2 \) and using \cref{1.6} as well as the first part
+    of the present theorem, we get \( [a, b](a, b) = ab \).
 \end{proof}
 
 \section{January 17, 2025}
@@ -429,7 +469,7 @@ presume that \(c\) is positive.
 \begin{example}
     \(2, 3, 5, 7\) are primes, but \(4, 6, 8, 9\) are composite.
 \end{example}
-\begin{theorem}
+\begin{theorem}\label{1.14}
     Every integer \(n\) greater than \(1\) can be expressed as a product of primes.
 \end{theorem}
 
@@ -467,11 +507,11 @@ presume that \(c\) is positive.
     \]
     where the factors \(p_i\) and \(q_j\) are primes, not necessarily all distinct,
     but where no prime on the left side occurs on the right side. But this is
-    impossible because \(p_1 \mid q_1 q_2 \cdots q_s\), so by Theorem 1.15, \(p_1\)
-    is a divisor of at least one of the \(q_j\). That is, \(p_1\) must be identical
-    with at least one of the \(q_j\). This contradicts our assumption that no prime
-    on the left side occurs on the right side. Therefore, the factorization of
-    \(n\) into primes is unique.
+    impossible because \(p_1 \mid q_1 q_2 \cdots q_s\), so by \cref{1.15},
+    \(p_1\) is a divisor of at least one of the \(q_j\). That is, \(p_1\) must be
+    identical with at least one of the \(q_j\). This contradicts our assumption
+    that no prime on the left side occurs on the right side. Therefore, the
+    factorization of \(n\) into primes is unique.
 \end{proof}
 
 In the applications of the fundamental theorem, we frequently write the integer
@@ -503,8 +543,8 @@ written as \[(a, b) = \prod_{p} p^{\min(\alpha(p), \beta(p))}\] \[[a, b] = \prod
     \(a\) is auare free if \(1\) is the largest square dividing \(a\). So \(\alpha(p)\) is square free if the only numbers are \(0\) and \(1\).
 \end{remark}
 
-\begin{theorem}[Euclid]
-    THenumber of primes is inifite. i.e. there is no end to the sequence of primes. \[2, 3, 5, 7, 11, 13, \ldots\]
+\begin{theorem}[Euclid]\label{1.17}
+    The number of primes is inifite. i.e. there is no end to the sequence of primes. \[2, 3, 5, 7, 11, 13, \ldots\]
 \end{theorem}
 
 \begin{proof}
@@ -515,7 +555,7 @@ written as \[(a, b) = \prod_{p} p^{\min(\alpha(p), \beta(p))}\] \[[a, b] = \prod
 \end{proof}
 %\section{January 20, 2025}
 \section{January 22, 2025}
-\begin{theorem}
+\begin{theorem}\label{1.18}
     There are arbitrarily large gapes in the series of primes stated otherwise, given any \(k\), there exit \(k\) consequetive composite integers.
 \end{theorem}
 \begin{proof}
@@ -531,14 +571,10 @@ ask about the nature of this function. Because of this irregular occurence of
 primes, we cannnot expect a simple formula for \(\pi(x)\), but we may week to
 estimate the rate of it's growth.
 
-\begin{theorem}
+\begin{theorem}\label{1.19}
     For any real number \(y \geqslant 2\), we have
     \[\sum_{p \leqslant y} \frac{1}{p} \log \log y - 1\]
 \end{theorem}
-
-\begin{fact}
-    From this, it follows that the infinite series \(\sum_{1}^{p}\) diverges, which is a second proof for our theorem 35.
-\end{fact}
 
 \subsection{The Binomial Theorem}
 We first define the \texttt{binomial coefficients} and describe them
@@ -561,7 +597,7 @@ combinatorially.
     Here we employ the convention \(0! = 1\).
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}\label{1.20}
     Let \(\mathbb{S}\) be a set containing exactly \(n\) elements. For any non-negative integer \(k\), the number of subsets \(\mathbb{S}\) containing precisely \(k\) elements \(\binom{n}{k}\).
 \end{theorem}
 
@@ -595,16 +631,16 @@ combinatorially.
     it represents the number of ways of doing something. In this way, combinatorial
     interpretations can be useful in number theory.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{1.21}
     The product of any \(k\) consecutive integers is divisible by \(k!\).
 \end{theorem}
 \begin{proof}
-    Let's write the product as \(n(n - 1) \cdots (n - k + 1)\). If \(n \geq k\), then we write this in the form \(\binom{n}{k} \cdot k!\) and note that \(\binom{n}{k}\) is an integer, by Theorem 1.20. If \(0 \leq n < k\), then one of the factors of our product is 0, so the product vanishes, and is therefore a multiple of \(k!\) in this case also. Finally, if \(n < 0\), we note that the product may be written as
+    Let's write the product as \(n(n - 1) \cdots (n - k + 1)\). If \(n \geq k\), then we write this in the form \(\binom{n}{k} \cdot k!\) and note that \(\binom{n}{k}\) is an integer, by \cref{1.20}. If \(0 \leq n < k\), then one of the factors of our product is 0, so the product vanishes, and is therefore a multiple of \(k!\) in this case also. Finally, if \(n < 0\), we note that the product may be written as
     \[
         (-1)^k (-n)(-n + 1) \cdots (-n + k - 1) = (-1)^k \binom{-n + k - 1}{k} k!.
     \]
     Note that in this case the upper member \(-n + k - 1\) is at least \(k\), so
-    that by Theorem 1.20 the binomial coefficient is an integer.
+    that by \cref{1.20} the binomial coefficient is an integer.
 
     In the formula for the binomial coefficients we note a symmetry:
     \[
@@ -612,7 +648,7 @@ combinatorially.
     \]
 \end{proof}
 
-\begin{theorem}[The Binomial Theorem]
+\begin{theorem}[The Binomial Theorem]\label{1.22}
     For any integer \(n \geqslant 1\), and any real numbers \(x\) and \(y\), we have
     \[
         (x + y)^n = \sum_{k = 0}^{n} \binom{n}{k} x^k y^{n - k}.
@@ -635,7 +671,7 @@ combinatorially.
 \section{January 24, 2025}
 The binomial theorem can also be proved analytically by appealing the following
 simple results.
-\begin{lemma}
+\begin{lemma}\label{1.23}
     Let \(P(z) = \sum_{k = 0}^{n} a_k z^k\) be a polynomial with real coefficients. Then \(a_r = \frac{P^{(r)}(0)}{r!}\) for \(r = 0, 1, 2, \ldots, n\), where \(P^{(r)}(0)\) denotes the \(r^{th}\) derivative of \(P(z)\) evaluated at \(z = 0\).
 \end{lemma}
 
@@ -705,14 +741,14 @@ A congruence is nothing more than the statement about divisibility.
     \end{enumerate}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}\label{2.2}
     Let \(f\) denote a polynomial with integral coefficients. If \(a \equiv b \pmod{m}\), then \(f(a) \equiv f(b) \pmod{m}\).
 \end{theorem}
 \begin{proof}
-    We can suppose \( f(x) = c_n x^n + c_{n-1} x^{n-1} + \cdots + c_0 \) where the \( c_i \) are integers. Since \( a \equiv b \pmod{m} \), we can apply Theorem 2.1, part 4, repeatedly to find \( a^2 \equiv b^2 \), \( a^3 \equiv b^3 \), \(\ldots\), \( a^n \equiv b^n \pmod{m} \), and then \( c_i a^j \equiv c_i b^j \pmod{m} \) and finally \( c_n a^n + c_{n-1} a^{n-1} + \cdots + c_0 \equiv c_n b^n + c_{n-1} b^{n-1} + \cdots + c_0 \pmod{m} \).
+    We can suppose \( f(x) = c_n x^n + c_{n-1} x^{n-1} + \cdots + c_0 \) where the \( c_i \) are integers. Since \( a \equiv b \pmod{m} \), we can apply \cref{2.1}, part 4, repeatedly to find \( a^2 \equiv b^2 \), \( a^3 \equiv b^3 \), \(\ldots\), \( a^n \equiv b^n \pmod{m} \), and then \( c_i a^j \equiv c_i b^j \pmod{m} \) and finally \( c_n a^n + c_{n-1} a^{n-1} + \cdots + c_0 \equiv c_n b^n + c_{n-1} b^{n-1} + \cdots + c_0 \pmod{m} \).
 \end{proof}
 
-\begin{theorem}\label{2.3}
+\begin{theorem} \label{2.3}
     For \(a, b, m \in \mathbb{Z}\), \(m > 0\), the situations hold:
     \begin{itemize}
         \item \(ax \equiv ay \pmod{m}\) if an only if \(x \equiv y \pmod{\frac{m}{(a, m)}}\)
@@ -732,15 +768,14 @@ A congruence is nothing more than the statement about divisibility.
               \[
                   \frac{a}{(a, m)} (y - x) = \frac{m}{(a, m)} z.
               \]
-              But \(\left(\frac{a}{(a, m)}, \frac{m}{(a, m)}\right) = 1\) by Theorem 1.7 and
-              therefore \(\frac{m}{(a, m)} \mid (y - x)\) by Theorem 1.10. That is,
+              But \(\left(\frac{a}{(a, m)}, \frac{m}{(a, m)}\right) = 1\) by \cref{1.7} and therefore \(\frac{m}{(a, m)} \mid (y - x)\) by \cref{1.10}. That is,
               \[
                   x \equiv y \pmod{\frac{m}{(a, m)}}.
               \]
         \item Conversely, if \(x \equiv y \pmod{\frac{m}{(a, m)}}\), we multiply by \(a\) to
-              get \(ax \equiv ay \pmod{a \cdot \frac{m}{(a, m)}}\) by use of Theorem 2.1,
-              part 6. But \((a, m)\) is a divisor of \(a\), so we can write \(ax \equiv ay
-              \pmod{m}\) by Theorem 2.1, part 5.
+              get \(ax \equiv ay \pmod{a \cdot \frac{m}{(a, m)}}\) by use of
+              \cref{2.1}, part 6. But \((a, m)\) is a divisor of \(a\), so we can write \(ax
+              \equiv ay \pmod{m}\) by \cref{2.1}, part 5.
     \end{itemize}
     For example, \(15x \equiv 15y \pmod{10}\) is equivalent to \(x \equiv y \pmod{2}\), which amounts to saying that \(x\) and \(y\) have the same parity.
 \end{proof}
@@ -749,11 +784,12 @@ A congruence is nothing more than the statement about divisibility.
     \begin{itemize}
         \item If \(x \equiv y \pmod{m_i}\) for \(i = 1, 2, \ldots, r\), then \(m_i \mid (y -
               x)\) for \(i = 1, 2, \ldots, r\). That is, \(y - x\) is a common multiple of
-              \(m_1, m_2, \ldots, m_r\), and therefore (see Theorem 1.12) \([m_1, m_2,
+              \(m_1, m_2, \ldots, m_r\), and therefore (see \cref{1.12}) \([m_1, m_2,
                       \ldots, m_r] \mid (y - x)\). This implies \(x \equiv y \pmod{[m_1, m_2, \ldots,
                           m_r]}\).
         \item If \(x \equiv y \pmod{[m_1, m_2, \ldots, m_r]}\), then \(x \equiv y
-              \pmod{m_i}\) by Theorem 2.1 part 5, since \(m_i \mid [m_1, m_2, \ldots, m_r]\).
+              \pmod{m_i}\) by \cref{2.1} part 5, since \(m_i \mid [m_1, m_2, \ldots,
+                  m_r]\).
     \end{itemize}
 \end{proof}
 \section{January 27, 2025}
@@ -785,7 +821,7 @@ For fixed integer \(x \equiv a \pmod {m}\) is the arithmetic progression
 This set is called a \vocab{residue class} or \vocab{congruence class} modulo
 \(m\). There are \(m\) distinct residue classe modulo \(m\), obtained from
 taking \(a = 0, 1, 2, \ldots, m \).
-\begin{theorem} \label{1.8}
+\begin{theorem}\label{2.4}
     If \(b \equiv c \pmod{m}\), then \((b, m) = (c, m)\).
 \end{theorem}
 
@@ -808,7 +844,7 @@ taking \(a = 0, 1, 2, \ldots, m \).
     In view of the preceding theorem, it is clear that a reduced residue system modulo \(m\) can be obtained by deleting from a complete residue system modulo \(m\) and those members that are not relatively prime to \(m\). Furthermore, all reduced residue system modulo \(m\) have the same number of members, namely \(\phi(m)\). This is called \vocab{Euler's \(\phi\) function}, sometimes called the \vocab{totient function}. By applying the definition of \(\phi(m)\), we can see that \(\phi(p) = p - 1\) for any prime \(p\).
 \end{remark}
 
-\begin{theorem}
+\begin{theorem}\label{2.5}
     The number \(\phi (m)\) is the number of positive integers less than or equal to \(m\) that are relatively prime to \(m\).
 \end{theorem}
 
@@ -825,7 +861,7 @@ in further sections.
 \end{example}
 
 \begin{theorem}[Fermat's Little Theorem]\label{2.7}
-    If \(p \nmid a\), then \((a, p) = 1\) and \(a^{p-1} \equiv 1 \pmod{p}\). To find \(\varphi(p)\), we refer to Theorem 2.5. All the integers \(1, 2, \ldots, p - 1\) are relatively prime to \(p\). Thus we have \(\varphi(p) = p - 1\), and the first part of Fermat's theorem follows. The second part is now obvious.
+    If \(p \nmid a\), then \((a, p) = 1\) and \(a^{p-1} \equiv 1 \pmod{p}\). To find \(\varphi(p)\), we refer to \cref{2.5}. All the integers \(1, 2, \ldots, p - 1\) are relatively prime to \(p\). Thus we have \(\varphi(p) = p - 1\), and the first part of Fermat's theorem follows. The second part is now obvious.
 
 \end{theorem}
 
@@ -834,7 +870,7 @@ in further sections.
     If \((a, m) = 1\) then \[a^{\varphi(m)} \equiv 1\pmod{m}\]
 \end{theorem}
 \begin{proof}
-    Let \(r_1, r_2, \ldots, r_{\varphi(m)}\) be a reduced residue system modulo \(m\). Then by Theorem \cref{2.6}, \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) is also a reduced residue system modulo \(m\). Hence, corresponding to each \(r_i\) there is one and only one \(ar_j\) such that \(r_i \equiv ar_j \pmod{m}\). Furthermore, different \(r_i\) will have different corresponding \(ar_j\). This means that the numbers \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) are just the residues modulo \(m\) of \(r_1, r_2, \ldots, r_{\varphi(m)}\), but not necessarily in the same order. Multiplying and using Theorem \cref{2.1}, part 4, we obtain
+    Let \(r_1, r_2, \ldots, r_{\varphi(m)}\) be a reduced residue system modulo \(m\). Then by \cref{2.6}, \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) is also a reduced residue system modulo \(m\). Hence, corresponding to each \(r_i\) there is one and only one \(ar_j\) such that \(r_i \equiv ar_j \pmod{m}\). Furthermore, different \(r_i\) will have different corresponding \(ar_j\). This means that the numbers \(ar_1, ar_2, \ldots, ar_{\varphi(m)}\) are just the residues modulo \(m\) of \(r_1, r_2, \ldots, r_{\varphi(m)}\), but not necessarily in the same order. Multiplying and using \cref{2.1}, part 4, we obtain
     \[
         \prod_{j=1}^{\varphi(m)} ar_j \equiv \prod_{i=1}^{\varphi(m)} r_i \pmod{m},
     \]
@@ -842,7 +878,7 @@ in further sections.
     \[
         a^{\varphi(m)} \prod_{j=1}^{\varphi(m)} r_j \equiv \prod_{j=1}^{\varphi(m)} r_j \pmod{m}.
     \]
-    Now \((r_j, m) = 1\), so we can use Theorem \ref{2.3}, part 2, to cancel the
+    Now \((r_j, m) = 1\), so we can use \cref{2.3}, part 2, to cancel the
     \(r_j\) and we obtain \(a^{\varphi(m)} \equiv 1 \pmod{m}\).
 \end{proof}
 
@@ -865,7 +901,7 @@ in further sections.
     additional it can be inferred in the form \(\bar{a} = a^{\varphi(m)} - 1\)
 \end{note}\
 
-\begin{lemma}
+\begin{lemma}\label{2.10}
     Let \(p\) be a prime number. Then \(x^2 \equiv 1 \pmod{m} \Longleftrightarrow x = \pm 1 \pmod{m}\). In a later section, we will establish a more general result which the following is easily derived, but we are giving a direct proof for now, because the observation has many useful applications.
 \end{lemma}
 \begin{proof}
@@ -878,7 +914,7 @@ in further sections.
 
 \section{January 31, 2025}
 \begin{proof}
-    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by Theorem \ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of Theorem \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
+    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by \ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
 \end{proof}
 \begin{theorem}\label{2.12}
     Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solution \(\Longleftrightarrow p = 2\) or \(p \equiv 1 \pmod{4}\)
@@ -915,13 +951,10 @@ in further sections.
     determined.
 \end{proof}
 
-\begin{theorem}\label{2.12}
-    Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solutions if and only if \(p = 2\) or \(p \equiv 1 \pmod{4}\).
-\end{theorem}
 
 \section{February 3, 2025}
 
-Theorem \ref{2.12} provides a key piece of informatoin needed to determine
+\ref{2.12} provides a key piece of informatoin needed to determine
 which integers can be written as the sum of two squares. We began by showing
 that a a class of prime numbers can be represented in this manner.
 
@@ -945,17 +978,15 @@ that a a class of prime numbers can be represented in this manner.
     We note that the identity holds:
     \[(a^2 + b^2 ) (c^2 + d^2 ) = (ac - bd)^2 + (ac + bc)^2\]
 \end{note}
-The Theorem of Fermat is the first of many such theorems. The object of constructing a coherent theorey of quadratic forms was the primary in the instance on research for seveveral centuries. This first setep in the theory is to generate Theorem \cref{2.12}. This is accomplished in the law of quadratic reciprocity, whcih we study in the initial chapters of the following chapters. With this tool in hand, we deelop some of the few fundamentals concerting quadratic forms in the latter part of Chapter 3. In particular, in sections, we apply the general theory of the sum of two squares, to give not only a proof of Theorem \cref{2.15} but also some further results.
+The Theorem of Fermat is the first of many such theorems. The object of constructing a coherent theorey of quadratic forms was the primary in the instance on research for seveveral centuries. This first setep in the theory is to generate \cref{2.12}. This is accomplished in the law of quadratic reciprocity, whcih we study in the initial chapters of the following chapters. With this tool in hand, we deelop some of the few fundamentals concerting quadratic forms in the latter part of Chapter 3. In particular, in sections, we apply the general theory of the sum of two squares, to give not only a proof of \cref{2.15} but also some further results.
 
 \subsection[Solutions of Congruences]{Solutions of Congruences}
 Let \(f(x)\) denote a polynomial with the integer coefficients
-\[f(x) = a_n x^n + a_{n + 1}x^{n - 1} + \cdots + a_0\]. If \(n\) is an integer such that \(f(u) \equiv 0 \pmod{m}\) we say that it is a solution of the congruence \(f(x) \equiv 0 \pmod{m}\). Whether or not an integer \(a\) is a solution of a congruence  depends on the modulo \(m\).
+\[f(x) = a_n x^n + a_{n + 1}x^{n - 1} + \cdots + a_0.\] If \(n\) is an integer such that \(f(u) \equiv 0 \pmod{m}\) we say that it is a solution of the congruence \(f(x) \equiv 0 \pmod{m}\). Whether or not an integer \(a\) is a solution of a congruence  depends on the modulo \(m\).
 
 If the integer \(u\) is a solution of \(f(x) \equiv 0 \pmod{m}\) and if \(v
-\equiv u \pmod{m}\), then Theorem \(\cref{2.2}\) shows that \(v\) is also a
-solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning
-that every integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0
-\pmod{m}\).
+\equiv u \pmod{m}\), then \cref{2.2} shows that \(v\) is also a
+solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning that every integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0 \pmod{m}\).
 \begin{example}
     The congruence \(x^2 - x + 4 \equiv 0 \pmod{10}\) has the solution \(x = 3\) and the solution \(x = 8\). It also has solutions \(x = 13\) and \(x = 18\) and all other numbers obtained by adding and subtracting 10 as often as we wish. In counting the number of solutions of a congruence, we can restrict our attention to complete residue system belong to the modolus. In the example \(x^2 - x + 4 \equiv 0 \pmod{10}\) because \(x = 3\) and \(x = 8\) are the only numbers among \(0, 1, 2, \ldots, 9\) that are solutions. The two solutions can be written in the form \(x = 3\) or \(x = 8\) on in congruence from \(x \equiv 3 \pmod{10}\) and \(x \equiv 8 \pmod{10}\).
 \end{example}
@@ -963,7 +994,11 @@ that every integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0
 \begin{example}
     The congruence
     \[x^2 - 7x + 2 \equiv 0 \pmod{10}\]
-    has exactly 4 solutions, \(x = 3 4, 8, 9\). The reason for counting the number of solutions in this way is that if \(f(x) \equiv 0 \pmod{m}\) has a solution \(x = a\), then it follows that all integers \(x\) satisfying \(x \equiv a \pmod{m}\) are automatically solutions, so this entire congruenec class is counted as a single solution. 
+    has exactly 4 solutions, \(x = 3 4, 8, 9\). The reason for counting the number
+    of solutions in this way is that if \(f(x) \equiv 0 \pmod{m}\) has a solution
+    \(x = a\), then it follows that all integers \(x\) satisfying \(x \equiv a
+    \pmod{m}\) are automatically solutions, so this entire congruenec class is
+    counted as a single solution.
 \end{example}
 
 \begin{definition}
