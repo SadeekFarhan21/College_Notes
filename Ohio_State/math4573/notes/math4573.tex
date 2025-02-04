@@ -748,7 +748,7 @@ A congruence is nothing more than the statement about divisibility.
     We can suppose \( f(x) = c_n x^n + c_{n-1} x^{n-1} + \cdots + c_0 \) where the \( c_i \) are integers. Since \( a \equiv b \pmod{m} \), we can apply \cref{2.1}, part 4, repeatedly to find \( a^2 \equiv b^2 \), \( a^3 \equiv b^3 \), \(\ldots\), \( a^n \equiv b^n \pmod{m} \), and then \( c_i a^j \equiv c_i b^j \pmod{m} \) and finally \( c_n a^n + c_{n-1} a^{n-1} + \cdots + c_0 \equiv c_n b^n + c_{n-1} b^{n-1} + \cdots + c_0 \pmod{m} \).
 \end{proof}
 
-\begin{theorem} \label{2.3}
+\begin{theorem}\label{2.3}
     For \(a, b, m \in \mathbb{Z}\), \(m > 0\), the situations hold:
     \begin{itemize}
         \item \(ax \equiv ay \pmod{m}\) if an only if \(x \equiv y \pmod{\frac{m}{(a, m)}}\)
@@ -914,7 +914,7 @@ in further sections.
 
 \section{January 31, 2025}
 \begin{proof}
-    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by \ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
+    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by~\ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
 \end{proof}
 \begin{theorem}\label{2.12}
     Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solution \(\Longleftrightarrow p = 2\) or \(p \equiv 1 \pmod{4}\)
@@ -954,7 +954,7 @@ in further sections.
 
 \section{February 3, 2025}
 
-\ref{2.12} provides a key piece of informatoin needed to determine
+Theorem \ref{2.12} provides a key piece of information needed to determine
 which integers can be written as the sum of two squares. We began by showing
 that a a class of prime numbers can be represented in this manner.
 
