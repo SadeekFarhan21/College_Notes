@@ -7,6 +7,8 @@
 \usepackage{amsthm}
 \usepackage{fontspec}
 \usepackage{bookmark}
+\usepackage{tikz}
+
 \title{Math 4547: Real Analysis I}
 \author{Lecturer: \textbf{Professor Alex Margolis}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
@@ -1075,32 +1077,32 @@ limits behave. Throughout the following, $(a_n)$ and $(b_n)$ denote sequences.
     we did have convergence and that \(x_n \to x\). Since \(x_{n+1}\) is a tail of
     \(x_n\), we see that \((x_{n+1}) \to x$ and so $1 + \frac{1}{x_n} \to 1 +
     \frac{1}{x}$ by AOL. So
-        \[
-            x = 1 + \frac{1}{x}
-        \]
-        by the Uniqueness of Limits. Hence $x^2 - x - 1 = 0$ giving $x = \frac{1 \pm
-        \sqrt{5}}{2}$. But $x_n \geq 0$ for all $n$, and so $x \geq 0$ by Theorem
-        2.1.10 giving
-        \[
-            x = \frac{1 + \sqrt{5}}{2} > 1.
-        \]
-        At this point we don't yet know the sequence is convergent. We only know that
-        if the sequence converges, then it must converge to the real number $\frac{1 +
-        \sqrt{5}}{2}$, which we will denote $\phi$. Now we will show that $(x_n)$ does
-        indeed converge to $\phi$. $\phi$ is called the Golden Ratio.
-        \[
-            x_{n+1} - \phi = 1 + \frac{1}{x_n} - \phi = 1 + \frac{1}{x_n} - 1 - \frac{1}{\phi} = \frac{1}{x_n} - \frac{1}{\phi} = \frac{x_n - \phi}{x_n \phi}
-        \]
-        as $\phi^2 = \phi + 1$. So
-        \[
-            \frac{x_{n+1} - \phi}{x_n - \phi} = \frac{1}{|x_n| |\phi|} = \frac{1}{\phi x_n} \leq \frac{1}{\phi}
-        \]
-        as $x_n \geq 1$ for all $n$. By induction, we get
-        \[
-            -\frac{1}{\phi^n} \leq x_n - \phi \leq \frac{1}{\phi^n}.
-        \]
-        and are done by the Squeeze Theorem, since $\phi > 1$ and so $(\pm
-    \frac{1}{\phi^n}) \to 0$.
+    \[
+        x = 1 + \frac{1}{x}
+    \]
+    by the Uniqueness of Limits. Hence $x^2 - x - 1 = 0$ giving $x = \frac{1 \pm
+            \sqrt{5}}{2}$. But $x_n \geq 0$ for all $n$, and so $x \geq 0$ by Theorem
+    2.1.10 giving
+    \[
+        x = \frac{1 + \sqrt{5}}{2} > 1.
+    \]
+    At this point we don't yet know the sequence is convergent. We only know that
+    if the sequence converges, then it must converge to the real number $\frac{1 +
+            \sqrt{5}}{2}$, which we will denote $\phi$. Now we will show that $(x_n)$ does
+    indeed converge to $\phi$. $\phi$ is called the Golden Ratio.
+    \[
+        x_{n+1} - \phi = 1 + \frac{1}{x_n} - \phi = 1 + \frac{1}{x_n} - 1 - \frac{1}{\phi} = \frac{1}{x_n} - \frac{1}{\phi} = \frac{x_n - \phi}{x_n \phi}
+    \]
+    as $\phi^2 = \phi + 1$. So
+    \[
+        \frac{x_{n+1} - \phi}{x_n - \phi} = \frac{1}{|x_n| |\phi|} = \frac{1}{\phi x_n} \leq \frac{1}{\phi}
+    \]
+    as $x_n \geq 1$ for all $n$. By induction, we get
+    \[
+        -\frac{1}{\phi^n} \leq x_n - \phi \leq \frac{1}{\phi^n}.
+    \]
+    and are done by the Squeeze Theorem, since $\phi > 1$ and so $(\pm
+        \frac{1}{\phi^n}) \to 0$.
 \end{proof}
 %\section{January 31, 2025}
 \section{February 3, 2025}
@@ -1232,8 +1234,58 @@ limits behave. Throughout the following, $(a_n)$ and $(b_n)$ denote sequences.
         r \geq N \implies n_r \geq N \implies |a_{n_r} - L| < \epsilon.
     \]
 \end{proof}
-%\section{February 5, 2025}
-%\section{February 7, 2025}
+\section{February 5, 2025}
+\begin{theorem}[Monotone Subsequence Theorem]\label{2.4.5}
+    Let \((a_n)\) be a sequencce. Then \((a_n)\) has a monotone subsequence which means the subsequence is either increaing or decreasing over that bound.
+\end{theorem}
+\begin{definition}[Vantage Point]
+
+\end{definition}
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (0,0) -- (10,0) node[right] {$n$};
+        \draw[->] (0,0) -- (0,5) node[above] {$a_n$};
+
+        \foreach \x in {1,2,...,9}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+
+        \foreach \y in {1,2,...,4}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\y};
+
+        \draw[thick, color=blue] plot coordinates {(1,1) (2,3) (3,2) (4,4) (5,3.5) (6,4.5) (7,3.8) (8,4.2) (9,4.6)};
+
+        \node at (4,4) [circle,fill,inner sep=1.5pt,label=above:$a_k$] {};
+        \draw[dashed] (4,4) -- (4,0);
+        \draw[dashed] (4,4) -- (0,4);
+
+        \node at (6,4.5) [circle,fill,inner sep=1.5pt,label=above:$a_m$] {};
+        \draw[dashed] (9,4.6) -- (0,4.6);
+
+        \node at (2,3) [circle,fill,inner sep=1.5pt,label=above:$a_j$] {};
+        \draw[dashed] (2,3) -- (0,3);
+    \end{tikzpicture}
+\end{center}
+
+Here, \(a_k\), \(a_m\), and \(a_j\) are vantage points.
+
+\begin{proof}
+    We say that \(k \in \mathbb{N}\) is a `vantage point' of \((a_n)\) if \(a_m < a_k\) for all \(m > k\). Let \(V = \{k \in \mathbb{N} \mid k \text{ is a vantage point}\}\).
+    \begin{itemize}
+        \item \textbf{Case 1: \(V\) is infinite:} \\ Let \(V = \{k_1, k_2, \ldots \}\) where \(k_1 < k_2 < k_3 < \ldots\). Each \(k_i\) is a vantage point. If \(m > n\), then \(a_{{k_m}} < a_{k_n}\). Hence \((a_{k_n})_{n=1}^\infty\) is a decreasing subsequence.
+        \item \textbf{Case 1: \(V\) is finite:} \\ There exist \(k_1\) such that \(\forall n \geq k_1, a_n\) is not a vantage point, \(\exists k_2 > k_1\) such that \(k_2 > k_1)\) Since, \(k_2 > k_1\) is also not a vantage point. hence \(\exists k_3 > k_2\) such that \(a_{k_3} \geq a_{k_2}\).\\ We continue in this way, defining a strictly increaseing subsequence. \[k_1 < k_2 < k_3 < \ldots\] such that \[a_{k_1} \leq a_{k_2} \leq a_{k_2} \leq a_{k_3} \leq \ldots\]. Hence \((a_{k_n})_{n=1}^\infty\) is an increasing subsequence. Therefore, \((a_{k_n})_{n=1}^\infty\) is monotone.    
+
+    \end{itemize}
+\end{proof}
+
+\begin{theorem}[Bolzano-Weierstrass Theorem]\label{2.4.6}
+Let \((a_n)\) be a bouded sequence. Then \((a_n)\) has a convergent-subsequence.
+\end{theorem}
+\begin{proof}
+    By \cref{2.4.5}, \((a_n)\) has a monotone subsequence, \((a_{k_n})_{n=1}^\infty\). Since \((a_n)\) is bounded, so is \((a_{k_n})\). By the Montone Convergence Theorem, \((a_{k_n})\) is convergent.
+\end{proof}
+\begin{proof}
+    Let $(a_n)$ be a bounded sequence. Then there exist $A_1$ and $B_1$ such that $A_1 \leq a_n \leq B_1$ for all $n$. We construct a nested sequence of intervals $[A_n, B_n]$ as follows: Let $[A_2, B_2]$ be one of the intervals $[A_1, \frac{A_1 + B_1}{2}]$ or $[\frac{A_1 + B_1}{2}, B_1]$ such that $\{n \in \mathbb{N} \mid a_n \in [A_2, B_2]\}$ is infinite. Similarly, let $[A_3, B_3]$ be one of the intervals $[A_2, \frac{A_2 + B_2}{2}]$ or $[\frac{A_2 + B_2}{2}, B_2]$ such that $\{n \in \mathbb{N} \mid a_n \in [A_3, B_3]\}$ is infinite. We continue this process, ensuring that each interval $[A_n, B_n]$ contains infinitely many terms of the sequence $(a_n)$. We then pick a subsequence $k_1 < k_2 < \ldots < k_n$ such that $a_{k_n} \in [A_n, B_n]$. Since $B_n - A_n = \frac{B_1 - A_1}{2^{n-1}}$, the length of the intervals $[A_n, B_n]$ tends to $0$ as $n \to \infty$. Since $(A_n)$ and $(B_n)$ are monotone and bounded, they converge to the same limit $L$. By the Squeeze Theorem, the subsequence $(a_{k_n})$ converges to $L$.
+\end{proof}
 %\section{February 10, 2025}
 %\section{February 12, 2025}
 %\section{February 14, 2025}
