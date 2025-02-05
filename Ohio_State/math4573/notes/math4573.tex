@@ -1,4 +1,4 @@
-% !TEX TS-program = xelatex
+% !TEX TS-program = lualatex
 %\documentclass[11pt, draft]{article}
 \documentclass[11pt]{article}
 \usepackage{lindrew}
@@ -10,7 +10,7 @@
 \usepackage{fontspec}
 \usepackage{cleveref}
 \title{Math 4573: Number Theory}
-\author{Lecturer: \textbf{Profesor James Cogdell}\\Notes by: Farhan Sadeek}
+\author{Lecturer: \textbf{Professor James Cogdell}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
 
 \begin{document}
@@ -237,8 +237,9 @@ Dr.\ Cogdell takes attendance so I will have to be in class every single day.
     \[
         a x_0 - b x_1 = m y_2.
     \]
-    From the equation \(a x_0 - b x_1 = m y_2\), we note, by part 3 \cref{1.1}, that any common divisor of \(a\) and \(b\) is a divisor of \(m\).
-    Hence, \((a, b, m) = 1\).
+    From the equation \(a x_0 - b x_1 = m y_2\), we note, by part 3 \cref{1.1},
+    that any common divisor of \(a\) and \(b\) is a divisor of \(m\). Hence, \((a,
+    b, m) = 1\).
 \end{proof}
 \begin{theorem}\label{1.9}
     For any integers \(a\) and \(b\), the following equalities hold:
@@ -313,18 +314,18 @@ two original numbers:
         9   & = 45 - 36 = 3 \cdot 657 - 2 \cdot 963 - (13 \cdot 963 - 19 \cdot 657) = 22 \cdot 657 - 15 \cdot 963.
     \end{aligned}
 \]
-In terms of \cref{1.3}, where \(g = (b, c) = bx_0 + cy_0\), beginning
-with \(b = 963\) and \(c = 657\) we have used a procedure called the Euclidean
-algorithm to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these
-values for \(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\)
-will do where \(k\) is any integer.
+In terms of \cref{1.3}, where \(g = (b, c) = bx_0 + cy_0\), beginning with \(b
+= 963\) and \(c = 657\) we have used a procedure called the Euclidean algorithm
+to find \(g = 9\), \(x_0 = -15\), \(y_0 = 22\). Of course, these values for
+\(x_0\) and \(y_0\) are not unique: \(-15 + 657k\) and \(22 - 963k\) will do
+where \(k\) is any integer.
 
 To find the greatest common divisor \((b, c)\) of any two integers \(b\) and
 \(c\), we now generalize what is done in the special case above. The process
 will also give integers \(x_0\) and \(y_0\) satisfying the equation \(bx_0 +
 cy_0 = (b, c)\). The case \(c = 0\) is special: \((b, 0) = |b|\). For \(c \neq
-0\), we observe that \((b, c) = (b, -c)\) by \cref{1.9}, and hence, we
-may presume that \(c\) is positive.
+0\), we observe that \((b, c) = (b, -c)\) by \cref{1.9}, and hence, we may
+presume that \(c\) is positive.
 
 \begin{theorem}[The Euclidean Algorithm]\label{1.11}
     Given integers \( b \) and \( c > 0 \), we make a repeated application of the division algorithm, \cref{1.2}, to obtain a series of equations:
@@ -447,19 +448,18 @@ may presume that \(c\) is positive.
     It will suffice to prove the second part for positive integers \( a \) and \( b
     \), since \( [a, -b] = [a, b] \). We begin with the special case where \( (a,
     b) = 1 \). Now \( [a, b] \) is a multiple of \( a \), say \( ma \). Then \( b
-    \mid ma \) and \( (a, b) = 1 \), so by \cref{1.10} we conclude that \(
-    b \mid m \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a
-    positive common multiple of \( b \) and \( a \), cannot be less than the least
-    common multiple, so \( ba = ma = [a, b] \).
+    \mid ma \) and \( (a, b) = 1 \), so by \cref{1.10} we conclude that \( b \mid m
+    \). Hence \( b \mid m \), \( ba \mid ma \). But \( ba \), being a positive
+    common multiple of \( b \) and \( a \), cannot be less than the least common
+    multiple, so \( ba = ma = [a, b] \).
 
     Turning to the general case where \( (a, b) = g > 1 \), we have \( (a/g, b/g) =
-    1 \) by \cref{1.7}. Applying the result of the preceding paragraph, we
-    obtain
+    1 \) by \cref{1.7}. Applying the result of the preceding paragraph, we obtain
     \[
         \left[ \frac{a}{g}, \frac{b}{g} \right] = \frac{ab}{g^2}.
     \]
-    Multiplying by \( g^2 \) and using \cref{1.6} as well as the first part
-    of the present theorem, we get \( [a, b](a, b) = ab \).
+    Multiplying by \( g^2 \) and using \cref{1.6} as well as the first part of the
+    present theorem, we get \( [a, b](a, b) = ab \).
 \end{proof}
 
 \section{January 17, 2025}
@@ -507,11 +507,11 @@ may presume that \(c\) is positive.
     \]
     where the factors \(p_i\) and \(q_j\) are primes, not necessarily all distinct,
     but where no prime on the left side occurs on the right side. But this is
-    impossible because \(p_1 \mid q_1 q_2 \cdots q_s\), so by \cref{1.15},
-    \(p_1\) is a divisor of at least one of the \(q_j\). That is, \(p_1\) must be
-    identical with at least one of the \(q_j\). This contradicts our assumption
-    that no prime on the left side occurs on the right side. Therefore, the
-    factorization of \(n\) into primes is unique.
+    impossible because \(p_1 \mid q_1 q_2 \cdots q_s\), so by \cref{1.15}, \(p_1\)
+    is a divisor of at least one of the \(q_j\). That is, \(p_1\) must be identical
+    with at least one of the \(q_j\). This contradicts our assumption that no prime
+    on the left side occurs on the right side. Therefore, the factorization of
+    \(n\) into primes is unique.
 \end{proof}
 
 In the applications of the fundamental theorem, we frequently write the integer
@@ -768,14 +768,15 @@ A congruence is nothing more than the statement about divisibility.
               \[
                   \frac{a}{(a, m)} (y - x) = \frac{m}{(a, m)} z.
               \]
-              But \(\left(\frac{a}{(a, m)}, \frac{m}{(a, m)}\right) = 1\) by \cref{1.7} and therefore \(\frac{m}{(a, m)} \mid (y - x)\) by \cref{1.10}. That is,
+              But \(\left(\frac{a}{(a, m)}, \frac{m}{(a, m)}\right) = 1\) by \cref{1.7} and
+              therefore \(\frac{m}{(a, m)} \mid (y - x)\) by \cref{1.10}. That is,
               \[
                   x \equiv y \pmod{\frac{m}{(a, m)}}.
               \]
         \item Conversely, if \(x \equiv y \pmod{\frac{m}{(a, m)}}\), we multiply by \(a\) to
-              get \(ax \equiv ay \pmod{a \cdot \frac{m}{(a, m)}}\) by use of
-              \cref{2.1}, part 6. But \((a, m)\) is a divisor of \(a\), so we can write \(ax
-              \equiv ay \pmod{m}\) by \cref{2.1}, part 5.
+              get \(ax \equiv ay \pmod{a \cdot \frac{m}{(a, m)}}\) by use of \cref{2.1}, part
+              6. But \((a, m)\) is a divisor of \(a\), so we can write \(ax \equiv ay
+              \pmod{m}\) by \cref{2.1}, part 5.
     \end{itemize}
     For example, \(15x \equiv 15y \pmod{10}\) is equivalent to \(x \equiv y \pmod{2}\), which amounts to saying that \(x\) and \(y\) have the same parity.
 \end{proof}
@@ -784,12 +785,11 @@ A congruence is nothing more than the statement about divisibility.
     \begin{itemize}
         \item If \(x \equiv y \pmod{m_i}\) for \(i = 1, 2, \ldots, r\), then \(m_i \mid (y -
               x)\) for \(i = 1, 2, \ldots, r\). That is, \(y - x\) is a common multiple of
-              \(m_1, m_2, \ldots, m_r\), and therefore (see \cref{1.12}) \([m_1, m_2,
-                      \ldots, m_r] \mid (y - x)\). This implies \(x \equiv y \pmod{[m_1, m_2, \ldots,
+              \(m_1, m_2, \ldots, m_r\), and therefore (see \cref{1.12}) \([m_1, m_2, \ldots,
+                      m_r] \mid (y - x)\). This implies \(x \equiv y \pmod{[m_1, m_2, \ldots,
                           m_r]}\).
         \item If \(x \equiv y \pmod{[m_1, m_2, \ldots, m_r]}\), then \(x \equiv y
-              \pmod{m_i}\) by \cref{2.1} part 5, since \(m_i \mid [m_1, m_2, \ldots,
-                  m_r]\).
+              \pmod{m_i}\) by \cref{2.1} part 5, since \(m_i \mid [m_1, m_2, \ldots, m_r]\).
     \end{itemize}
 \end{proof}
 \section{January 27, 2025}
@@ -878,8 +878,8 @@ in further sections.
     \[
         a^{\varphi(m)} \prod_{j=1}^{\varphi(m)} r_j \equiv \prod_{j=1}^{\varphi(m)} r_j \pmod{m}.
     \]
-    Now \((r_j, m) = 1\), so we can use \cref{2.3}, part 2, to cancel the
-    \(r_j\) and we obtain \(a^{\varphi(m)} \equiv 1 \pmod{m}\).
+    Now \((r_j, m) = 1\), so we can use \cref{2.3}, part 2, to cancel the \(r_j\)
+    and we obtain \(a^{\varphi(m)} \equiv 1 \pmod{m}\).
 \end{proof}
 
 \begin{theorem}\label{2.9}
@@ -914,7 +914,7 @@ in further sections.
 
 \section{January 31, 2025}
 \begin{proof}
-    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by~\ref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of \ref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by Lemma \ref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
+    If \(p = 2\) or \(p = 3\), the congruence is easily verified. Thus we may assume that \(p \geq 5\). Suppose that \(1 \leq a \leq p - 1\). Then \((a, p) = 1\), so that by~\cref{2.9} there is a unique integer \(\bar{a}\) such that \(1 \leq \bar{a} \leq p - 1\) and \(a\bar{a} \equiv 1 \pmod{p}\). By a second application of \cref{2.9} we find that if \(a\) is given then there is exactly one \(\bar{a}\), \(1 \leq \bar{a} \leq p - 1\), such that \(a\bar{a} \equiv 1 \pmod{p}\). Thus \(a\) and \(\bar{a}\) form a pair whose combined contribution to \((p - 1)!\) is \(\equiv 1 \pmod{p}\). However, a little care is called for because it may happen that \(a = \bar{a}\). This is equivalent to the assertion that \(a^2 \equiv 1 \pmod{p}\), and by \cref{2.10} we see that this is in turn equivalent to \(a \equiv 1\) or \(a \equiv p - 1\). That is, \(\bar{1} = 1\) and \(\overline{p - 1} = p - 1\), but if \(2 \leq a \leq p - 2\) then \(a \neq \bar{a}\). By pairing these latter residues in this manner we find that \(\prod_{a=2}^{p-2} a \equiv 1 \pmod{p}\), so that \((p - 1)! \equiv 1 \cdot \prod_{a=2}^{p-2} a \cdot (p - 1) \equiv -1 \pmod{p}\).
 \end{proof}
 \begin{theorem}\label{2.12}
     Let \(p\) denote a prime. Then \(x^2 \equiv -1 \pmod {m}\) has solution \(\Longleftrightarrow p = 2\) or \(p \equiv 1 \pmod{4}\)
@@ -951,10 +951,9 @@ in further sections.
     determined.
 \end{proof}
 
-
 \section{February 3, 2025}
 
-Theorem \ref{2.12} provides a key piece of information needed to determine
+\cref{2.12} provides a key piece of information needed to determine
 which integers can be written as the sum of two squares. We began by showing
 that a a class of prime numbers can be represented in this manner.
 
@@ -982,11 +981,14 @@ The Theorem of Fermat is the first of many such theorems. The object of construc
 
 \subsection[Solutions of Congruences]{Solutions of Congruences}
 Let \(f(x)\) denote a polynomial with the integer coefficients
-\[f(x) = a_n x^n + a_{n + 1}x^{n - 1} + \cdots + a_0.\] If \(n\) is an integer such that \(f(u) \equiv 0 \pmod{m}\) we say that it is a solution of the congruence \(f(x) \equiv 0 \pmod{m}\). Whether or not an integer \(a\) is a solution of a congruence  depends on the modulo \(m\).
+\[f(x) = a_n x^n + a_{n + 1}x^{n - 1} + \cdots + a_0.\] If \(n\) is an integer such that \(f(u) \equiv 0 \pmod{m}\) we say that it is a
+solution of the congruence \(f(x) \equiv 0 \pmod{m}\). Whether or not an
+integer \(a\) is a solution of a congruence depends on the modulo \(m\).
 
 If the integer \(u\) is a solution of \(f(x) \equiv 0 \pmod{m}\) and if \(v
-\equiv u \pmod{m}\), then \cref{2.2} shows that \(v\) is also a
-solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning that every integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0 \pmod{m}\).
+\equiv u \pmod{m}\), then \cref{2.2} shows that \(v\) is also a solution.
+Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning that every
+integer congruent to \(u \pmod{m}\) satisfies \(f(x) \equiv 0 \pmod{m}\).
 \begin{example}
     The congruence \(x^2 - x + 4 \equiv 0 \pmod{10}\) has the solution \(x = 3\) and the solution \(x = 8\). It also has solutions \(x = 13\) and \(x = 18\) and all other numbers obtained by adding and subtracting 10 as often as we wish. In counting the number of solutions of a congruence, we can restrict our attention to complete residue system belong to the modolus. In the example \(x^2 - x + 4 \equiv 0 \pmod{10}\) because \(x = 3\) and \(x = 8\) are the only numbers among \(0, 1, 2, \ldots, 9\) that are solutions. The two solutions can be written in the form \(x = 3\) or \(x = 8\) on in congruence from \(x \equiv 3 \pmod{10}\) and \(x \equiv 8 \pmod{10}\).
 \end{example}
@@ -994,7 +996,7 @@ solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning t
 \begin{example}
     The congruence
     \[x^2 - 7x + 2 \equiv 0 \pmod{10}\]
-    has exactly 4 solutions, \(x = 3 4, 8, 9\). The reason for counting the number
+    has exactly 4 solutions, \(x = 3, 4, 8, 9\). The reason for counting the number
     of solutions in this way is that if \(f(x) \equiv 0 \pmod{m}\) has a solution
     \(x = a\), then it follows that all integers \(x\) satisfying \(x \equiv a
     \pmod{m}\) are automatically solutions, so this entire congruenec class is
@@ -1005,7 +1007,71 @@ solution. Because of this we shall say that \(f(x) \equiv 0 \pmod{m}\) meaning t
     Let \(r_1, r_2, \ldots, r_m\) denote a complete system of residues \(\pmod{m}\) Then the number of solutions of \(f(x) \equiv 0 \pmod{m}\) is the number of solutions \(r_i\) such that \(f(r_1) \equiv 0 \pmod{m}\).
 \end{definition}
 
-%\section{February 5, 2025}
+\section{February 5, 2025}
+\begin{example}
+
+    \(x^2 + 1 = 0 \pmod{7}\) has no solutions. \\
+    \(x^2 + 1 = 0 \pmod{5}\) has two solutions. \\
+    \(x^2 - 1 = 0 \pmod{8}\) has \(4\) solutions.
+
+\end{example}
+
+\begin{definition}\label{Definition 2.5}
+    Let \[f(x) = a_{n} x^n + a_{n-1}x^{n - 1} + \cdots + a_0\]
+    If \(a_n \not \equiv 0 \pmod{m}\), then the degree of the congruence \(f(x) = 0
+    \pmod{m}\) is degree \(n\). \\ If \(a_n \equiv 0 \pmod{m}\). Then let \(j\) be
+    the largest integer such that \(a_j \not \equiv 0 \pmod{m}\). \\ If there is no
+    such \(j\), so all coefficients are multiples of \(m\), then the degree is not
+    defined to the congruence. It should be noted that the degree of the congruence
+    \(f(x) \equiv 0 \pmod{m}\) is not the same as the degree fo the polynomial
+    \(f(x)\). \\ The degree of the congruence depends on the modulus \(m\) and the
+    coefficients of the polynomial \(f(x)\).
+\end{definition}
+
+\begin{example}
+    If \[g(x)=6x^3 + 3x^2 + 1\] then \(g(x) \equiv 0 \pmod{5}\) has degree three but \(g(x) \equiv 0 \pmod{2}\)
+    has degree \(2\) where as \(g(x)\)is of degree \(3\).
+\end{example}
+
+\begin{theorem}\label{2.16}
+    If \(d \mid m, d > 0\), and if the solution of \(f(x) \equiv 0 \pmod{m}\) then it is a solution of \(f(x) \equiv 0 \pmod{d}\).
+\end{theorem}
+
+\begin{proof}
+    This follows directly from \cref{2.1}, part 5
+\end{proof}
+This is a distinction mode in the theorey of algebraic congruence equations that has an analogy for congruences. A conditional equation such as \(x^2 - 5x + 6 = 0\) is true only for certain values of \(x\), namely \(x = 2\) and \(x = 3\). An identity of identical equations, such as \((x - 2)^2 = x^2 - 4x + 4\) holds for all real numbers of complex numbers. Similarly, we say \(f(x) \equiv 0 \pmod{m}\) is an \vocab{identical congruence} if all polynomials all of those coefficients are divisble by all whose coefficients are divisible by \(f(x) \equiv 0 \pmod{m}\) is an identical congruence. A different type of identical congruence is also illustrated by \(x^p \equiv x \pmod{p}\) which is trye by Fermat's theorem.\\
+So before, considering congruences of higher degree, we first descibe the solutions in the linear case.
+\begin{theorem}\label{2.17}
+    Let \(a^b\), and \(m > 0\) be integers. Put \(g = (a, m)\)and now the congruence \(ax \equiv b \pmod{m}\) has a solution \(\Leftrightarrow g \mid b\). If the condition is met, then the solution from an arithmetic property progressoin with common differnece \(m / g\), giving the solutions \(\pmod{m}\).
+\end{theorem}
+\begin{proof}
+    The question is whether there exist integers \(x\) and \(y\) such that \(ax + my = b\). Since \(g\) divides the left side, for such integers to exist we must have \(g \mid b\). Suppose that this condition is met, and write \(a = g\alpha\), \(b = g\beta\), \(m = g\gamma\). Then by the first part of \cref{2.3}, the desired congruence holds if and only if \(\alpha x \equiv \beta \pmod{\gamma}\). Here \((\alpha, \gamma) = 1\) by \cref{1.7}, so by \cref{2.9} there is a unique number \(\bar{\alpha} \pmod{\gamma}\) such that \(\alpha \bar{\alpha} \equiv 1 \pmod{\gamma}\). On multiplying through by \(\bar{\alpha}\), we find that \(x = \bar{\alpha} \beta \pmod{\gamma}\). Thus the set of integers \(x\) for which \(ax \equiv b \pmod{m}\) is precisely the arithmetic progression of numbers of the form \(\bar{\alpha} \beta + k\gamma\). If we allow \(k\) to take on the values \(0, 1, \ldots, g - 1\), we obtain \(g\) values of \(x\) that are distinct \(\pmod{m}\). All other values of \(x\) are congruent \(\pmod{m}\) to one of these, so we have precisely \(g\) solutions.
+\end{proof}
+\begin{fact}
+    Since \(\bar \alpha\) can be found by application of the Euclidean algorithm, we have a method for finding all solutions of \(ax \equiv b \pmod{m}\) when \(g \mid b\).
+\end{fact}
+
+\subsection{Chinese Remainder Theorem}
+We now consider the important problem of solving simultaneous congruences. The
+simplest case of this is to see if there is any \(x\) that satisfies the
+simultaneous congruences:
+
+\[
+    \begin{aligned}\label{congruence}
+        x & \equiv a_1 \pmod{m_1} \\
+        x & \equiv a_2 \pmod{m_2} \\
+          & \vdots                \\
+        x & \equiv a_r \pmod{m_r}
+    \end{aligned}
+\]
+This is the subject of the Chinese Remainder Theorem because it was known in
+China in the first century AD.
+
+\begin{theorem}[Chinese Remainder Theorem]\label{2.18}
+    Let \(m_1, m_2, \ldots, m_r\) denote \(r\) positive integers that are relatively prime in pairs. Let \(a_1, a_2, \ldots, a_r\) denote any \(r\) integers. If the congruence \ref{congruence} holds that means that \(x\) is in the form of \(x = x_0 + km\) for some integer \(k\). Here, \(m = m_1 m_2 \ldots m_r\).
+\end{theorem}
+
 %\section{February 7, 2025}
 %\section{February 10, 2025}
 %\section{February 12, 2025}
