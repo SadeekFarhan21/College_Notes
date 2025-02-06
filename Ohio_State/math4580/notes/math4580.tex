@@ -1,4 +1,4 @@
-% !TEX TS-program = lualatex
+% !TEX TS-program = xelatex
 \documentclass[11pt, draft]{article}
 \usepackage{lindrew}
 \usepackage{tikz}
@@ -1722,8 +1722,54 @@ factorization.
 %\section{January 27, 2025}
 %\section{January 29, 2025}
 %\section{January 31, 2025}
+
 %\section{February 3, 2025}
-%\section{February 5, 2025}
+\section{February 5, 2025}
+
+\subsection{Examples of Rings}
+Last time we we defined abstract rings.
+\begin{remark}
+    \(1 \in \mathbb{R}\) (ring with \(1\)
+\end{remark}
+
+\begin{fact}
+    If you take the set of all integers, and you add and multiply them, you get a ring.
+\end{fact}
+
+\subsubsection{Non-commutative Rings}
+\begin{enumerate}
+    \item Let \(V\) be a vector space over \(\mathbb{R}\). The set \(S = \{\text{linear
+              transformations } T: V \to V\}\) forms a ring with addition and composition of
+          transformations. For \(T, T' \in S\), the addition \(T + T'\) is defined by
+          \((T + T')(v) := T(v) + T'(v)\) for all \(v \in V\).
+    \item The zero ring is a ring in which the product of any two elements is zero. It
+          can be defined as \( R = \{0\} \) with the operations \( 0 + 0 = 0 \) and \( 0
+          \cdot 0 = 0 \). This ring has only one element, which is both the additive and
+          multiplicative identity.
+    \item If \(T, T'\) are both linear transformations from \(V \rightarrow V\). Then \(T \cdot T' = T \cdot T' = \left((T \cdot T)(v)  \right) = T(T'(x))\). That means that the composition of two linear transformations is also a linear transformation. 
+\end{enumerate}
+\begin{fact}
+    If we take two matrices \(T, T'\) and multiply them together \(T \cdot T'\) and \(T' \cdot T\) then they are not the sample. For example
+    \[T = \begin{bmatrix}
+        0 & 0 \\    
+1 & 0
+    \end{bmatrix}\] and 
+    \[T'=\begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}\]
+    \[T \cdot T' = \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}\] and
+
+    \[T' \cdot T = \begin{vmatrix}
+    1 & 0 \\
+    0 & 0
+    \end{vmatrix}\]
+    Therefore, we proved that composition of two linear transformations is not commutative.
+However, the distributive properties hold.
+\end{fact}
 %\section{February 7, 2025}
 %\section{February 10, 2025}
 %\section{February 12, 2025}
