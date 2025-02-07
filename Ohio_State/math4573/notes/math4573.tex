@@ -1072,7 +1072,72 @@ China in the first century AD.
     Let \(m_1, m_2, \ldots, m_r\) denote \(r\) positive integers that are relatively prime in pairs. Let \(a_1, a_2, \ldots, a_r\) denote any \(r\) integers. If the congruence \ref{congruence} holds that means that \(x\) is in the form of \(x = x_0 + km\) for some integer \(k\). Here, \(m = m_1 m_2 \ldots m_r\).
 \end{theorem}
 
-%\section{February 7, 2025}
+\section{February 7, 2025}
+\begin{proof}
+    Writing \(m = m_1 m_2 \ldots m_r\), we see that \(\frac{m}{m_j}\) is an integer and that \(\left(\frac{m}{m_j}, m_i\right) = 1\). Hence, by \cref{2.9}, for each \(j\) there is an integer \(b_j\) such that \(\frac{m}{m_j} b_j \equiv 1 \pmod{m_j}\) and \(\frac{m}{m_j} b_j \equiv 0 \pmod{m_i}\) if \(i \neq j\). Put
+    \[x_0 = \sum_{j=1}^{r} \frac{m}{m_j} b_j a_j.\]
+    We consider this number modulo \(m_i\) and find that
+    \[x_0 \equiv a_i \pmod{m_i}.\]
+    Thus \(x_0\) is a solution of the system. If \(x_0\) and \(x_1\) are two
+    solutions of the system, then \(x_0 \equiv x_1 \pmod{m_i}\) for \(i = 1, 2,
+    \ldots, r\) and hence \(x_0 \equiv x_1 \pmod{m}\). By part 3 of \cref{2.3},
+    this completes the proof.
+\end{proof}
+
+\begin{example}
+    Find the least positive integer such that
+    \[x \equiv 5 \pmod{7} \\ x \equiv 7 \pmod{11} \\ x \equiv 3 \pmod{13}\]
+\end{example}
+\begin{solution}
+    We follow the proof of the theorem, taking \(a_1 \equiv 5 \pmod{7}\), \(a_2 \equiv 7 \pmod{11}\), and \(a_3 \equiv 3 \pmod{13}\). We follow the proof, let \(m = 7 \cdot 11 \cdot 13 = 1001\). Now \((m_1, m_2, m_3) = 1\) and indeed by \cref{1.8}, part 4, we find that, \[(-2) m_2 m_3 + (21)m_1 = 1\]. So we take \(b_1 = 2\). Similarly, \[4m_1 m_3 + (-33)m_2 = 1\]. By the Euclidean Algorithm a third time, \[(-1)m_1 m_2 + 6m_3 = 1\]. So we may take \(b_3 =1\). Then \cref{2.2}, we see that \(11 \cdot 13 \cdot (-2) \cdot 5 + 7 \cdot 13 \cdot 4 \cdot 7 + 7 \cdot 11 \cdot (-1) \cdot 3 = 887\). Since the solution is unique \(\pmod {m}\), there is only a solution among the numbers \(1, 2, \ldots, 1001\). Thus 887 is the least possible solution. \\ In the Chinese Remainder Theorem, the hypthesis that modulo \(m_j\) should be a pairwise is absolutely essential, when this hypothesis fails, a solution \(x\) of the system is no longer guaranteed, and when such an \(x\) does exist, we see from part 3 of \cref{2.3} this is unique \[m_1, m_2, \ldots, m_3\] not modulo \(m\). In this case, there is no solution of the system, and we call
+    the system \vocab{inconsistent}, The following two examples arise when the
+    \(m_j\) are allowed to have a common factor. An extension of \cref{2.18} to the
+    case of \(m_j\) is laid out in the problems 1 9 through 23 in the textbook.
+\end{solution}
+
+\begin{example}
+    Show that there is no solution \(x\) for which \(x \equiv 29 \pmod{52}\) and \(x\equiv 19 \pmod{72}\)
+\end{example}
+\begin{solution}
+    Since \(52 = 4 \cdot 13\), we see by part 4 of \cref{2.3} that the simultaneous congruences \(x \equiv 29 \pmod{4}\), and \(x \equiv 20 \pmod{13}\) which reduces to \(x \equiv 1 \pmod{4}\), and \(x \equiv 3 \pmod{13}\). \\ Similarly, \(72 = 8 \cdot 9\) and the second congruence is given to be \(x \equiv 19 \pmod{8}\) and \(x \equiv 19 \pmod{9}\). These reduces to \(x \equiv 3 \pmod{13}\) and \(x \equiv 1 \pmod{9}\). By \cref{2.18}, we know that the constraints \(\pmod{13}\) and \(\pmod{9}\) and independent of the congruences \(x \equiv 1 \pmod{4}\) and \(x \equiv 3 \pmod{8}\). \\ Once an inconsistency has been identified, a brief proof can be constructed. The first congruence implies that \(x \equiv 1 \pmod{4}\) while the second congruence implies that \(x \equiv 3 \pmod{4}\). This is a contradiction, so there is no solution.
+\end{solution}
+
+\begin{example}
+    Determine if whether the system
+    \[
+        \begin{aligned}
+            x & \equiv 3 \pmod{10}, \\
+            x & \equiv 5 \pmod{15}, \\
+            x & \equiv 5 \pmod{84}
+        \end{aligned}
+    \]
+    has a solution and find them all if any exists.
+\end{example}
+There are two ways of solving this
+\begin{solution}[First Solution]
+    We factor each moduli into prime factors by part 3, \cref{2.3}, we see that the first congruence is equivalent to the simultaneous congruences \(x \equiv 3 \pmod{2}\), and \(x \equiv 3 \pmod{5}\). Similarly, the system is equivalent to the two conditinos
+    \[\begin{aligned}
+            x & \equiv 8 \pmod{3} \\
+            x & \equiv 8 \pmod{5} \\
+        \end{aligned}\]
+    while the third congruence is equivalent to the three congruences \(x \equiv 5
+    \pmod{4}, x \equiv 5 \pmod{5}, and x \equiv 5 \pmod{3}\) and \(x \equiv 5
+    \pmod{17}\). The new congruence of simultaneous is now equivalent to the new
+    ones, but the moduli are prime numbers. So we have,\[\begin{aligned}
+            x & \equiv 3 \pmod{2} \\
+            x & \equiv 3 \pmod{5} \\
+            x & \equiv 8 \pmod{3} \\
+            x & \equiv 8 \pmod{5} \\
+            x & \equiv 5 \pmod{4} \\
+            x & \equiv 5 \pmod{3} \\
+            x & \equiv 5 \pmod{3} \\
+            x & \equiv 3 \pmod{7}
+        \end{aligned}\]
+    We can consider the first 2 factors. The conditions are \[x \equiv 3 \pmod{2} \text{ and } x \equiv 1 \pmod{4}\]. These two are consistent, but the second one implies the first, so that the first one may be dropped. The
+    The conditions modulo 3 are \(x \equiv 8 \pmod{3}\) and \(x \equiv 5 \pmod{3}\). These are equivalent, and may be expressed as \(x \equiv 2 \pmod{3}\). Third, the conditions modulo 5 are \(x \equiv 3 \pmod{5}\), \(x \equiv 8 \pmod{5}\). These are equivalent, so we drop the second of them. Finally, we have the condition \(x \equiv 5 \pmod{7}\).
+
+\end{solution}
+
 %\section{February 10, 2025}
 %\section{February 12, 2025}
 %\section{February 14, 2025}

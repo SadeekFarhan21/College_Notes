@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 23.12) (format=lualatex 2024.12.30)  5 FEB 2025 12:19
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 23.12) (format=lualatex 2024.12.30)  7 FEB 2025 12:26
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"c:/Users/Farhan/OneDrive/Documents/Github Repositories/College_Notes/Ohio_St
@@ -1760,25 +1760,42 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1071.
- [25] (./math4573.aux)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1088.
+ [25]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1099.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1106.
+ [26]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 1136.
+
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 1136.
+
+ [27] (./math4573.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `math4573.out' has not changed.
-(rerunfilecheck)             Checksum: 9E2E8ED8C973614B37195C656424238D;2807.
+(rerunfilecheck)             Checksum: 07CC16BDE4D5BDD2E64FE7F718C2A3B4;2938.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41829 strings out of 478278
+ 41853 strings out of 478278
  125070,1977958 words of node,token memory allocated
- 1711 words of node memory still in use:
-   10 hlist, 2 vlist, 2 rule, 10 glue, 4 kern, 1 glyph, 220 attribute, 104 glue_
-spec, 220 attribute_list, 2 write, 4 pdf_colorstack nodes
-   avail lists: 1:4,2:2409,3:1252,4:229,5:662,6:57,7:6342,8:63,9:749,10:22,11:38
+ 1816 words of node memory still in use:
+   11 hlist, 2 vlist, 2 rule, 14 glue, 4 kern, 1 glyph, 235 attribute, 104 glue_
+spec, 235 attribute_list, 2 write, 6 pdf_colorstack nodes
+   avail lists: 1:4,2:2379,3:1252,4:230,5:662,6:57,7:6338,8:63,9:748,10:22,11:38
 5
- 60340 multiletter control sequences out of 65536+600000
- 63 fonts using 4603767 bytes
- 99i,10n,98p,1273b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60352 multiletter control sequences out of 65536+600000
+ 66 fonts using 4999151 bytes
+ 99i,10n,98p,1281b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <<C:\Users\Farhan\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cm
 brmb10.pk>><//?/c:/users/farhan/appdata/local/programs/miktex/fonts/opentype/pub
 lic/lm/lmsans10-boldoblique.otf><<C:\Users\Farhan\AppData\Local\MiKTeX\fonts/pk/
@@ -1804,9 +1821,9 @@ iktex/fonts/opentype/public/lm/lmsans10-regular.otf><//?/c:/users/farhan/appdata
 rs/farhan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmsans10-bold.o
 tf><C:/Users/Farhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmex10.pfb>
-Output written on math4573.pdf (25 pages, 255465 bytes).
+Output written on math4573.pdf (27 pages, 268171 bytes).
 
-PDF statistics: 663 PDF objects out of 1000 (max. 8388607)
- 206 named destinations out of 1000 (max. 131072)
- 176 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 696 PDF objects out of 1000 (max. 8388607)
+ 218 named destinations out of 1000 (max. 131072)
+ 184 words of extra memory for PDF output out of 10000 (max. 100000000)
 
