@@ -771,7 +771,7 @@ To clarify our goal here, we would like to obtain \(\frac{d^2\mathbf{r}}{dt^2}\)
 
 The following exercise in taking derivatives works for a general vector \(\mathbf{A} = A_x \hat{\mathbf{x}} + A_y \hat{\mathbf{y}} + A_z \hat{\mathbf{z}}\) in the moving frame; it isn’t necessary that it be a position vector. So we’ll work with a general \(\mathbf{A}\) and then set \(\mathbf{A} = \mathbf{r}\) when we’re done. To take \(\frac{d}{dt}\) of \(\mathbf{A} = A_x \hat{\mathbf{x}} + A_y \hat{\mathbf{y}} + A_z \hat{\mathbf{z}}\), we can use the product rule to obtain
 \begin{equation}
-    \frac{d\mathbf{A}}{dt} = \frac{dA_x}{dt} \hat{\mathbf{x}} + \frac{dA_y}{dt} \hat{\mathbf{y}} + \frac{dA_z}{dt} \hat{\mathbf{z}} + A_x \frac{d\hat{\mathbf{x}}}{dt} + A_y \frac{d\hat{\mathbf{y}}}{dt} + A_z \frac{d\hat{\mathbf{z}}}{dt}.\label{eq:10.4}
+	\frac{d\mathbf{A}}{dt} = \frac{dA_x}{dt} \hat{\mathbf{x}} + \frac{dA_y}{dt} \hat{\mathbf{y}} + \frac{dA_z}{dt} \hat{\mathbf{z}} + A_x \frac{d\hat{\mathbf{x}}}{dt} + A_y \frac{d\hat{\mathbf{y}}}{dt} + A_z \frac{d\hat{\mathbf{z}}}{dt}.\label{eq:10.4}
 \end{equation}
 Yes, the product rule works with vectors too. We’re doing nothing more than expanding \((A_x + dA_x)(\hat{\mathbf{x}} + d\hat{\mathbf{x}}) - A_x \hat{\mathbf{x}}\), etc., to first order. Note that although we have expressed the vector \(\mathbf{A}\) in terms of the coordinate axes of the moving frame, the total derivative \(\frac{d\mathbf{A}}{dt}\) is measured with respect to the inertial frame. As mentioned above, the total rate of change of \(\mathbf{A}\) comes from two effects, namely the two groups of terms in the equation above. The first group gives the rate of change of \(\mathbf{A}\), as measured with respect to the moving frame. We’ll denote this quantity by \(\frac{\delta\mathbf{A}}{\delta t}\).
 
@@ -779,15 +779,15 @@ The second group arises because the coordinate axes are moving. In what manner a
 
 We saw that a vector \(\mathbf{B}\) that has fixed length (the coordinate axes here do indeed have fixed length) and that rotates with angular velocity \(\boldsymbol{\omega} \equiv \omega \hat{\boldsymbol{\omega}}\) changes at a rate \(\frac{d\mathbf{B}}{dt} = \boldsymbol{\omega} \times \mathbf{B}\). In particular, \(\frac{d\hat{\mathbf{x}}}{dt} = \boldsymbol{\omega} \times \hat{\mathbf{x}}\), etc. So in the equation above, the \(A_x \frac{d\hat{\mathbf{x}}}{dt}\) term equals \(A_x (\boldsymbol{\omega} \times \hat{\mathbf{x}}) = \boldsymbol{\omega} \times (A_x \hat{\mathbf{x}})\). Likewise for the \(\hat{\mathbf{y}}\) and \(\hat{\mathbf{z}}\) terms. Combining them gives \(\boldsymbol{\omega} \times (A_x \hat{\mathbf{x}} + A_y \hat{\mathbf{y}} + A_z \hat{\mathbf{z}})\), which is just \(\boldsymbol{\omega} \times \mathbf{A}\). Therefore, the equation becomes
 \begin{equation}
-    \frac{d\mathbf{A}}{dt} = \frac{\delta\mathbf{A}}{\delta t} + \boldsymbol{\omega} \times \mathbf{A}.\label{eq:10.5}
+	\frac{d\mathbf{A}}{dt} = \frac{\delta\mathbf{A}}{\delta t} + \boldsymbol{\omega} \times \mathbf{A}.\label{eq:10.5}
 \end{equation}
 We still have to take one more time derivative. Using the product rule, the time derivative of the equation above is
 \begin{equation}
-    \frac{d^2\mathbf{A}}{dt^2} = \frac{d}{dt} \left( \frac{\delta\mathbf{A}}{\delta t} \right) + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{A} + \boldsymbol{\omega} \times \frac{d\mathbf{A}}{dt}.\label{eq:10.6}
+	\frac{d^2\mathbf{A}}{dt^2} = \frac{d}{dt} \left( \frac{\delta\mathbf{A}}{\delta t} \right) + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{A} + \boldsymbol{\omega} \times \frac{d\mathbf{A}}{dt}.\label{eq:10.6}
 \end{equation}
 Applying the previous result to the first term on the right (with \(\frac{\delta\mathbf{A}}{\delta t}\) in place of \(\mathbf{A}\)), and plugging the previous result into the third term, gives
 \begin{equation}
-    \frac{d^2\mathbf{A}}{dt^2} = \frac{\delta^2\mathbf{A}}{\delta t^2} + \boldsymbol{\omega} \times \frac{\delta\mathbf{A}}{\delta t} + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{A} + \boldsymbol{\omega} \times \left( \frac{\delta\mathbf{A}}{\delta t} + \boldsymbol{\omega} \times \mathbf{A} \right).\label{eq:10.7}
+	\frac{d^2\mathbf{A}}{dt^2} = \frac{\delta^2\mathbf{A}}{\delta t^2} + \boldsymbol{\omega} \times \frac{\delta\mathbf{A}}{\delta t} + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{A} + \boldsymbol{\omega} \times \left( \frac{\delta\mathbf{A}}{\delta t} + \boldsymbol{\omega} \times \mathbf{A} \right).\label{eq:10.7}
 \end{equation}
 Simplifying, we get
 \begin{equation}
@@ -795,35 +795,62 @@ Simplifying, we get
 \end{equation}
 At this point we will set \(\mathbf{A} = \mathbf{r}\), which gives
 \begin{equation}
-    \frac{d^2\mathbf{r}}{dt^2} = \mathbf{a} + \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}) + 2\boldsymbol{\omega} \times \mathbf{v} + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r},\label{eq:10.8}
+	\frac{d^2\mathbf{r}}{dt^2} = \mathbf{a} + \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}) + 2\boldsymbol{\omega} \times \mathbf{v} + \frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r},\label{eq:10.8}
 \end{equation}
 where \(\mathbf{r}\), \(\mathbf{v} \equiv \frac{\delta\mathbf{r}}{\delta t}\), and \(\mathbf{a} \equiv \frac{\delta^2\mathbf{r}}{\delta t^2}\) are the position, velocity, and acceleration of the particle, as measured with respect to the accelerating frame. In other words, if the accelerating frame is enclosed in a windowless box, and if a person inside the box paints a coordinate grid on the floor, then she can (assuming that she has a clock at her disposal) measure \(\mathbf{r}\), \(\mathbf{v}\), and \(\mathbf{a}\) without caring at all about what is going on in the outside world.
 
 You might be concerned that the \(\mathbf{r}\), \(\mathbf{v}\), and \(\mathbf{a}\) on the right-hand side of the equation are measured by someone in the rotating frame, whereas the \(\frac{d^2\mathbf{r}}{dt^2}\) on the left-hand side is measured by someone in the inertial frame. But this apparent discrepancy is a nonissue, because the equation is a statement about vectors, and these vectors have an existence that is independent of the coordinate system that is used to describe them. For example, the vector \(\mathbf{a}\) points in a certain direction (say, toward the distant star Sirius) and has a certain magnitude, independent of whoever chooses to describe it with whatever coordinates.
 
 \subsection{Fictious Force}
-From Eq.(\ref{eq:10.1}) we already have 
+From Eq.(\ref{eq:10.1}) we already have
 \begin{equation}
-    \frac{d^2\mathbf{r}}{dt^2} = \frac{d^2\mathbf{r_I}}{dt^2} - \frac{d^2\mathbf{R}}{dt^2}
-    \label{10.9}
+	\frac{d^2\mathbf{r}}{dt^2} = \frac{d^2\mathbf{r_I}}{dt^2} - \frac{d^2\mathbf{R}}{dt^2}
+	\label{10.9}
 \end{equation}
 Now, we can equate that to the Eq.(\ref{eq:10.8}) and multiply by the mass \(m\) and we realize that it's simply force \(\mathbf{F}\) acting on the particle and solging for \(m\mathbf{a}\) we get the following:
 
 \begin{equation}
-    \begin{aligned}
-        m\mathbf{a} &= \mathbf{F} - m\frac{d^2\mathbf{R}}{dt^2} + m\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}) + 2m\boldsymbol{\omega} \times \mathbf{v} + m\frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r}\\
-        &\equiv \mathbf{F} + \mathbf{F_{translational}} + \mathbf{F_{centrifuga}} + \mathbf{F_{Coriolis}} + \mathbf{F_{azimuthal}} 
-    \end{aligned}\label{eq:10.10}
+	\begin{aligned}
+		m\mathbf{a} & = \mathbf{F} - m\frac{d^2\mathbf{R}}{dt^2} + m\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}) + 2m\boldsymbol{\omega} \times \mathbf{v} + m\frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r} \\
+		            & \equiv \mathbf{F} + \mathbf{F_{translational}} + \mathbf{F_{centrifuga}} + \mathbf{F_{Coriolis}} + \mathbf{F_{azimuthal}}
+	\end{aligned}\label{eq:10.10}
 \end{equation}
 That means we can \vocab{fictious forces} as following:
 \begin{equation}
-    \begin{aligned}
-        \mathbf{F_{translational}} &\equiv -m\frac{d^2\mathbf{R}}{dt^2}\\
-        \mathbf{F_{centrifuga}} &\equiv m\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r})\\
-        \mathbf{F_{Coriolis}} &\equiv 2m\boldsymbol{\omega} \times \mathbf{v}\\
-        \mathbf{F_{azimuthal}} &\equiv m\frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r}
-    \end{aligned}\label{eq:10.11}
+	\begin{aligned}
+		\mathbf{F_{translational}} & \equiv -m\frac{d^2\mathbf{R}}{dt^2}                                        \\
+		\mathbf{F_{centrifuga}}    & \equiv m\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}) \\
+		\mathbf{F_{Coriolis}}      & \equiv 2m\boldsymbol{\omega} \times \mathbf{v}                             \\
+		\mathbf{F_{azimuthal}}     & \equiv m\frac{d\boldsymbol{\omega}}{dt} \times \mathbf{r}
+	\end{aligned}\label{eq:10.11}
 \end{equation}
+
+
+\section{Februrary 19, 2025}
+\begin{example}
+	A stick rotates with \(\vec{\omega} = \omega \hat{z}\) and one end fixed to a pivot. The little \(dm\) a distance \(s\) from the pivot experiences a centrifugal force \(d\vec{F}_{\text{cent}} = ?\)
+\end{example}
+
+\begin{solution}
+
+\end{solution}
+\begin{example}
+	A stick rotates with \(\vec{\omega} = \omega \hat{z}\) and one end fixed to a pivot. If the centrifugal force on an element \(dm\) is \(d\vec{F}_{\text{cent}} = dm \omega^2 s \sin\phi \hat{r}\), then the contribution to the torque around the pivot point (top end of the stick) is:
+\end{example}
+\begin{solution}
+	Here, the \(d\vec{F}_{\text{cent}} = s \, dm \, \omega^2 \sin\phi \, \hat{r}\) and \(\hat{r} = \sin\phi \, \hat{r} - \cos\phi \, \hat{z}\).
+\end{solution}
+
+
+
+\begin{example}
+	On Earth at the equator \((R\sim 6400 km)\), how big is the centrifugal force, expressed as a fraction of gravity, i.e.  \(F_{cent}/(mg)\approx\)?
+\end{example}
+\begin{solution}
+	Here, the radius, \(r = 6.4 \times 10^5\) m, and \(\omega = \frac{2\pi}{24 \times 60 \times 60}\), and we plug that into the formula \[\frac{F_{cent}}{mg} = \frac{m\omega^2 r}{mg} = \frac{\omega^2 r}{g} = \frac{\left(\frac{2\pi}{24 \times 60 \times 60}\right)^2 \cdot (6.4 \times 10^5)}{9.8} \sim 0.003\]
+\end{solution}
+
+
 
 %\section{February 21, 2025}
 %\section{February 24, 2025}
