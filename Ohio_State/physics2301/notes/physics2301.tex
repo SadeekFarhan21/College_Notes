@@ -6,7 +6,6 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{tikz}
-\usepackage{fontspec}
 \title{Physics 2301: Intermediate Mechanics II}
 \author{Lecturer: \textbf{Professor Antonio Boveia}\\Notes by: Farhan Sadeek}
 \date{Spring 2025}
@@ -831,9 +830,6 @@ That means we can \vocab{fictious forces} as following:
 	A stick rotates with \(\vec{\omega} = \omega \hat{z}\) and one end fixed to a pivot. The little \(dm\) a distance \(s\) from the pivot experiences a centrifugal force \(d\vec{F}_{\text{cent}} = ?\)
 \end{example}
 
-\begin{solution}
-
-\end{solution}
 \begin{example}
 	A stick rotates with \(\vec{\omega} = \omega \hat{z}\) and one end fixed to a pivot. If the centrifugal force on an element \(dm\) is \(d\vec{F}_{\text{cent}} = dm \omega^2 s \sin\phi \hat{r}\), then the contribution to the torque around the pivot point (top end of the stick) is:
 \end{example}
@@ -849,8 +845,45 @@ That means we can \vocab{fictious forces} as following:
 \begin{solution}
 	Here, the radius, \(r = 6.4 \times 10^5\) m, and \(\omega = \frac{2\pi}{24 \times 60 \times 60}\), and we plug that into the formula \[\frac{F_{cent}}{mg} = \frac{m\omega^2 r}{mg} = \frac{\omega^2 r}{g} = \frac{\left(\frac{2\pi}{24 \times 60 \times 60}\right)^2 \cdot (6.4 \times 10^5)}{9.8} \sim 0.003\]
 \end{solution}
+\section{February 20, 2025}
+\begin{center}
+\begin{tikzpicture}
+    % Draw the circle
+    \draw[thick] (0,0) circle (3cm);
 
+    % Draw the vectors
+    \draw[->, thick] (0,0) -- (0,1) node[above] {$\hat{e}_2$};
+    \draw[->, thick] (0,0) -- (1,0) node[right] {$\hat{e}_1$};
 
+    % Draw the angular velocity vector
+    \draw[->, thick] (3.5,0) arc (0:45:3.5) node[above right] {$\omega$};
+
+    % Draw the mass
+    \filldraw[black] (1.5,0.5) circle (0.1cm) node[below right] {$m$};
+\end{tikzpicture}
+
+\end{center}
+\begin{center}
+\begin{tikzpicture}
+    % Draw the circle
+    \draw[thick] (0,0) circle (3cm);
+
+    % Draw the vectors
+    \draw[->, thick] (-2.25,0) -- (-2.25,1.5) node[above] {$z$};
+    \draw[->, thick] (-2.25,0) -- (-1.5,0) node[right] {$l$};
+
+    % Draw the angular velocity vector
+    \draw[->, thick] (3.5,0) arc (0:45:3.5) node[above right] {$\omega$};
+
+    % Draw the mass and points A and B
+    \filldraw[black] (0,0) circle (0.025cm) node[below] {A};
+    \filldraw[black] (2.25,0) circle (0.025cm) node[below] {B};
+    \filldraw[black] (1.125,0) circle (0.05cm) node[above] {$m$};
+
+    % Draw the line connecting A and B
+    \draw[thick] (0,0) -- (2.25,0);
+\end{tikzpicture}
+\end{center}
 
 %\section{February 21, 2025}
 %\section{February 24, 2025}
