@@ -22,10 +22,10 @@
 \fi
 
 \iflinheader
-    \usepackage[includehead, includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
+    \usepackage[includehead,includefoot, heightrounded,  left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
-    \rhead{\textbf{Farhan Sadeek}} % change name as necessary
+    \rhead{\textbf{Andrew Lin}} % change name as necessary
 \else
     %\usepackage[left=0.8in, top=2.6cm, bottom=1.4cm, right=0.8in]{geometry}
     \usepackage[left=0.8in, top=1.6cm, bottom=2.4cm, right=0.8in]{geometry}
@@ -82,7 +82,6 @@
 \newcommand{\UU}{\mathbb U}
 \newcommand{\ZZ}{\mathbb Z}
 
-\newcommand{\sfrac}[2]{\frac{#1}{#2}}
 \newcommand{\mc}[1]{\mathcal{#1}}
 \newcommand{\mf}[1]{\mathfrak{#1}}
 \newcommand{\parsh}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
@@ -111,8 +110,6 @@
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\Alt}{Alt}
-\DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\codim}{codim}
 
 % physics
 \newcommand{\ket}[1]{\left|#1\right\rangle}
@@ -166,12 +163,8 @@
 \thmboxstyle{notebox}{mdorangebox}{orange!50!brown}{yellow!5!olive!5}
 \thmboxstyle{lembox}{mdpurplebox}{purple!50!blue}{purple!5!blue!3}
 
-\iflinclass
-    \declaretheorem[style = thmbox, name = Theorem]{theorem}
-\else
-    \declaretheorem[style = thmbox, name = Theorem, numberwithin = section]{theorem}
-\fi
 
+\declaretheorem[style = thmbox, name = Theorem]{theorem}
 \declaretheorem[style = lembox, name = Lemma, sibling = theorem]{lemma}
 \declaretheorem[style = thmbox, name = Proposition, sibling = theorem]{proposition}
 \declaretheorem[style = thmbox, name = Corollary, sibling = theorem]{corollary}

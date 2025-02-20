@@ -3,7 +3,8 @@
 \usepackage{lindrew}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usepackage{fontspec}
+%\usepackage{fontspec}
+\usepackage{amsmath, amssymb, amsthm}
 \pgfplotsset{compat=1.18}
 \title{Math 4580: Abstract Algebra I}
 \usepackage{hyperref}
@@ -546,15 +547,16 @@ Inductive hypothesis $\Leftrightarrow$
               \right.
           \]
 
-          \[
-              \begin{array}{c|c|c|c|c|c|c|c|c|c}
-                  n   & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7  & 8  \\
-                  \hline
-                  f_n & 0 & 1 & 1 & 2 & 3 & 5 & 8 & 13 & 21 \\
-              \end{array}
-          \]
-
-          Now that
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+                \hline
+                $n$   & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7  & 8  \\
+                \hline
+                $f_n$ & 0 & 1 & 1 & 2 & 3 & 5 & 8 & 13 & 21 \\
+                \hline
+            \end{tabular}
+        \end{center}       
+        Now that
 
           \[
               f_n = \frac{1}{\sqrt{5}} \left[ \left( \frac{1 + \sqrt{5}}{2} \right)^n - \left( \frac{1 - \sqrt{5}}{2} \right)^n \right]
@@ -1723,7 +1725,8 @@ factorization.
 %\section{January 29, 2025}
 %\section{January 31, 2025}
 
-%\section{February 3, 2025}
+\section{February 3, 2025}
+We abstract the properties we need for arithmetic in \(\ZZ\).
 \section{February 5, 2025}
 
 \subsection{Examples of Rings}

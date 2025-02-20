@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2025.2.18)  18 FEB 2025 11:04
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2025.2.18)  20 FEB 2025 11:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1309,14 +1309,8 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (C:\Users\Farhan\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
-)) (physics2301.aux
-
-LaTeX Warning: Label `eq:10.8' multiply defined.
-
-
-LaTeX Warning: Label `eq:10.8@cref' multiply defined.
-
-)
+))
+No file physics2301.aux.
 \openout1 = `physics2301.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1339,7 +1333,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1375,10 +1368,11 @@ LaTeX Font Info:    ... okay on input line 14.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 14.
-(physics2301.out) (physics2301.out)
 \@outlinefile=\write4
 \openout4 = `physics2301.out'.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1537,9 +1531,42 @@ LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <6> not available
 
 [14]
 
+LaTeX Warning: Reference `eq:10.1' on page 15 undefined on input line 762.
+
+
+LaTeX Warning: Reference `eq:10.2' on page 15 undefined on input line 762.
+
+
+LaTeX Warning: Reference `eq:10.1' on page 15 undefined on input line 768.
+
+
+
 [15]
 
+LaTeX Warning: Reference `eq:10.1' on page 16 undefined on input line 805.
+
+
+
 [16]
+
+LaTeX Warning: Reference `eq:10.8' on page 17 undefined on input line 810.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 831.
+Package hyperref Info: bookmark level for unknown solution defaults to 0 on inp
+ut line 835.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 838.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 841.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 841.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 847.
+
 
 [17] (physics2301.aux)
  ***********
@@ -1548,17 +1575,26 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `physics2301.out' has not changed.
-(rerunfilecheck)             Checksum: CCE82E15144233B76B2152C5F61669F0;3949.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `physics2301.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `physics2301.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  88EEDE3B793383CF452AF656469A9387;4089.
  ) 
 Here is how much of TeX's memory you used:
- 39775 strings out of 408644
- 942679 string characters out of 5744686
- 1488143 words of memory out of 5000000
- 62248 multiletter control sequences out of 15000+600000
- 569193 words of font info for 85 fonts, out of 8000000 for 9000
+ 39790 strings out of 408644
+ 943096 string characters out of 5744686
+ 1488470 words of memory out of 5000000
+ 62266 multiletter control sequences out of 15000+600000
+ 569209 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,17n,111p,1007b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

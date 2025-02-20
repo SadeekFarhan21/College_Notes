@@ -5,7 +5,6 @@
 \usepackage{fontspec}
 \usepackage{fancyhdr}
 \usepackage{titlecaps}
-\pagestyle{fancy}
 
 
 \title{Stat 4202: Mathematical Statistics II}
@@ -15,30 +14,33 @@
 \begin{document}
 
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{January 6, 2025}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%F
+
+For this class, it was hybrid learning, so we had three days of class, two of which were pre-recorded and Friday was the in-person meeting, and one recitation. So for the sake of clarity, I will write the notes as if they are taken all at the same time on Friday but in reality, it was taken across the week. Professor Kerr could be reached out to at the email through office hours, Friday 4 through 6 pm, and TA could be at
+
+\section{January 11, 2025}
 STAT 4202 will rely a lot on STAT 4201. So we need to have a pretty good
-understanding of those concepts.
+understanding of those concepts
 
 \subsection{Review of Probability Theory}
 \begin{definition}
-    The \vocab{Sample Space}, denoted by $\mathcal{S}$, is the set of all outcomes from an experiment.
+	The \vocab{Sample Space}, denoted by $\mathcal{S}$, is the set of all outcomes from an experiment.
 \end{definition}
 
 \begin{definition}
-    An \vocab{Event}, usually denoted by a capital letter such as $A$ or $B$, is a subset of the Sample Space.
+	An \vocab{Event}, usually denoted by a capital letter such as $A$ or $B$, is a subset of the Sample Space.
 \end{definition}
 
 The probability function
 \begin{itemize}
-    \item $P(A) \geq 0$
-    \item $P(\mathcal{S}) = 1$
-    \item For disjoint sets $A_1$, $A_2$, $\cdots$, $A_n$: \[ P\left(\bigcup_{i = 1}^{n}A_i \right) = \sum_{i = 1}^{n} P(A_i)\]
+	\item $P(A) \geq 0$
+	\item $P(\mathcal{S}) = 1$
+	\item For disjoint sets $A_1$, $A_2$, $\cdots$, $A_n$: \[ P\left(\bigcup_{i = 1}^{n}A_i \right) = \sum_{i = 1}^{n} P(A_i)\]
 \end{itemize}
 
 If an event $A$ is a subset of another event $B$, then the probability of $A$
 is less than or equal to the probability of event $B$. That is to say, if $A
-    \subseteq B$, then \( P(A) \leq P(B)\)
+	\subseteq B$, then \( P(A) \leq P(B)\)
 
 The complement of an event $A$, denoted by $A^c$, has a probability equal to
 one minus the probability of the event $A$. That is,
@@ -57,28 +59,28 @@ events, we have \[P(A \cap B) = P(A)P(B)\]
 The \vocab{conditional probability} of $A$ given $B$ is given by \[P(A|B) = \frac{P(A \cap B)}{P(B)}\]
 
 \begin{lemma}
-    Note that if $A$ and $B$ are independent, then \begin{align*}
-        P(A|B) & = \frac{P(A \cap B)}{P(B)} \\
-               & = \frac{P(A)P(B)}{P(B)}    \\
-               & = P(A)
-    \end{align*}
+	Note that if $A$ and $B$ are independent, then \begin{align*}
+		P(A|B) & = \frac{P(A \cap B)}{P(B)} \\
+		       & = \frac{P(A)P(B)}{P(B)}    \\
+		       & = P(A)
+	\end{align*}
 \end{lemma}
 
 \begin{corollary}
-    If $A$ and $B$ are independent, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$
+	If $A$ and $B$ are independent, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$
 \end{corollary}
 
 \subsection{Random Variables}
 
 \begin{definition}
-    A random variable is a function that takes outcomes from the sample space $\mathcal{S}$ to the real numbers $\mathbb{R}$. That is, a random variable is a function $X: \mathcal{S} \to \mathbb{R}$.
+	A random variable is a function that takes outcomes from the sample space $\mathcal{S}$ to the real numbers $\mathbb{R}$. That is, a random variable is a function $X: \mathcal{S} \to \mathbb{R}$.
 \end{definition}
 
 We then use a probability mass function (pmf) in the discrete case or a
 probability density function (pdf) in the continuous case:
 \begin{align*}
-     & \text{pmf:} &  & f_X(x) = P(X = x)                                   &  & \text{when } X \text{ is discrete}   \\
-     & \text{pdf:} &  & \int_{a}^{b}f_X(x) \mathrm{d}x = P(a \leq X \leq b) &  & \text{when } X \text{ is continuous}
+	 & \text{pmf:} &  & f_X(x) = P(X = x)                                   &  & \text{when } X \text{ is discrete}   \\
+	 & \text{pdf:} &  & \int_{a}^{b}f_X(x) \mathrm{d}x = P(a \leq X \leq b) &  & \text{when } X \text{ is continuous}
 \end{align*}
 
 The cumulative distribution function (cdf) gives the probability of observing a
@@ -90,32 +92,32 @@ When $X$ is a continuous random variable, the pdf is the derivative of the cdf: 
 For random variable $X$, the \vocab{expected value} is denoted by $E \,(X)$ and
 is given by:
 \[
-    E(X) = \begin{cases}
-        \sum_{x} x f_X(x)                            & \text{if } X \text{ is discrete}   \\
-        \int_{-\infty}^{\infty} x f_X(x) \mathrm{d}x & \text{if } X \text{ is continuous}
-    \end{cases}
+	E(X) = \begin{cases}
+		\sum_{x} x f_X(x)                            & \text{if } X \text{ is discrete}   \\
+		\int_{-\infty}^{\infty} x f_X(x) \mathrm{d}x & \text{if } X \text{ is continuous}
+	\end{cases}
 \]
 \\
 The \vocab{variance} of a random variable $X$ is denoted by $\text{Var}(X)$ and is
 given by:
 \[
-    \text{Var}(X) = E\left[{(X - E(X))}^{2}\right]
+	\text{Var}(X) = E\left[{(X - E(X))}^{2}\right]
 \]
 
 \subsection{Covariance}
 
 The \vocab{covariance} of two random variables $X$ and $Y$ is denoted by:
 \[
-    \text{Cov}(X, Y) = E\left[(X - E(X))(Y - E(Y))\right]
+	\text{Cov}(X, Y) = E\left[(X - E(X))(Y - E(Y))\right]
 \]
 \\
 If two random variables $X$ and $Y$ are independent, then
 \[
-    P(X\in A, Y \in B) = P(X\in A)P(Y\in B)
+	P(X\in A, Y \in B) = P(X\in A)P(Y\in B)
 \]
 \\
 So, we will be using these formulas to estimate the mean and the variance throughout the semester.
-\section{January 8, 2025}
+\section{January 18, 2025}
 \subsection{Statistical Models}
 In statistics, we often model data $X_1, X_2, \cdots, X_n$ as a random sample
 from a population. We assume that the data are independent and identically
@@ -123,50 +125,134 @@ distributed (iid) random variables. The goal is to estimate the parameters of
 the population distribution.
 
 \begin{definition}
-    A \vocab {parameter} of a distribution are values that describe a certain characteristic of the given distribution.
+	A \vocab {parameter} of a distribution are values that describe a certain characteristic of the given distribution.
 \end{definition}
 Some examples of parameters include:
 \begin{itemize}
-    \item The mean height of \textbf{all} OSU incoming freshmen.
-    \item The proportion of registered voters that voted for a particular candidate.
-    \item The standard deviation of waiting times for \textbf{all} customers shopping at
-          a store during a week.
+	\item The mean height of \textbf{all} OSU incoming freshmen.
+	\item The proportion of registered voters that voted for a particular candidate.
+	\item The standard deviation of waiting times for \textbf{all} customers shopping at
+	      a store during a week.
 \end{itemize}
 
 \begin{fact}
-    If $X_1, X_2, \ldots, X_n \overset{iid}{\approx} f_X(x)$ then \(\mu  = E(X_i)\) is a parameter, which is the mean of the distribution. The variance is also a parameter: \(\sigma^2 = E[(X - \mu)^2]\)
+	If $X_1, X_2, \ldots, X_n \overset{iid}{\approx} f_X(x)$ then \(\mu  = E(X_i)\) is a parameter, which is the mean of the distribution. The variance is also a parameter: \(\sigma^2 = E[(X - \mu)^2]\)
 \end{fact}
 
 \begin{example}
-    Suppose we are examining the efficacy difference between a newly developed drug and an existing drug. We look at the differences, $\Delta i$, from a series of $n$ comparative samples. Note that these will all come from some distribution:
-    \[ \Delta_1, \Delta_2, \ldots, \Delta_n, \overset{iid} f(x)\]
+	Suppose we are examining the efficacy difference between a newly developed drug and an existing drug. We look at the differences, $\Delta i$, from a series of $n$ comparative samples. Note that these will all come from some distribution:
+	\[ \Delta_1, \Delta_2, \ldots, \Delta_n, \overset{iid} f(x)\]
 
 \end{example}
 \begin{fact}
-    Here the independed is a really important to look for we will look thorogh that through the semester.
+	Here the independed is a really important to look for we will look thorogh that through the semester.
 \end{fact}
 For a parametric model\[\{f_g(x)_{\theta \in \RR}\}\]
 Which is indexed by a vector $\theta$ of parameters.
 
 \begin{example}
-    Suppose we wanted to estimate the height and weight of all incoming students at Ohio State. We could take a random sample of \(n\) of the incoming students and observe the height (\(H\)) and weight (\(W\)) of each student, giving the following sample data:
-    \[
-        (H_1, W_1), (H_2, W_2), \dots, (H_n, W_n)
-    \]
+	Suppose we wanted to estimate the height and weight of all incoming students at Ohio State. We could take a random sample of \(n\) of the incoming students and observe the height (\(H\)) and weight (\(W\)) of each student, giving the following sample data:
+	\[
+		(H_1, W_1), (H_2, W_2), \dots, (H_n, W_n)
+	\]
 \end{example}
 We can then consider the following model:
 \[
-    {N(\mu, \Sigma)}
+	{N(\mu, \Sigma)}
 \]
 
-\section{January 8, 2025}
+
 We went over the \textbf{Recitation Logistics} and \textbf{Quiz 1}.
 
-\section{January 10, 2025 (In-Person)}
 We wanted to check how to get estimators. We will do the backwards this week for.
 
 \subsection{Unbiased Estimator}
 \begin{definition}
-    An \vocab{estimator} \(\hat(\theta) \)
+	An \vocab{estimator} \(\hat(\theta) \)
 \end{definition}
+
+
+Let's review some concepts from the previous lecture. Let's consider the following:
+\subsection{Unbiased Estimator}
+\begin{definition}
+	An \vocab{unbiased estimator} $\hat{\theta}$ of a parameter $\theta$ is an estimator such that $E(\hat{\theta}) = \theta$.
+\end{definition}
+
+\subsection{Asymptotically Unbiased Estimator}
+\begin{definition}
+	An estimator $\hat{\theta}$ is \vocab{asymptotically unbiased} if $\lim_{n \to \infty} E(\hat{\theta}) - \theta = 0$.
+\end{definition}
+
+\subsection{Mean Square Error}
+\begin{definition}
+	The \vocab{mean square error} (MSE) of an estimator $\hat{\theta}$ is given by $E[(\hat{\theta} - \theta)^2]$.
+\end{definition}
+
+For an unbiased estimator $\hat{\theta}$, the MSE is equal to the variance of the estimator:
+\[ E[(\hat{\theta} - \theta)^2] = \text{Var}(\hat{\theta}) \]
+
+\subsection{Cramér-Rao Lower Bound}
+\begin{theorem}
+	For an unbiased estimator $\hat{\theta}$, the variance of the estimator is bounded below by the Cramér-Rao lower bound:
+	\[ \text{Var}(\hat{\theta}) \geq \frac{1}{n E\left[\left(\frac{\partial \ln f_X(x; \theta)}{\partial \theta}\right)^2\right]} \]
+\end{theorem}
+\section{January 31, 2025}
+\subsection{Interval Estimation}
+So here our goal is to come up with an inteveral \([\hat{\theta_1}, \hat{\theta_2}]\) such that we can confidently claim that \(\theta\) is inside of that interval and at the same time the length of this interval is as small as possible. \\
+This is called the interval estimation problem.
+
+\begin{definition}
+	Let \(\hat{\Theta}_1\) and \(\hat{\Theta}_2\) be two statistics (functions of \(X_1, X_2, \ldots, X_n\)). Let \(\hat{\theta}_1 = \hat{\Theta}_1(x_1, x_2, \ldots, x_n)\) and \(\hat{\theta}_2 = \hat{\Theta}_2(x_1, x_2, \ldots, x_n)\) be the values of \(\hat{\Theta}_1\) and \(\hat{\Theta}_2\) when \(x_1, x_2, \ldots, x_n\) are observed. \\
+	If
+	\[ P(\hat{\Theta}_1 < \theta < \hat{\Theta}_2) = 1 - \alpha \]
+	for some \(0 < \alpha < 1\), we refer to the interval \([\hat{\theta}_1, \hat{\theta}_2]\) as a \(100(1 - \alpha)\%\) confidence interval for \(\theta\).
+	The value \(100(1 - \alpha)\%\) is called the \vocab{degree of confidence}, and \(\hat{\theta}_1\) and \(\hat{\theta}_2\) are called the \vocab{lower} and \vocab{upper confidence limits}, respectively.
+\end{definition}
+Let's look at some examples:
+\begin{example}
+
+	When $\alpha = 0.05$, we have a $95\%$ confidence interval.
+	When $\alpha = 0.01$, we have a $99\%$ confidence interval.
+	Given a value of $\alpha$, we want to design a confidence interval with
+	$E[\hat{\Theta}_2 - \hat{\Theta}_1]$ as small as possible.
+\end{example}
+\subsection{Estimation of Means}\label{Section 11.2}
+Let \(X_1, X_2, \ldots, X_n \sim N(\mu, \sigma^2)\). How do we construct a confidence interval for \(\mu\)?
+
+We will use the fact that
+\[ Z \coloneqq \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1) \]
+
+where \(\bar{X}\) is the sample mean. For a \(100(1 - \alpha)\%\) confidence interval, we have
+\[ P\left( -z_{\alpha/2} \leq \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \leq z_{\alpha/2} \right) = 1 - \alpha \]
+
+Solving for \(\mu\), we get
+\[ P\left( \bar{X} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \right) = 1 - \alpha \]
+
+Thus, the \(100(1 - \alpha)\%\) confidence interval for \(\mu\) is
+\[ \left( \bar{X} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}}, \bar{X} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \right) \]
+
+\begin{theorem}
+	If the value of $\sigma$ is known, then
+	\[ \left( \bar{X} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}}, \bar{X} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \right) \]
+	is a $100(1 - \alpha)\%$ confidence interval for $\mu$.
+\end{theorem}
+
+\begin{theorem}
+	As $\alpha$ decreases, the length of the confidence interval increases. This is because a smaller $\alpha$ corresponds to a larger $z_{\alpha/2}$ value, which in turn increases the margin of error $z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$. Conversely, as $\alpha$ increases, the length of the confidence interval decreases.
+\end{theorem}
+\begin{example}
+    A random sample of size $n = 20$ is taken from a normal distribution. The variance from the distribution is $\sigma^2 = 225$, and the sample mean is $\bar{x} = 64.3$. Construct a 95\% confidence interval for the population mean $\mu$.
+\end{example}
+
+\begin{solution}
+    To be written here
+\end{solution}
+
+\subsubsection{When \(\omega\) is unknown}
+\begin{theorem}
+    If we do not know \(\sigma\), but our sample size is at least 30 \(n \geq 30\), then
+    \[ \left( \bar{X} - z_{\alpha/2} \frac{s}{\sqrt{n}}, \bar{X} + z_{\alpha/2} \frac{s}{\sqrt{n}} \right) \]
+    where \(s\) is the sample standard deviation,
+    is an appropriate \(100(1 - \alpha)\%\) confidence interval for \(\mu\).
+\end{theorem}
 \end{document}

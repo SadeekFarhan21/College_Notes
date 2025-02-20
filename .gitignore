@@ -1,1 +1,6 @@
-Ohio_State/physics2301/textbooks/
+homeworks/
+textbook/
+*.aux
+*.log
+*.out
+*.syntex.gz

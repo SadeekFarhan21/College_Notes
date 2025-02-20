@@ -1,0 +1,17 @@
+{
+    "editor.fontFamily": "Fragment Mono",
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.linting.run": "onSave",
+    "latex-workshop.texcount.interval": 5000,
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ]
+}
